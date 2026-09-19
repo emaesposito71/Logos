@@ -3,9 +3,12 @@
 calcio.py — scarica i loghi da football-logos.cc in modo ordinato.
 
 Sorgente: https://football-logos.cc/image-sitemap.xml.gz
-  Mappa ogni pagina-logo al suo PNG 700px su assets.football-logos.cc.
+  Mappa ogni pagina-logo al suo PNG nativo (700px, o 1500px per alcuni
+  loghi storici) su assets.football-logos.cc.
 Per SVG e altre misure PNG, la pagina del logo viene letta per ricavare
 gli hash di download (data-svg-hash / <option value="MISURA::HASH">).
+Le pagine di storia-logo non hanno download diretti: per quelle viene
+salvato il PNG nativo della sitemap e l'SVG è marcato non disponibile.
 
 Struttura prodotta (default: PNG 700px + SVG):
 
@@ -25,6 +28,10 @@ Esecuzioni incrementali: i loghi già scaricati e invariati vengono saltati
 (confronto hash dalla sitemap), quindi le run successive scaricano solo
 le novità. Solo stdlib, nessuna dipendenza da installare.
 
+Rispetto anti-sovraccarico: pochi worker, pausa tra le richieste, backoff
+con rispetto di Retry-After, pausa globale condivisa sui 429 e stop
+automatico se il rate limit diventa persistente.
+
 Esempi:
     python3 scripts/calcio.py                                # tutto
     python3 scripts/calcio.py --countries italy,spain        # filtro paesi
@@ -43,11 +50,13 @@ import argparse
 import gzip
 import json
 import os
+import random
 import re
 import sys
 import threading
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -59,7 +68,7 @@ IMAGE_CDN = "https://images.football-logos.cc"
 
 # Header da browser: il CDN images.* richiede Accept di tipo immagine,
 # altrimenti risponde 404. Rispettiamo robots.txt (Allow: /) e usiamo
-# pochi worker + retry con backoff per non sovraccaricare il sito.
+# pochi worker + pause + backoff per non sovraccaricare il sito.
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
@@ -85,6 +94,19 @@ RE_PNG_OPT = re.compile(r'<option\s+value="(\d+)::([0-9a-f]+)"')
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
 
 
+class RateLimitExceeded(Exception):
+    """Il CDN risponde 429 in modo persistente: meglio fermarsi e riprovare dopo."""
+
+
+# Pausa globale condivisa tra i thread dopo un HTTP 429: quando il CDN
+# ci rallenta, TUTTI i worker si fermano per non peggiorare la situazione.
+_rate_lock = threading.Lock()
+_rate_cooldown_until = 0.0
+_consec_429 = 0
+MAX_CONSEC_429 = 20
+_abort = threading.Event()
+
+
 def log(msg: str) -> None:
     print(msg, flush=True)
 
@@ -93,27 +115,75 @@ def sanitize(name: str) -> str:
     return re.sub(r"[^a-zA-Z0-9._-]+", "_", name)
 
 
-def fetch_bytes(url: str, headers: dict, timeout: int, retries: int, referer: str = "") -> bytes:
-    """Scarica un URL in memoria con retry + backoff. Solleva l'ultima eccezione."""
+def _set_cooldown(seconds: float) -> None:
+    global _rate_cooldown_until
+    with _rate_lock:
+        _rate_cooldown_until = max(_rate_cooldown_until, time.monotonic() + seconds)
+
+
+def polite_wait(cfg: dict) -> None:
+    """Pausa educata prima di ogni richiesta + rispetto del cooldown globale."""
+    delay = cfg.get("delay", 0) or 0
+    if delay > 0:
+        time.sleep(delay + random.uniform(0, delay * 0.5))
+    while True:
+        if _abort.is_set():
+            raise RateLimitExceeded("run interrotta per rate limit persistente")
+        with _rate_lock:
+            remaining = _rate_cooldown_until - time.monotonic()
+        if remaining <= 0:
+            return
+        time.sleep(min(remaining, 2.0))
+
+
+def fetch_bytes(url: str, headers: dict, timeout: int, retries: int,
+                referer: str = "", cfg: dict | None = None) -> bytes:
+    """Scarica un URL in memoria con retry + backoff. Solleva l'ultima eccezione.
+
+    I 429 (rate limit) hanno attese più lunghe, rispettano Retry-After e
+    attivano una pausa globale per tutti i thread. Dopo troppi 429
+    consecutivi solleva RateLimitExceeded per fermare la run.
+    """
+    global _consec_429
     last_err: Exception | None = None
     h = dict(headers)
     if referer:
         h["Referer"] = referer
+    host = urllib.parse.urlparse(url).netloc
     for attempt in range(retries):
+        if _abort.is_set():
+            raise RateLimitExceeded("run interrotta per rate limit persistente")
+        if cfg:
+            polite_wait(cfg)
         try:
             req = urllib.request.Request(url, headers=h)
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 if resp.status != 200:
                     raise urllib.error.HTTPError(url, resp.status, "bad status", resp.headers, None)
-                return resp.read()
+                data = resp.read()
+                with _rate_lock:
+                    _consec_429 = 0
+                return data
         except urllib.error.HTTPError as e:
             last_err = e
-            wait = 2 ** attempt
             if e.code == 429:
                 try:
-                    wait = max(wait, int(e.headers.get("Retry-After", wait)))
+                    retry_after = int(e.headers.get("Retry-After", 0))
                 except (TypeError, ValueError):
-                    pass
+                    retry_after = 0
+                wait = max(5 * (2 ** attempt), retry_after)
+                with _rate_lock:
+                    _consec_429 += 1
+                    trips = _consec_429 >= MAX_CONSEC_429
+                _set_cooldown(20)
+                log(f"  ... HTTP 429 da {host} (tentativo {attempt + 1}/{retries}), attendo {wait}s")
+                if trips:
+                    _abort.set()
+                    raise RateLimitExceeded(
+                        f"rate limit persistente su {host}: "
+                        f"{MAX_CONSEC_429} risposte 429 consecutive")
+            else:
+                wait = 2 ** attempt
             if attempt < retries - 1:
                 time.sleep(wait)
         except Exception as e:  # timeout, DNS, reset...
@@ -176,7 +246,7 @@ def load_sitemap(timeout: int, retries: int) -> list[dict]:
                 "country": country,
                 "slug": m.group(1),
                 "hash": m.group(2),
-                "size": ms.group(1),  # es. "700" da "700x700"
+                "size": ms.group(1),  # es. "700" da "700x700" ("1500" per storici)
             }
         )
     log(f"Sitemap: {len(entries)} loghi trovati.")
@@ -205,84 +275,157 @@ def process_entry(entry: dict, cfg: dict, manifest_logos: dict) -> dict:
     out = cfg["out"]
     sizes: list[str] = cfg["sizes"]
     want_svg: bool = cfg["svg"]
+    native_size = entry["size"]
 
-    png_files = {s: os.path.join(out, country, f"{slug}-{s}.png") for s in sizes}
-    svg_file = os.path.join(out, country, f"{slug}.svg")
+    prev = manifest_logos.get(key) if not cfg["force"] else None
+    if prev and prev.get("hash") != entry["hash"]:
+        prev = None  # logo aggiornato sul sito: riscarica tutto
 
-    # --- skip se già presente e invariato ----------------------------------
-    if not cfg["force"]:
-        prev = manifest_logos.get(key)
-        if prev and prev.get("hash") == entry["hash"] and prev.get("sizes") == sizes \
-                and prev.get("svg") == want_svg:
-            if all(os.path.exists(p) for p in png_files.values()) \
-                    and (not want_svg or prev.get("svg_missing") or os.path.exists(svg_file)):
+    # --- skip se già completo (verifica i file registrati nel manifesto) ----
+    if prev and prev.get("sizes") == sizes and prev.get("svg") == want_svg and prev.get("png"):
+        recorded = list(prev["png"].values())
+        if prev.get("svg_file"):
+            recorded.append(prev["svg_file"])
+        if recorded and all(os.path.exists(os.path.join(out, f["file"])) for f in recorded):
+            if (not want_svg) or prev.get("svg_missing") or prev.get("svg_file"):
                 return {"key": key, "status": "skipped"}
 
     errors: list[str] = []
     png_done: dict[str, dict] = {}
     svg_done: dict | None = None
     svg_missing = False
-    page: dict | None = None
+    page_info: dict | None = None
+    page_state = "todo"  # todo | ok | no_widget | error
 
-    def ensure_page() -> dict | None:
-        nonlocal page
-        if page is None:
-            try:
-                html = fetch_bytes(
-                    entry["page_url"], PAGE_HEADERS, cfg["timeout"], cfg["retries"]
-                ).decode("utf-8", "replace")
-                page = parse_logo_page(html)
-                if not page["category_id"] or not page["logo_id"]:
-                    raise ValueError("attributi data-* non trovati nella pagina")
-            except Exception as e:
-                errors.append(f"pagina: {e}")
-                page = {}
-        return page or None
-
-    # --- PNG ---------------------------------------------------------------
-    for size in sizes:
-        dest = png_files[size]
+    def ensure_page() -> None:
+        nonlocal page_info, page_state
+        if page_state != "todo":
+            return
         try:
-            if size == entry["size"]:
-                # URL diretto dalla sitemap, nessuna pagina da leggere
-                url = entry["image_url"]
-                data = fetch_bytes(url, IMG_HEADERS, cfg["timeout"], cfg["retries"],
-                                   referer=entry["page_url"])
-                if not is_valid_png(data):
-                    raise ValueError("contenuto non-PNG")
-                save_file(data, dest)
-                png_done[size] = {"hash": entry["hash"], "file": os.path.relpath(dest, out)}
-            else:
-                info = ensure_page()
-                h = (info or {}).get("png_hashes", {}).get(size, "")
-                if not h:
-                    raise ValueError(f"hash PNG {size}px non trovato nella pagina")
-                url = f"{IMAGE_CDN}/{info['category_id']}/{size}/{info['logo_id']}.{h}.png"
-                data = fetch_bytes(url, IMG_HEADERS, cfg["timeout"], cfg["retries"],
-                                   referer=entry["page_url"])
-                if not is_valid_png(data):
-                    raise ValueError("contenuto non-PNG")
-                save_file(data, dest)
-                png_done[size] = {"hash": h, "file": os.path.relpath(dest, out)}
+            html = fetch_bytes(entry["page_url"], PAGE_HEADERS,
+                               cfg["timeout"], cfg["retries"], cfg=cfg).decode("utf-8", "replace")
+        except RateLimitExceeded:
+            raise
+        except Exception as e:
+            page_state = "error"
+            errors.append(f"pagina: {e}")
+            return
+        info = parse_logo_page(html)
+        if not info["category_id"] or not info["logo_id"]:
+            page_state = "no_widget"  # es. pagine logo-history: nessun download diretto
+        else:
+            page_state = "ok"
+            page_info = info
+
+    def reuse_prev(kind: str, size: str | None, expected_hash: str) -> dict | None:
+        """Riusa il file di una run precedente se hash coincide ed esiste."""
+        if not prev:
+            return None
+        if kind == "png":
+            rec = prev.get("png", {}).get(size or "", {})
+        else:
+            rec = prev.get("svg_file") or {}
+        if rec and rec.get("hash") == expected_hash \
+                and os.path.exists(os.path.join(out, rec["file"])):
+            return rec
+        return None
+
+    def download_png(url: str, dest_rel: str, expected_hash: str) -> dict:
+        data = fetch_bytes(url, IMG_HEADERS, cfg["timeout"], cfg["retries"],
+                           referer=entry["page_url"], cfg=cfg)
+        if not is_valid_png(data):
+            raise ValueError("contenuto non-PNG")
+        save_file(data, os.path.join(out, dest_rel))
+        return {"hash": expected_hash, "file": dest_rel}
+
+    # --- PNG alla misura nativa della sitemap (URL diretto, no pagina) -------
+    for size in sizes:
+        if size != native_size:
+            continue
+        dest_rel = os.path.join(country, f"{slug}-{size}.png")
+        rec = reuse_prev("png", size, entry["hash"])
+        if rec:
+            png_done[size] = rec
+            continue
+        try:
+            png_done[size] = download_png(entry["image_url"], dest_rel, entry["hash"])
+        except RateLimitExceeded:
+            raise
         except Exception as e:
             errors.append(f"png-{size}: {e}")
 
-    # --- SVG ---------------------------------------------------------------
+    # --- PNG altre misure (via pagina) ----------------------------------------
+    need_page_sizes = [s for s in sizes if s != native_size and s not in png_done]
+    if need_page_sizes:
+        ensure_page()
+        if page_state == "ok" and page_info:
+            for size in need_page_sizes:
+                h = page_info["png_hashes"].get(size, "")
+                if not h:
+                    errors.append(f"png-{size}: misura non offerta nella pagina")
+                    continue
+                dest_rel = os.path.join(country, f"{slug}-{size}.png")
+                rec = reuse_prev("png", size, h)
+                if rec:
+                    png_done[size] = rec
+                    continue
+                url = (f"{IMAGE_CDN}/{page_info['category_id']}/{size}/"
+                       f"{page_info['logo_id']}.{h}.png")
+                try:
+                    png_done[size] = download_png(url, dest_rel, h)
+                except RateLimitExceeded:
+                    raise
+                except Exception as e:
+                    errors.append(f"png-{size}: {e}")
+
+    # --- Fallback: PNG nativo della sitemap -----------------------------------
+    # Se la pagina non espone download (loghi storici) o una misura richiesta
+    # fallisce, salviamo comunque il PNG nativo della sitemap: meglio di niente.
+    if native_size not in sizes and native_size not in png_done:
+        dest_rel = os.path.join(country, f"{slug}-{native_size}.png")
+        rec = reuse_prev("png", native_size, entry["hash"])
+        if rec:
+            png_done[native_size] = rec
+        elif page_state in ("no_widget", "error") or any(x.startswith("png-") for x in errors):
+            try:
+                png_done[native_size] = download_png(entry["image_url"], dest_rel, entry["hash"])
+            except RateLimitExceeded:
+                raise
+            except Exception as e:
+                errors.append(f"png-{native_size} (fallback): {e}")
+
+    # --- SVG ------------------------------------------------------------------
     if want_svg:
-        try:
-            info = ensure_page()
-            if not info or not info.get("svg_hash"):
-                svg_missing = True  # nessun vettoriale per questo logo (normale)
+        ensure_page()
+        if page_state == "ok" and page_info and page_info["svg_hash"]:
+            h = page_info["svg_hash"]
+            rec = reuse_prev("svg", None, h)
+            if rec:
+                svg_done = rec
             else:
-                url = f"{IMAGE_CDN}/{info['category_id']}/{info['logo_id']}.{info['svg_hash']}.svg"
-                data = fetch_bytes(url, IMG_HEADERS, cfg["timeout"], cfg["retries"],
-                                   referer=entry["page_url"])
-                if not is_valid_svg(data):
-                    raise ValueError("contenuto non-SVG")
-                save_file(data, svg_file)
-                svg_done = {"hash": info["svg_hash"], "file": os.path.relpath(svg_file, out)}
-        except Exception as e:
-            errors.append(f"svg: {e}")
+                url = (f"{IMAGE_CDN}/{page_info['category_id']}/"
+                       f"{page_info['logo_id']}.{h}.svg")
+                try:
+                    data = fetch_bytes(url, IMG_HEADERS, cfg["timeout"], cfg["retries"],
+                                       referer=entry["page_url"], cfg=cfg)
+                    if not is_valid_svg(data):
+                        raise ValueError("contenuto non-SVG")
+                    dest_rel = os.path.join(country, f"{slug}.svg")
+                    save_file(data, os.path.join(out, dest_rel))
+                    svg_done = {"hash": h, "file": dest_rel}
+                except RateLimitExceeded:
+                    raise
+                except Exception as e:
+                    errors.append(f"svg: {e}")
+        elif page_state == "no_widget" or (page_state == "ok" and page_info
+                                           and not page_info["svg_hash"]):
+            svg_missing = True  # nessun vettoriale offerto (es. loghi storici)
+        else:  # pagina irraggiungibile: riusa l'SVG precedente se invariato
+            if prev and prev.get("svg_file") \
+                    and os.path.exists(os.path.join(out, prev["svg_file"]["file"])):
+                svg_done = prev["svg_file"]
+            else:
+                errors.append("svg: pagina non leggibile")
 
     status = "ok" if not errors else ("partial" if (png_done or svg_done) else "failed")
     return {
@@ -328,6 +471,9 @@ def write_github_summary(path: str, stats: dict, failures: list[dict], countries
         lines += ["", "### ❌ Errori (primi 20)", ""]
         for f in failures[:20]:
             lines.append(f"- `{f['key']}`: {'; '.join(f['errors'])}")
+        lines += ["",
+                  "> ℹ️ Rilancia il workflow per completare i loghi parziali/falliti: "
+                  "i file già scaricati vengono riusati, si scarica solo ciò che manca."]
     lines.append("")
     with open(path, "a", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
@@ -343,7 +489,10 @@ def main() -> int:
     ap.add_argument("--svg", dest="svg", action=argparse.BooleanOptionalAction, default=True,
                     help="Scarica anche gli SVG (default: sì; --no-svg per disattivare)")
     ap.add_argument("--limit", type=int, default=0, help="Scarica al massimo N loghi (0 = tutti)")
-    ap.add_argument("--workers", type=int, default=8, help="Download paralleli (default: 8)")
+    ap.add_argument("--workers", type=int, default=4,
+                    help="Download paralleli (default: 4; abbassa se vedi HTTP 429)")
+    ap.add_argument("--delay", type=float, default=0.5,
+                    help="Pausa in secondi prima di ogni richiesta (default: 0.5; alza se vedi HTTP 429)")
     ap.add_argument("--force", action="store_true", help="Riscarica tutto, anche se presente")
     ap.add_argument("--prune", action="store_true",
                     help="Rimuove dal manifesto/file i loghi spariti dalla sitemap (solo run complete)")
@@ -385,7 +534,7 @@ def main() -> int:
             log(f"ATTENZIONE: manifesto illeggibile ({e}), riparto da zero.")
 
     cfg = {"out": args.out, "sizes": sizes, "svg": args.svg, "force": args.force,
-           "timeout": args.timeout, "retries": args.retries}
+           "timeout": args.timeout, "retries": args.retries, "delay": max(0.0, args.delay)}
 
     stats = {"total": len(entries), "ok": 0, "partial": 0, "skipped": 0,
              "failed": 0, "files": 0, "svg_missing": 0}
@@ -394,14 +543,24 @@ def main() -> int:
     done = 0
     t0 = time.time()
 
-    workers = max(1, min(args.workers, 32))
+    workers = max(1, min(args.workers, 16))
     log(f"Avvio download: {len(entries)} loghi, {workers} worker, "
-        f"misure PNG {','.join(sizes)}, SVG {'sì' if args.svg else 'no'}.")
+        f"misure PNG {','.join(sizes)}, SVG {'sì' if args.svg else 'no'}, "
+        f"pausa {cfg['delay']}s.")
 
-    with ThreadPoolExecutor(max_workers=workers) as pool:
+    aborted: Exception | None = None
+    pool = ThreadPoolExecutor(max_workers=workers)
+    try:
         futs = {pool.submit(process_entry, e, cfg, manifest_logos): e for e in entries}
         for fut in as_completed(futs):
-            res = fut.result()
+            try:
+                res = fut.result()
+            except RateLimitExceeded as e:
+                aborted = e
+                _abort.set()
+                for f in futs:
+                    f.cancel()
+                break
             with lock:
                 done += 1
                 st = res["status"]
@@ -418,10 +577,19 @@ def main() -> int:
                     el = time.time() - t0
                     log(f"... {done}/{len(entries)} ({el:.0f}s) "
                         f"ok={stats['ok']} skip={stats['skipped']} fail={stats['failed']}")
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
 
-    # --- prune ---------------------------------------------------------------
+    if aborted is not None:
+        log("")
+        log(f"INTERROTTO: {aborted}")
+        log("Il CDN sta limitando le richieste in modo persistente. I progressi parziali")
+        log("sono salvati nel manifesto: rilancia più tardi (eventualmente con --delay")
+        log("più alto o --workers più basso) per completare i loghi mancanti.")
+
+    # --- prune (solo run complete non interrotte) ------------------------------
     pruned = 0
-    if args.prune:
+    if args.prune and aborted is None:
         live = {f"{e['country']}/{e['slug']}" for e in entries}
         for key in list(manifest_logos.keys()):
             if key not in live:
@@ -469,7 +637,7 @@ def main() -> int:
             write_github_summary(summary_path, stats, failures, countries)
         except Exception as e:
             log(f"(impossibile scrivere il riepilogo GitHub: {e})")
-    return 0
+    return 3 if aborted is not None else 0
 
 
 if __name__ == "__main__":
