@@ -1,0 +1,5708 @@
+{
+ "source": "https://football-logos.cc/image-sitemap.xml.gz",
+ "updated_at": "2026-09-19T21:20:50.695897+00:00",
+ "sizes": [
+  "700"
+ ],
+ "svg": true,
+ "count": 273,
+ "logos": {
+  "italy/ac-leon": {
+   "name": "AC Leon Logo",
+   "country": "italy",
+   "slug": "ac-leon",
+   "page_url": "https://football-logos.cc/italy/ac-leon/",
+   "hash": "02d6d9f4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "02d6d9f4",
+     "file": "italy/ac-leon-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "55add233",
+    "file": "italy/ac-leon.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.184211+00:00"
+  },
+  "italy/acerrana-1926": {
+   "name": "Acerrana 1926 Logo",
+   "country": "italy",
+   "slug": "acerrana-1926",
+   "page_url": "https://football-logos.cc/italy/acerrana-1926/",
+   "hash": "32fe4cf5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "32fe4cf5",
+     "file": "italy/acerrana-1926-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "3794f83e",
+    "file": "italy/acerrana-1926.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.214239+00:00"
+  },
+  "italy/acireale-calcio": {
+   "name": "Acireale Calcio Logo",
+   "country": "italy",
+   "slug": "acireale-calcio",
+   "page_url": "https://football-logos.cc/italy/acireale-calcio/",
+   "hash": "5f80b95a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5f80b95a",
+     "file": "italy/acireale-calcio-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "1d7b684e",
+    "file": "italy/acireale-calcio.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.257290+00:00"
+  },
+  "italy/acr-messina": {
+   "name": "ACR Messina Logo",
+   "country": "italy",
+   "slug": "acr-messina",
+   "page_url": "https://football-logos.cc/italy/acr-messina/",
+   "hash": "591d7d5e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "591d7d5e",
+     "file": "italy/acr-messina-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "82f9fad8",
+    "file": "italy/acr-messina.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.184473+00:00"
+  },
+  "italy/adriese": {
+   "name": "USD Adriese 1906 Logo",
+   "country": "italy",
+   "slug": "adriese",
+   "page_url": "https://football-logos.cc/italy/adriese/",
+   "hash": "9c63757e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9c63757e",
+     "file": "italy/adriese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "d6b1e4b7",
+    "file": "italy/adriese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.190409+00:00"
+  },
+  "italy/afragolese-1944": {
+   "name": "Afragolese 1944 Logo",
+   "country": "italy",
+   "slug": "afragolese-1944",
+   "page_url": "https://football-logos.cc/italy/afragolese-1944/",
+   "hash": "07ba210b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "07ba210b",
+     "file": "italy/afragolese-1944-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "e2da7160",
+    "file": "italy/afragolese-1944.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.149003+00:00"
+  },
+  "italy/albinoleffe": {
+   "name": "AlbinoLeffe Logo",
+   "country": "italy",
+   "slug": "albinoleffe",
+   "page_url": "https://football-logos.cc/italy/albinoleffe/",
+   "hash": "05507391",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "05507391",
+     "file": "italy/albinoleffe-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ac8488f9",
+    "file": "italy/albinoleffe.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.492665+00:00"
+  },
+  "italy/alcione": {
+   "name": "Alcione Logo",
+   "country": "italy",
+   "slug": "alcione",
+   "page_url": "https://football-logos.cc/italy/alcione/",
+   "hash": "f8625d85",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f8625d85",
+     "file": "italy/alcione-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c5286dd6",
+    "file": "italy/alcione.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:11.315584+00:00"
+  },
+  "italy/ancona": {
+   "name": "Ancona Logo",
+   "country": "italy",
+   "slug": "ancona",
+   "page_url": "https://football-logos.cc/italy/ancona/",
+   "hash": "6dc243b1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "6dc243b1",
+     "file": "italy/ancona-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "1982002a",
+    "file": "italy/ancona.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.236983+00:00"
+  },
+  "italy/anzio-calcio-1924": {
+   "name": "Anzio Calcio 1924 Logo",
+   "country": "italy",
+   "slug": "anzio-calcio-1924",
+   "page_url": "https://football-logos.cc/italy/anzio-calcio-1924/",
+   "hash": "9c7b083a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9c7b083a",
+     "file": "italy/anzio-calcio-1924-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "8be5eed3",
+    "file": "italy/anzio-calcio-1924.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.217096+00:00"
+  },
+  "italy/aquila-montevarchi": {
+   "name": "Aquila Montevarchi 1902 Logo",
+   "country": "italy",
+   "slug": "aquila-montevarchi",
+   "page_url": "https://football-logos.cc/italy/aquila-montevarchi/",
+   "hash": "72d0e8e8",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "72d0e8e8",
+     "file": "italy/aquila-montevarchi-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "44c1f93a",
+    "file": "italy/aquila-montevarchi.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.363050+00:00"
+  },
+  "italy/arezzo": {
+   "name": "Arezzo Logo",
+   "country": "italy",
+   "slug": "arezzo",
+   "page_url": "https://football-logos.cc/italy/arezzo/",
+   "hash": "973545fa",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "973545fa",
+     "file": "italy/arezzo-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ab296ebb",
+    "file": "italy/arezzo.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.117377+00:00"
+  },
+  "italy/ars-et-labor-ferrara-calcio": {
+   "name": "Ars et Labor Ferrara Calcio Logo",
+   "country": "italy",
+   "slug": "ars-et-labor-ferrara-calcio",
+   "page_url": "https://football-logos.cc/italy/ars-et-labor-ferrara-calcio/",
+   "hash": "f636de9a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f636de9a",
+     "file": "italy/ars-et-labor-ferrara-calcio-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "4f4c754e",
+    "file": "italy/ars-et-labor-ferrara-calcio.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.149331+00:00"
+  },
+  "italy/arzignano-valchiampo": {
+   "name": "FC Arzignano Valchiampo Logo",
+   "country": "italy",
+   "slug": "arzignano-valchiampo",
+   "page_url": "https://football-logos.cc/italy/arzignano-valchiampo/",
+   "hash": "18685802",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "18685802",
+     "file": "italy/arzignano-valchiampo-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "64db85a6",
+    "file": "italy/arzignano-valchiampo.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.188150+00:00"
+  },
+  "italy/as-melfi": {
+   "name": "AS Melfi Logo",
+   "country": "italy",
+   "slug": "as-melfi",
+   "page_url": "https://football-logos.cc/italy/as-melfi/",
+   "hash": "54425f16",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "54425f16",
+     "file": "italy/as-melfi-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "41007d52",
+    "file": "italy/as-melfi.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.447055+00:00"
+  },
+  "italy/ascoli": {
+   "name": "Ascoli Logo",
+   "country": "italy",
+   "slug": "ascoli",
+   "page_url": "https://football-logos.cc/italy/ascoli/",
+   "hash": "8dfea86e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8dfea86e",
+     "file": "italy/ascoli-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ee27585f",
+    "file": "italy/ascoli.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:12.399667+00:00"
+  },
+  "italy/asti": {
+   "name": "Asti Logo",
+   "country": "italy",
+   "slug": "asti",
+   "page_url": "https://football-logos.cc/italy/asti/",
+   "hash": "0da2c88c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0da2c88c",
+     "file": "italy/asti-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "9aee1591",
+    "file": "italy/asti.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.166117+00:00"
+  },
+  "italy/atalanta": {
+   "name": "Atalanta Logo",
+   "country": "italy",
+   "slug": "atalanta",
+   "page_url": "https://football-logos.cc/italy/atalanta/",
+   "hash": "55d9b635",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "55d9b635",
+     "file": "italy/atalanta-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "cba0b439",
+    "file": "italy/atalanta.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.044892+00:00"
+  },
+  "italy/athletic-club-palermo": {
+   "name": "Athletic Club Palermo Logo",
+   "country": "italy",
+   "slug": "athletic-club-palermo",
+   "page_url": "https://football-logos.cc/italy/athletic-club-palermo/",
+   "hash": "a1a10727",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a1a10727",
+     "file": "italy/athletic-club-palermo-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "bfd0d013",
+    "file": "italy/athletic-club-palermo.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.354456+00:00"
+  },
+  "italy/atletico-ascoli": {
+   "name": "Atletico Ascoli Logo",
+   "country": "italy",
+   "slug": "atletico-ascoli",
+   "page_url": "https://football-logos.cc/italy/atletico-ascoli/",
+   "hash": "4c997b29",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4c997b29",
+     "file": "italy/atletico-ascoli-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "65e2ddb5",
+    "file": "italy/atletico-ascoli.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.273449+00:00"
+  },
+  "italy/atletico-lodigiani": {
+   "name": "Atletico Lodigiani Logo",
+   "country": "italy",
+   "slug": "atletico-lodigiani",
+   "page_url": "https://football-logos.cc/italy/atletico-lodigiani/",
+   "hash": "667062a7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "667062a7",
+     "file": "italy/atletico-lodigiani-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "6c51502b",
+    "file": "italy/atletico-lodigiani.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.474404+00:00"
+  },
+  "italy/audace-cerignola": {
+   "name": "Audace Cerignola Logo",
+   "country": "italy",
+   "slug": "audace-cerignola",
+   "page_url": "https://football-logos.cc/italy/audace-cerignola/",
+   "hash": "c57a2490",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c57a2490",
+     "file": "italy/audace-cerignola-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "752ea52b",
+    "file": "italy/audace-cerignola.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.342709+00:00"
+  },
+  "italy/avc-vogherese-1919": {
+   "name": "AVC Vogherese 1919 Logo",
+   "country": "italy",
+   "slug": "avc-vogherese-1919",
+   "page_url": "https://football-logos.cc/italy/avc-vogherese-1919/",
+   "hash": "48d04500",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "48d04500",
+     "file": "italy/avc-vogherese-1919-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "009b1416",
+    "file": "italy/avc-vogherese-1919.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.401813+00:00"
+  },
+  "italy/az-picerno": {
+   "name": "AZ Picerno Logo",
+   "country": "italy",
+   "slug": "az-picerno",
+   "page_url": "https://football-logos.cc/italy/az-picerno/",
+   "hash": "0d00a858",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0d00a858",
+     "file": "italy/az-picerno-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c5955210",
+    "file": "italy/az-picerno.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:13.492561+00:00"
+  },
+  "italy/bari": {
+   "name": "Bari Logo",
+   "country": "italy",
+   "slug": "bari",
+   "page_url": "https://football-logos.cc/italy/bari/",
+   "hash": "2d0935eb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2d0935eb",
+     "file": "italy/bari-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "683fde9c",
+    "file": "italy/bari.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.110733+00:00"
+  },
+  "italy/barletta-1922": {
+   "name": "Barletta 1922 Logo",
+   "country": "italy",
+   "slug": "barletta-1922",
+   "page_url": "https://football-logos.cc/italy/barletta-1922/",
+   "hash": "9fc84d19",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9fc84d19",
+     "file": "italy/barletta-1922-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "66ff5879",
+    "file": "italy/barletta-1922.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.336403+00:00"
+  },
+  "italy/bassano": {
+   "name": "FC Bassano Logo",
+   "country": "italy",
+   "slug": "bassano",
+   "page_url": "https://football-logos.cc/italy/bassano/",
+   "hash": "3f9c5a19",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3f9c5a19",
+     "file": "italy/bassano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "e435dc8a",
+    "file": "italy/bassano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.222809+00:00"
+  },
+  "italy/benevento": {
+   "name": "Benevento Logo",
+   "country": "italy",
+   "slug": "benevento",
+   "page_url": "https://football-logos.cc/italy/benevento/",
+   "hash": "69d830d1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "69d830d1",
+     "file": "italy/benevento-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "4b011269",
+    "file": "italy/benevento.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.371026+00:00"
+  },
+  "italy/biellese": {
+   "name": "Biellese Logo",
+   "country": "italy",
+   "slug": "biellese",
+   "page_url": "https://football-logos.cc/italy/biellese/",
+   "hash": "a3ee647c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a3ee647c",
+     "file": "italy/biellese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "a4acacf8",
+    "file": "italy/biellese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.388038+00:00"
+  },
+  "italy/bologna": {
+   "name": "Bologna Logo",
+   "country": "italy",
+   "slug": "bologna",
+   "page_url": "https://football-logos.cc/italy/bologna/",
+   "hash": "577e3847",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "577e3847",
+     "file": "italy/bologna-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "2f94d248",
+    "file": "italy/bologna.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.343432+00:00"
+  },
+  "italy/bra": {
+   "name": "Bra Logo",
+   "country": "italy",
+   "slug": "bra",
+   "page_url": "https://football-logos.cc/italy/bra/",
+   "hash": "86af31fa",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "86af31fa",
+     "file": "italy/bra-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "db3e861b",
+    "file": "italy/bra.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.393101+00:00"
+  },
+  "italy/breno": {
+   "name": "USD Breno Logo",
+   "country": "italy",
+   "slug": "breno",
+   "page_url": "https://football-logos.cc/italy/breno/",
+   "hash": "c6929e6b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c6929e6b",
+     "file": "italy/breno-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ab3fa7ba",
+    "file": "italy/breno.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:14.481579+00:00"
+  },
+  "italy/brescia": {
+   "name": "Brescia Logo",
+   "country": "italy",
+   "slug": "brescia",
+   "page_url": "https://football-logos.cc/italy/brescia/",
+   "hash": "5bca74a6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5bca74a6",
+     "file": "italy/brescia-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c26bce37",
+    "file": "italy/brescia.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.424009+00:00"
+  },
+  "italy/brian-lignano": {
+   "name": "Brian Lignano Calcio Logo",
+   "country": "italy",
+   "slug": "brian-lignano",
+   "page_url": "https://football-logos.cc/italy/brian-lignano/",
+   "hash": "794c4f3a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "794c4f3a",
+     "file": "italy/brian-lignano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "8f8fd87d",
+    "file": "italy/brian-lignano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.230992+00:00"
+  },
+  "italy/brusaporto": {
+   "name": "Calcio Brusaporto Logo",
+   "country": "italy",
+   "slug": "brusaporto",
+   "page_url": "https://football-logos.cc/italy/brusaporto/",
+   "hash": "d9e799a6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d9e799a6",
+     "file": "italy/brusaporto-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "079f2610",
+    "file": "italy/brusaporto.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.340053+00:00"
+  },
+  "italy/budoni-calcio": {
+   "name": "Budoni Calcio Logo",
+   "country": "italy",
+   "slug": "budoni-calcio",
+   "page_url": "https://football-logos.cc/italy/budoni-calcio/",
+   "hash": "d2dfd502",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d2dfd502",
+     "file": "italy/budoni-calcio-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ee37a8c6",
+    "file": "italy/budoni-calcio.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.333277+00:00"
+  },
+  "italy/cagliari": {
+   "name": "Cagliari Logo",
+   "country": "italy",
+   "slug": "cagliari",
+   "page_url": "https://football-logos.cc/italy/cagliari/",
+   "hash": "36b537b2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "36b537b2",
+     "file": "italy/cagliari-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "052c6400",
+    "file": "italy/cagliari.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.328270+00:00"
+  },
+  "italy/cairese": {
+   "name": "Cairese Logo",
+   "country": "italy",
+   "slug": "cairese",
+   "page_url": "https://football-logos.cc/italy/cairese/",
+   "hash": "e63730ed",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e63730ed",
+     "file": "italy/cairese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "d7e1a1b3",
+    "file": "italy/cairese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.279313+00:00"
+  },
+  "italy/caldiero-terme": {
+   "name": "Calcio Caldiero Terme Logo",
+   "country": "italy",
+   "slug": "caldiero-terme",
+   "page_url": "https://football-logos.cc/italy/caldiero-terme/",
+   "hash": "0f42648b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0f42648b",
+     "file": "italy/caldiero-terme-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "9b59508c",
+    "file": "italy/caldiero-terme.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.437698+00:00"
+  },
+  "italy/calvi-noale": {
+   "name": "FC Calvi Noale Logo",
+   "country": "italy",
+   "slug": "calvi-noale",
+   "page_url": "https://football-logos.cc/italy/calvi-noale/",
+   "hash": "ffb5b499",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ffb5b499",
+     "file": "italy/calvi-noale-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "0c67062c",
+    "file": "italy/calvi-noale.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:15.448661+00:00"
+  },
+  "italy/camaiore": {
+   "name": "Camaiore Calcio Logo",
+   "country": "italy",
+   "slug": "camaiore",
+   "page_url": "https://football-logos.cc/italy/camaiore/",
+   "hash": "568a4b59",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "568a4b59",
+     "file": "italy/camaiore-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "256bccb3",
+    "file": "italy/camaiore.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.235815+00:00"
+  },
+  "italy/campobasso": {
+   "name": "Campobasso Logo",
+   "country": "italy",
+   "slug": "campobasso",
+   "page_url": "https://football-logos.cc/italy/campobasso/",
+   "hash": "14087d70",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "14087d70",
+     "file": "italy/campobasso-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "e1b1a068",
+    "file": "italy/campobasso.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.362871+00:00"
+  },
+  "italy/campodarsego": {
+   "name": "ACD Campodarsego Calcio Logo",
+   "country": "italy",
+   "slug": "campodarsego",
+   "page_url": "https://football-logos.cc/italy/campodarsego/",
+   "hash": "f4b23aed",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f4b23aed",
+     "file": "italy/campodarsego-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "375027c9",
+    "file": "italy/campodarsego.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.223344+00:00"
+  },
+  "italy/cannara": {
+   "name": "ASD Cannara Logo",
+   "country": "italy",
+   "slug": "cannara",
+   "page_url": "https://football-logos.cc/italy/cannara/",
+   "hash": "32abd017",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "32abd017",
+     "file": "italy/cannara-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "0c9a8bcf",
+    "file": "italy/cannara.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.310996+00:00"
+  },
+  "italy/carpi": {
+   "name": "AC Carpi Logo",
+   "country": "italy",
+   "slug": "carpi",
+   "page_url": "https://football-logos.cc/italy/carpi/",
+   "hash": "7cc30e7f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7cc30e7f",
+     "file": "italy/carpi-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "9210e575",
+    "file": "italy/carpi.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.396370+00:00"
+  },
+  "italy/carrarese": {
+   "name": "Carrarese Calcio Logo",
+   "country": "italy",
+   "slug": "carrarese",
+   "page_url": "https://football-logos.cc/italy/carrarese/",
+   "hash": "2ff21bf0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2ff21bf0",
+     "file": "italy/carrarese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "207acee6",
+    "file": "italy/carrarese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.327824+00:00"
+  },
+  "italy/casarano": {
+   "name": "Casarano Logo",
+   "country": "italy",
+   "slug": "casarano",
+   "page_url": "https://football-logos.cc/italy/casarano/",
+   "hash": "2447c450",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2447c450",
+     "file": "italy/casarano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "3afdb1c3",
+    "file": "italy/casarano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.319539+00:00"
+  },
+  "italy/casatese-merate": {
+   "name": "USD Casatese Merate Logo",
+   "country": "italy",
+   "slug": "casatese-merate",
+   "page_url": "https://football-logos.cc/italy/casatese-merate/",
+   "hash": "3c144178",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3c144178",
+     "file": "italy/casatese-merate-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "9b87f6dc",
+    "file": "italy/casatese-merate.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:16.585774+00:00"
+  },
+  "italy/casertana": {
+   "name": "Casertana Logo",
+   "country": "italy",
+   "slug": "casertana",
+   "page_url": "https://football-logos.cc/italy/casertana/",
+   "hash": "9dc01802",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9dc01802",
+     "file": "italy/casertana-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "4751bee3",
+    "file": "italy/casertana.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.242342+00:00"
+  },
+  "italy/cassino-calcio-1924": {
+   "name": "Cassino Calcio 1924 Logo",
+   "country": "italy",
+   "slug": "cassino-calcio-1924",
+   "page_url": "https://football-logos.cc/italy/cassino-calcio-1924/",
+   "hash": "e236be6d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e236be6d",
+     "file": "italy/cassino-calcio-1924-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "1163a12a",
+    "file": "italy/cassino-calcio-1924.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.317194+00:00"
+  },
+  "italy/castelfidardo-calcio": {
+   "name": "Castelfidardo Calcio Logo",
+   "country": "italy",
+   "slug": "castelfidardo-calcio",
+   "page_url": "https://football-logos.cc/italy/castelfidardo-calcio/",
+   "hash": "3046fdb8",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3046fdb8",
+     "file": "italy/castelfidardo-calcio-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c070ae0b",
+    "file": "italy/castelfidardo-calcio.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.282612+00:00"
+  },
+  "italy/castellanzese": {
+   "name": "USD Castellanzese 1921 Logo",
+   "country": "italy",
+   "slug": "castellanzese",
+   "page_url": "https://football-logos.cc/italy/castellanzese/",
+   "hash": "775ced14",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "775ced14",
+     "file": "italy/castellanzese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c083f314",
+    "file": "italy/castellanzese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.306721+00:00"
+  },
+  "italy/castrum-favara": {
+   "name": "Castrum Favara Logo",
+   "country": "italy",
+   "slug": "castrum-favara",
+   "page_url": "https://football-logos.cc/italy/castrum-favara/",
+   "hash": "b8644aff",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b8644aff",
+     "file": "italy/castrum-favara-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "9fe9c147",
+    "file": "italy/castrum-favara.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.370902+00:00"
+  },
+  "italy/catania": {
+   "name": "Catania Logo",
+   "country": "italy",
+   "slug": "catania",
+   "page_url": "https://football-logos.cc/italy/catania/",
+   "hash": "f24f1987",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f24f1987",
+     "file": "italy/catania-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "d99e483f",
+    "file": "italy/catania.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.330118+00:00"
+  },
+  "italy/catanzaro": {
+   "name": "Catanzaro Logo",
+   "country": "italy",
+   "slug": "catanzaro",
+   "page_url": "https://football-logos.cc/italy/catanzaro/",
+   "hash": "9c9a9d57",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9c9a9d57",
+     "file": "italy/catanzaro-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "f083d11e",
+    "file": "italy/catanzaro.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.382687+00:00"
+  },
+  "italy/cavese": {
+   "name": "Cavese Logo",
+   "country": "italy",
+   "slug": "cavese",
+   "page_url": "https://football-logos.cc/italy/cavese/",
+   "hash": "478f1fe4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "478f1fe4",
+     "file": "italy/cavese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "bf972a99",
+    "file": "italy/cavese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:17.990379+00:00"
+  },
+  "italy/celle-varazze": {
+   "name": "Celle Varazze Logo",
+   "country": "italy",
+   "slug": "celle-varazze",
+   "page_url": "https://football-logos.cc/italy/celle-varazze/",
+   "hash": "d2d63fe9",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d2d63fe9",
+     "file": "italy/celle-varazze-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "5a333917",
+    "file": "italy/celle-varazze.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.261798+00:00"
+  },
+  "italy/cesena": {
+   "name": "Cesena FC Logo",
+   "country": "italy",
+   "slug": "cesena",
+   "page_url": "https://football-logos.cc/italy/cesena/",
+   "hash": "117c648d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "117c648d",
+     "file": "italy/cesena-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "f46c9bc1",
+    "file": "italy/cesena.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.179705+00:00"
+  },
+  "italy/chieti-fc-1922": {
+   "name": "Chieti FC 1922 Logo",
+   "country": "italy",
+   "slug": "chieti-fc-1922",
+   "page_url": "https://football-logos.cc/italy/chieti-fc-1922/",
+   "hash": "2d98ef73",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2d98ef73",
+     "file": "italy/chieti-fc-1922-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "29fabd8a",
+    "file": "italy/chieti-fc-1922.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.259202+00:00"
+  },
+  "italy/chievo": {
+   "name": "AC ChievoVerona Logo",
+   "country": "italy",
+   "slug": "chievo",
+   "page_url": "https://football-logos.cc/italy/chievo/",
+   "hash": "b82cdebd",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b82cdebd",
+     "file": "italy/chievo-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "876b12df",
+    "file": "italy/chievo.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.256074+00:00"
+  },
+  "italy/chisola": {
+   "name": "Chisola Logo",
+   "country": "italy",
+   "slug": "chisola",
+   "page_url": "https://football-logos.cc/italy/chisola/",
+   "hash": "7c2cdf16",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7c2cdf16",
+     "file": "italy/chisola-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "f35cc224",
+    "file": "italy/chisola.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.352258+00:00"
+  },
+  "italy/citta-di-fasano": {
+   "name": "Città di Fasano Logo",
+   "country": "italy",
+   "slug": "citta-di-fasano",
+   "page_url": "https://football-logos.cc/italy/citta-di-fasano/",
+   "hash": "0bc5eb9a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0bc5eb9a",
+     "file": "italy/citta-di-fasano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "24b0f23f",
+    "file": "italy/citta-di-fasano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.070508+00:00"
+  },
+  "italy/cittadella": {
+   "name": "Cittadella Logo",
+   "country": "italy",
+   "slug": "cittadella",
+   "page_url": "https://football-logos.cc/italy/cittadella/",
+   "hash": "3a30ac5f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3a30ac5f",
+     "file": "italy/cittadella-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "893e7463",
+    "file": "italy/cittadella.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.611791+00:00"
+  },
+  "italy/cittadella-vis-modena": {
+   "name": "Cittadella Vis Modena Logo",
+   "country": "italy",
+   "slug": "cittadella-vis-modena",
+   "page_url": "https://football-logos.cc/italy/cittadella-vis-modena/",
+   "hash": "322e8b48",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "322e8b48",
+     "file": "italy/cittadella-vis-modena-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "febc1c98",
+    "file": "italy/cittadella-vis-modena.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:18.993990+00:00"
+  },
+  "italy/cjarlins-muzane": {
+   "name": "ASD Cjarlins Muzane Logo",
+   "country": "italy",
+   "slug": "cjarlins-muzane",
+   "page_url": "https://football-logos.cc/italy/cjarlins-muzane/",
+   "hash": "5d6446d6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5d6446d6",
+     "file": "italy/cjarlins-muzane-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "0c60af26",
+    "file": "italy/cjarlins-muzane.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.186060+00:00"
+  },
+  "italy/club-milano": {
+   "name": "Club Milano Logo",
+   "country": "italy",
+   "slug": "club-milano",
+   "page_url": "https://football-logos.cc/italy/club-milano/",
+   "hash": "baa35d73",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "baa35d73",
+     "file": "italy/club-milano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "6697a165",
+    "file": "italy/club-milano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.140927+00:00"
+  },
+  "italy/como-1907": {
+   "name": "Como 1907 Logo",
+   "country": "italy",
+   "slug": "como-1907",
+   "page_url": "https://football-logos.cc/italy/como-1907/",
+   "hash": "9113270a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9113270a",
+     "file": "italy/como-1907-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "268bc823",
+    "file": "italy/como-1907.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.060604+00:00"
+  },
+  "italy/conegliano": {
+   "name": "FCD Conegliano 1907 Logo",
+   "country": "italy",
+   "slug": "conegliano",
+   "page_url": "https://football-logos.cc/italy/conegliano/",
+   "hash": "0a4ea463",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0a4ea463",
+     "file": "italy/conegliano-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "452fb161",
+    "file": "italy/conegliano.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:20.279970+00:00"
+  },
+  "italy/coppa-italia": {
+   "name": "Coppa Italia Logo",
+   "country": "italy",
+   "slug": "coppa-italia",
+   "page_url": "https://football-logos.cc/italy/coppa-italia/",
+   "hash": "a62c208e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a62c208e",
+     "file": "italy/coppa-italia-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ee9bcd50",
+    "file": "italy/coppa-italia.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.380276+00:00"
+  },
+  "italy/correggese": {
+   "name": "Correggese Calcio 1948 Logo",
+   "country": "italy",
+   "slug": "correggese",
+   "page_url": "https://football-logos.cc/italy/correggese/",
+   "hash": "f422afa1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f422afa1",
+     "file": "italy/correggese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "3b8fa529",
+    "file": "italy/correggese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.533244+00:00"
+  },
+  "italy/cos-sarrabus-ogliastra": {
+   "name": "COS Sarrabus Ogliastra Logo",
+   "country": "italy",
+   "slug": "cos-sarrabus-ogliastra",
+   "page_url": "https://football-logos.cc/italy/cos-sarrabus-ogliastra/",
+   "hash": "a0bfac81",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a0bfac81",
+     "file": "italy/cos-sarrabus-ogliastra-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "fbc26b62",
+    "file": "italy/cos-sarrabus-ogliastra.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:19.953334+00:00"
+  },
+  "italy/cosenza": {
+   "name": "Cosenza Logo",
+   "country": "italy",
+   "slug": "cosenza",
+   "page_url": "https://football-logos.cc/italy/cosenza/",
+   "hash": "4a7360bd",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4a7360bd",
+     "file": "italy/cosenza-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:22.751551+00:00"
+  },
+  "italy/crema": {
+   "name": "AC Crema 1908 Logo",
+   "country": "italy",
+   "slug": "crema",
+   "page_url": "https://football-logos.cc/italy/crema/",
+   "hash": "733d86dc",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "733d86dc",
+     "file": "italy/crema-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "a8a631a3",
+    "file": "italy/crema.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:20.026698+00:00"
+  },
+  "italy/cremonese": {
+   "name": "Cremonese Logo",
+   "country": "italy",
+   "slug": "cremonese",
+   "page_url": "https://football-logos.cc/italy/cremonese/",
+   "hash": "d1134526",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d1134526",
+     "file": "italy/cremonese-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "ac3a7f1e",
+    "file": "italy/cremonese.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:20.029968+00:00"
+  },
+  "italy/crotone": {
+   "name": "Crotone Logo",
+   "country": "italy",
+   "slug": "crotone",
+   "page_url": "https://football-logos.cc/italy/crotone/",
+   "hash": "67ee1d92",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "67ee1d92",
+     "file": "italy/crotone-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "509b9177",
+    "file": "italy/crotone.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:21.232119+00:00"
+  },
+  "italy/cynthialbalonga": {
+   "name": "Cynthialbalonga Calcio Logo",
+   "country": "italy",
+   "slug": "cynthialbalonga",
+   "page_url": "https://football-logos.cc/italy/cynthialbalonga/",
+   "hash": "72e7ad4c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "72e7ad4c",
+     "file": "italy/cynthialbalonga-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "d601732b",
+    "file": "italy/cynthialbalonga.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:20.421243+00:00"
+  },
+  "italy/derthona": {
+   "name": "Derthona Logo",
+   "country": "italy",
+   "slug": "derthona",
+   "page_url": "https://football-logos.cc/italy/derthona/",
+   "hash": "79eec39a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "79eec39a",
+     "file": "italy/derthona-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "39bcde29",
+    "file": "italy/derthona.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:21.654668+00:00"
+  },
+  "italy/desenzano": {
+   "name": "Calcio Desenzano Logo",
+   "country": "italy",
+   "slug": "desenzano",
+   "page_url": "https://football-logos.cc/italy/desenzano/",
+   "hash": "17228cad",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "17228cad",
+     "file": "italy/desenzano-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:23.542234+00:00"
+  },
+  "italy/dolomiti-bellunesi": {
+   "name": "Dolomiti Bellunesi Logo",
+   "country": "italy",
+   "slug": "dolomiti-bellunesi",
+   "page_url": "https://football-logos.cc/italy/dolomiti-bellunesi/",
+   "hash": "7e511823",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7e511823",
+     "file": "italy/dolomiti-bellunesi-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "1b4267e8",
+    "file": "italy/dolomiti-bellunesi.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:20.876980+00:00"
+  },
+  "italy/empoli": {
+   "name": "Empoli Logo",
+   "country": "italy",
+   "slug": "empoli",
+   "page_url": "https://football-logos.cc/italy/empoli/",
+   "hash": "46305e41",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "46305e41",
+     "file": "italy/empoli-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:23.694389+00:00"
+  },
+  "italy/enna-calcio": {
+   "name": "Enna Calcio Logo",
+   "country": "italy",
+   "slug": "enna-calcio",
+   "page_url": "https://football-logos.cc/italy/enna-calcio/",
+   "hash": "95fb74b1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "95fb74b1",
+     "file": "italy/enna-calcio-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c45b482d",
+    "file": "italy/enna-calcio.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:21.543973+00:00"
+  },
+  "italy/este": {
+   "name": "AC Este Logo",
+   "country": "italy",
+   "slug": "este",
+   "page_url": "https://football-logos.cc/italy/este/",
+   "hash": "145f1af3",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "145f1af3",
+     "file": "italy/este-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:24.082105+00:00"
+  },
+  "italy/fbc-gravina": {
+   "name": "FBC Gravina Logo",
+   "country": "italy",
+   "slug": "fbc-gravina",
+   "page_url": "https://football-logos.cc/italy/fbc-gravina/",
+   "hash": "dddad6a6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dddad6a6",
+     "file": "italy/fbc-gravina-700.png"
+    }
+   },
+   "svg_file": {
+    "hash": "c5250c80",
+    "file": "italy/fbc-gravina.svg"
+   },
+   "fetched_at": "2026-09-19T21:19:22.062803+00:00"
+  },
+  "italy/fc-francavilla": {
+   "name": "FC Francavilla Logo",
+   "country": "italy",
+   "slug": "fc-francavilla",
+   "page_url": "https://football-logos.cc/italy/fc-francavilla/",
+   "hash": "4a75fa61",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4a75fa61",
+     "file": "italy/fc-francavilla-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:24.798000+00:00"
+  },
+  "italy/fc-obermais": {
+   "name": "FC Obermais Logo",
+   "country": "italy",
+   "slug": "fc-obermais",
+   "page_url": "https://football-logos.cc/italy/fc-obermais/",
+   "hash": "fc73501b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "fc73501b",
+     "file": "italy/fc-obermais-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:25.167173+00:00"
+  },
+  "italy/fc-pompei": {
+   "name": "FC Pompei Logo",
+   "country": "italy",
+   "slug": "fc-pompei",
+   "page_url": "https://football-logos.cc/italy/fc-pompei/",
+   "hash": "ad1d571e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ad1d571e",
+     "file": "italy/fc-pompei-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:25.387032+00:00"
+  },
+  "italy/feralpisalo": {
+   "name": "Feralpisalò Logo",
+   "country": "italy",
+   "slug": "feralpisalo",
+   "page_url": "https://football-logos.cc/italy/feralpisalo/",
+   "hash": "c5159b11",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c5159b11",
+     "file": "italy/feralpisalo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:25.744316+00:00"
+  },
+  "italy/ferrandina-17890": {
+   "name": "Asd Ferrandina 17890 Logo",
+   "country": "italy",
+   "slug": "ferrandina-17890",
+   "page_url": "https://football-logos.cc/italy/ferrandina-17890/",
+   "hash": "09748b2f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "09748b2f",
+     "file": "italy/ferrandina-17890-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:26.349328+00:00"
+  },
+  "italy/fidelis-andria": {
+   "name": "Fidelis Andria Logo",
+   "country": "italy",
+   "slug": "fidelis-andria",
+   "page_url": "https://football-logos.cc/italy/fidelis-andria/",
+   "hash": "3f454101",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3f454101",
+     "file": "italy/fidelis-andria-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:27.233207+00:00"
+  },
+  "italy/fiorentina": {
+   "name": "Fiorentina Logo",
+   "country": "italy",
+   "slug": "fiorentina",
+   "page_url": "https://football-logos.cc/italy/fiorentina/",
+   "hash": "a4632b82",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a4632b82",
+     "file": "italy/fiorentina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:27.100755+00:00"
+  },
+  "italy/flaminia-civita-castellana": {
+   "name": "Flaminia Civita Castellana Logo",
+   "country": "italy",
+   "slug": "flaminia-civita-castellana",
+   "page_url": "https://football-logos.cc/italy/flaminia-civita-castellana/",
+   "hash": "a3c8a45e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a3c8a45e",
+     "file": "italy/flaminia-civita-castellana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:28.047135+00:00"
+  },
+  "italy/foggia": {
+   "name": "Foggia Logo",
+   "country": "italy",
+   "slug": "foggia",
+   "page_url": "https://football-logos.cc/italy/foggia/",
+   "hash": "5b4f6113",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5b4f6113",
+     "file": "italy/foggia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:28.415588+00:00"
+  },
+  "italy/folgore-caratese": {
+   "name": "Folgore Caratese Logo",
+   "country": "italy",
+   "slug": "folgore-caratese",
+   "page_url": "https://football-logos.cc/italy/folgore-caratese/",
+   "hash": "2acd0966",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2acd0966",
+     "file": "italy/folgore-caratese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:28.786583+00:00"
+  },
+  "italy/foligno": {
+   "name": "Foligno Calcio 1928 Logo",
+   "country": "italy",
+   "slug": "foligno",
+   "page_url": "https://football-logos.cc/italy/foligno/",
+   "hash": "b9f4d57b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b9f4d57b",
+     "file": "italy/foligno-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:29.015168+00:00"
+  },
+  "italy/follonica-gavorrano": {
+   "name": "US Follonica Gavorrano Logo",
+   "country": "italy",
+   "slug": "follonica-gavorrano",
+   "page_url": "https://football-logos.cc/italy/follonica-gavorrano/",
+   "hash": "4d85299e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4d85299e",
+     "file": "italy/follonica-gavorrano-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:29.360679+00:00"
+  },
+  "italy/forli-fc": {
+   "name": "Forlì FC Logo",
+   "country": "italy",
+   "slug": "forli-fc",
+   "page_url": "https://football-logos.cc/italy/forli-fc/",
+   "hash": "3f9becb5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3f9becb5",
+     "file": "italy/forli-fc-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:30.121607+00:00"
+  },
+  "italy/fossombrone-calcio": {
+   "name": "Fossombrone Calcio Logo",
+   "country": "italy",
+   "slug": "fossombrone-calcio",
+   "page_url": "https://football-logos.cc/italy/fossombrone-calcio/",
+   "hash": "ba4aa07d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ba4aa07d",
+     "file": "italy/fossombrone-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:30.767098+00:00"
+  },
+  "italy/frosinone": {
+   "name": "Frosinone Calcio Logo",
+   "country": "italy",
+   "slug": "frosinone",
+   "page_url": "https://football-logos.cc/italy/frosinone/",
+   "hash": "c62d1243",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c62d1243",
+     "file": "italy/frosinone-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:30.829030+00:00"
+  },
+  "italy/gela-calcio": {
+   "name": "Gela Calcio Logo",
+   "country": "italy",
+   "slug": "gela-calcio",
+   "page_url": "https://football-logos.cc/italy/gela-calcio/",
+   "hash": "46be0927",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "46be0927",
+     "file": "italy/gela-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:31.723319+00:00"
+  },
+  "italy/gelbison-cilento": {
+   "name": "Gelbison Cilento Logo",
+   "country": "italy",
+   "slug": "gelbison-cilento",
+   "page_url": "https://football-logos.cc/italy/gelbison-cilento/",
+   "hash": "2b569b78",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2b569b78",
+     "file": "italy/gelbison-cilento-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:32.039389+00:00"
+  },
+  "italy/genoa": {
+   "name": "Genoa Logo",
+   "country": "italy",
+   "slug": "genoa",
+   "page_url": "https://football-logos.cc/italy/genoa/",
+   "hash": "e9e4cc28",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e9e4cc28",
+     "file": "italy/genoa-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:32.374545+00:00"
+  },
+  "italy/ghiviborgo": {
+   "name": "Ghiviborgo Logo",
+   "country": "italy",
+   "slug": "ghiviborgo",
+   "page_url": "https://football-logos.cc/italy/ghiviborgo/",
+   "hash": "9ba21912",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9ba21912",
+     "file": "italy/ghiviborgo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:32.690653+00:00"
+  },
+  "italy/giana-erminio": {
+   "name": "Giana Erminio Logo",
+   "country": "italy",
+   "slug": "giana-erminio",
+   "page_url": "https://football-logos.cc/italy/giana-erminio/",
+   "hash": "58797bbe",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "58797bbe",
+     "file": "italy/giana-erminio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:32.926796+00:00"
+  },
+  "italy/giugliano": {
+   "name": "Giugliano Logo",
+   "country": "italy",
+   "slug": "giugliano",
+   "page_url": "https://football-logos.cc/italy/giugliano/",
+   "hash": "434a67f4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "434a67f4",
+     "file": "italy/giugliano-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:33.766990+00:00"
+  },
+  "italy/giulianova-calcio-1924": {
+   "name": "Giulianova Calcio 1924 Logo",
+   "country": "italy",
+   "slug": "giulianova-calcio-1924",
+   "page_url": "https://football-logos.cc/italy/giulianova-calcio-1924/",
+   "hash": "bef60f9d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "bef60f9d",
+     "file": "italy/giulianova-calcio-1924-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:34.342969+00:00"
+  },
+  "italy/gozzano": {
+   "name": "Gozzano Logo",
+   "country": "italy",
+   "slug": "gozzano",
+   "page_url": "https://football-logos.cc/italy/gozzano/",
+   "hash": "c8928037",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c8928037",
+     "file": "italy/gozzano-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:34.426728+00:00"
+  },
+  "italy/grosseto": {
+   "name": "US Grosseto 1912 Logo",
+   "country": "italy",
+   "slug": "grosseto",
+   "page_url": "https://football-logos.cc/italy/grosseto/",
+   "hash": "3b53fb51",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3b53fb51",
+     "file": "italy/grosseto-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:35.445652+00:00"
+  },
+  "italy/gubbio": {
+   "name": "Gubbio Logo",
+   "country": "italy",
+   "slug": "gubbio",
+   "page_url": "https://football-logos.cc/italy/gubbio/",
+   "hash": "93abdf45",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "93abdf45",
+     "file": "italy/gubbio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:35.620655+00:00"
+  },
+  "italy/guidonia-montecelio": {
+   "name": "Guidonia Montecelio Logo",
+   "country": "italy",
+   "slug": "guidonia-montecelio",
+   "page_url": "https://football-logos.cc/italy/guidonia-montecelio/",
+   "hash": "e1764e20",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e1764e20",
+     "file": "italy/guidonia-montecelio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:36.096004+00:00"
+  },
+  "italy/heraclea-calcio": {
+   "name": "Heraclea Calcio Logo",
+   "country": "italy",
+   "slug": "heraclea-calcio",
+   "page_url": "https://football-logos.cc/italy/heraclea-calcio/",
+   "hash": "ae5e9bf9",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ae5e9bf9",
+     "file": "italy/heraclea-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:36.281274+00:00"
+  },
+  "italy/igea-virtus-barcellona": {
+   "name": "Igea Virtus Barcellona Logo",
+   "country": "italy",
+   "slug": "igea-virtus-barcellona",
+   "page_url": "https://football-logos.cc/italy/igea-virtus-barcellona/",
+   "hash": "6e860503",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "6e860503",
+     "file": "italy/igea-virtus-barcellona-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:36.590966+00:00"
+  },
+  "italy/imolese": {
+   "name": "Imolese Calcio 1919 Logo",
+   "country": "italy",
+   "slug": "imolese",
+   "page_url": "https://football-logos.cc/italy/imolese/",
+   "hash": "c77d79e4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c77d79e4",
+     "file": "italy/imolese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:37.422357+00:00"
+  },
+  "italy/imperia": {
+   "name": "Imperia Logo",
+   "country": "italy",
+   "slug": "imperia",
+   "page_url": "https://football-logos.cc/italy/imperia/",
+   "hash": "fab58087",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "fab58087",
+     "file": "italy/imperia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:37.921300+00:00"
+  },
+  "italy/inter": {
+   "name": "Inter Logo",
+   "country": "italy",
+   "slug": "inter",
+   "page_url": "https://football-logos.cc/italy/inter/",
+   "hash": "305ef900",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "305ef900",
+     "file": "italy/inter-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:38.022276+00:00"
+  },
+  "italy/ischia-calcio": {
+   "name": "Ischia Calcio Logo",
+   "country": "italy",
+   "slug": "ischia-calcio",
+   "page_url": "https://football-logos.cc/italy/ischia-calcio/",
+   "hash": "fdd14174",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "fdd14174",
+     "file": "italy/ischia-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:39.227431+00:00"
+  },
+  "italy/italian-super-cup": {
+   "name": "Italian Super Cup Logo",
+   "country": "italy",
+   "slug": "italian-super-cup",
+   "page_url": "https://football-logos.cc/italy/italian-super-cup/",
+   "hash": "4364d07a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4364d07a",
+     "file": "italy/italian-super-cup-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:39.136980+00:00"
+  },
+  "italy/italy-national-team": {
+   "name": "Italy National Team Logo",
+   "country": "italy",
+   "slug": "italy-national-team",
+   "page_url": "https://football-logos.cc/italy/italy-national-team/",
+   "hash": "b7765860",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b7765860",
+     "file": "italy/italy-national-team-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:39.702444+00:00"
+  },
+  "italy/juve-stabia": {
+   "name": "Juve Stabia Logo",
+   "country": "italy",
+   "slug": "juve-stabia",
+   "page_url": "https://football-logos.cc/italy/juve-stabia/",
+   "hash": "f1e3d87d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f1e3d87d",
+     "file": "italy/juve-stabia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:39.891719+00:00"
+  },
+  "italy/juventus": {
+   "name": "Juventus Logo",
+   "country": "italy",
+   "slug": "juventus",
+   "page_url": "https://football-logos.cc/italy/juventus/",
+   "hash": "35f443cb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "35f443cb",
+     "file": "italy/juventus-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:40.044925+00:00"
+  },
+  "italy/juventus--white": {
+   "name": "Juventus White Logo",
+   "country": "italy",
+   "slug": "juventus--white",
+   "page_url": "https://football-logos.cc/italy/juventus/white/",
+   "hash": "ddcefc5a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ddcefc5a",
+     "file": "italy/juventus--white-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:41.218103+00:00"
+  },
+  "italy/juventus-next-gen": {
+   "name": "Juventus Next Gen Logo",
+   "country": "italy",
+   "slug": "juventus-next-gen",
+   "page_url": "https://football-logos.cc/italy/juventus-next-gen/",
+   "hash": "36c2e9c8",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "36c2e9c8",
+     "file": "italy/juventus-next-gen-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:41.561657+00:00"
+  },
+  "italy/laquila-1927": {
+   "name": "L'Aquila 1927 Logo",
+   "country": "italy",
+   "slug": "laquila-1927",
+   "page_url": "https://football-logos.cc/italy/laquila-1927/",
+   "hash": "daa90711",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "daa90711",
+     "file": "italy/laquila-1927-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:41.616460+00:00"
+  },
+  "italy/latina": {
+   "name": "Latina Calcio 1932 Logo",
+   "country": "italy",
+   "slug": "latina",
+   "page_url": "https://football-logos.cc/italy/latina/",
+   "hash": "34437fdb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "34437fdb",
+     "file": "italy/latina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:42.705131+00:00"
+  },
+  "italy/lavagnese": {
+   "name": "Lavagnese Logo",
+   "country": "italy",
+   "slug": "lavagnese",
+   "page_url": "https://football-logos.cc/italy/lavagnese/",
+   "hash": "2e3c2855",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2e3c2855",
+     "file": "italy/lavagnese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:42.866263+00:00"
+  },
+  "italy/lazio": {
+   "name": "Lazio Logo",
+   "country": "italy",
+   "slug": "lazio",
+   "page_url": "https://football-logos.cc/italy/lazio/",
+   "hash": "0926bd10",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0926bd10",
+     "file": "italy/lazio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:43.271703+00:00"
+  },
+  "italy/lecce": {
+   "name": "Lecce Logo",
+   "country": "italy",
+   "slug": "lecce",
+   "page_url": "https://football-logos.cc/italy/lecce/",
+   "hash": "fa3a5ff0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "fa3a5ff0",
+     "file": "italy/lecce-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:43.613505+00:00"
+  },
+  "italy/lecco": {
+   "name": "Lecco Logo",
+   "country": "italy",
+   "slug": "lecco",
+   "page_url": "https://football-logos.cc/italy/lecco/",
+   "hash": "4db3c0de",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4db3c0de",
+     "file": "italy/lecco-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:43.693987+00:00"
+  },
+  "italy/legnago-salus": {
+   "name": "FC Legnago Salus Logo",
+   "country": "italy",
+   "slug": "legnago-salus",
+   "page_url": "https://football-logos.cc/italy/legnago-salus/",
+   "hash": "86229f11",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "86229f11",
+     "file": "italy/legnago-salus-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:44.867600+00:00"
+  },
+  "italy/lentigione": {
+   "name": "Lentigione Calcio Logo",
+   "country": "italy",
+   "slug": "lentigione",
+   "page_url": "https://football-logos.cc/italy/lentigione/",
+   "hash": "bcd18285",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "bcd18285",
+     "file": "italy/lentigione-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:45.187680+00:00"
+  },
+  "italy/ligorna": {
+   "name": "Ligorna Logo",
+   "country": "italy",
+   "slug": "ligorna",
+   "page_url": "https://football-logos.cc/italy/ligorna/",
+   "hash": "a75be0cb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a75be0cb",
+     "file": "italy/ligorna-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:45.239060+00:00"
+  },
+  "italy/livorno": {
+   "name": "Livorno Logo",
+   "country": "italy",
+   "slug": "livorno",
+   "page_url": "https://football-logos.cc/italy/livorno/",
+   "hash": "e0f00eec",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e0f00eec",
+     "file": "italy/livorno-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:46.386742+00:00"
+  },
+  "italy/lucchese-1905": {
+   "name": "Lucchese 1905 Logo",
+   "country": "italy",
+   "slug": "lucchese-1905",
+   "page_url": "https://football-logos.cc/italy/lucchese-1905/",
+   "hash": "b2b69aa4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b2b69aa4",
+     "file": "italy/lucchese-1905-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:46.524650+00:00"
+  },
+  "italy/lumezzane": {
+   "name": "Lumezzane Logo",
+   "country": "italy",
+   "slug": "lumezzane",
+   "page_url": "https://football-logos.cc/italy/lumezzane/",
+   "hash": "4fb0e39e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "4fb0e39e",
+     "file": "italy/lumezzane-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:46.893350+00:00"
+  },
+  "italy/luparense": {
+   "name": "Luparense FC Logo",
+   "country": "italy",
+   "slug": "luparense",
+   "page_url": "https://football-logos.cc/italy/luparense/",
+   "hash": "1b4f4770",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "1b4f4770",
+     "file": "italy/luparense-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:47.236866+00:00"
+  },
+  "italy/maceratese-1922": {
+   "name": "Maceratese 1922 Logo",
+   "country": "italy",
+   "slug": "maceratese-1922",
+   "page_url": "https://football-logos.cc/italy/maceratese-1922/",
+   "hash": "0542e90a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0542e90a",
+     "file": "italy/maceratese-1922-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:47.365972+00:00"
+  },
+  "italy/manfredonia-calcio": {
+   "name": "Manfredonia Calcio Logo",
+   "country": "italy",
+   "slug": "manfredonia-calcio",
+   "page_url": "https://football-logos.cc/italy/manfredonia-calcio/",
+   "hash": "9bb5d933",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9bb5d933",
+     "file": "italy/manfredonia-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:48.430997+00:00"
+  },
+  "italy/mantova-1911": {
+   "name": "Mantova 1911 Logo",
+   "country": "italy",
+   "slug": "mantova-1911",
+   "page_url": "https://football-logos.cc/italy/mantova-1911/",
+   "hash": "334841e8",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "334841e8",
+     "file": "italy/mantova-1911-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:48.802723+00:00"
+  },
+  "italy/martina-calcio-1947": {
+   "name": "Martina Calcio 1947 Logo",
+   "country": "italy",
+   "slug": "martina-calcio-1947",
+   "page_url": "https://football-logos.cc/italy/martina-calcio-1947/",
+   "hash": "8a13f78a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8a13f78a",
+     "file": "italy/martina-calcio-1947-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:48.824817+00:00"
+  },
+  "italy/mestre": {
+   "name": "AC Mestre Logo",
+   "country": "italy",
+   "slug": "mestre",
+   "page_url": "https://football-logos.cc/italy/mestre/",
+   "hash": "16392550",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "16392550",
+     "file": "italy/mestre-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:50.014858+00:00"
+  },
+  "italy/milan": {
+   "name": "Milan Logo",
+   "country": "italy",
+   "slug": "milan",
+   "page_url": "https://football-logos.cc/italy/milan/",
+   "hash": "23ad6174",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "23ad6174",
+     "file": "italy/milan-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:50.083313+00:00"
+  },
+  "italy/milazzo": {
+   "name": "SS Milazzo Logo",
+   "country": "italy",
+   "slug": "milazzo",
+   "page_url": "https://football-logos.cc/italy/milazzo/",
+   "hash": "7a0a387f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7a0a387f",
+     "file": "italy/milazzo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:50.655325+00:00"
+  },
+  "italy/modena": {
+   "name": "Modena Logo",
+   "country": "italy",
+   "slug": "modena",
+   "page_url": "https://football-logos.cc/italy/modena/",
+   "hash": "be3ead74",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "be3ead74",
+     "file": "italy/modena-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:50.882527+00:00"
+  },
+  "italy/monastir-1983": {
+   "name": "ASD Monastir 1983 Logo",
+   "country": "italy",
+   "slug": "monastir-1983",
+   "page_url": "https://football-logos.cc/italy/monastir-1983/",
+   "hash": "d5098f95",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d5098f95",
+     "file": "italy/monastir-1983-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:51.078767+00:00"
+  },
+  "italy/monopoli": {
+   "name": "Monopoli Logo",
+   "country": "italy",
+   "slug": "monopoli",
+   "page_url": "https://football-logos.cc/italy/monopoli/",
+   "hash": "b1cef692",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b1cef692",
+     "file": "italy/monopoli-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:51.992279+00:00"
+  },
+  "italy/montespaccato-calcio": {
+   "name": "Montespaccato Calcio Logo",
+   "country": "italy",
+   "slug": "montespaccato-calcio",
+   "page_url": "https://football-logos.cc/italy/montespaccato-calcio/",
+   "hash": "a34ea874",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a34ea874",
+     "file": "italy/montespaccato-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:52.479897+00:00"
+  },
+  "italy/monza": {
+   "name": "AC Monza Logo",
+   "country": "italy",
+   "slug": "monza",
+   "page_url": "https://football-logos.cc/italy/monza/",
+   "hash": "6ecda2cb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "6ecda2cb",
+     "file": "italy/monza-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:52.486008+00:00"
+  },
+  "italy/napoli": {
+   "name": "Napoli Logo",
+   "country": "italy",
+   "slug": "napoli",
+   "page_url": "https://football-logos.cc/italy/napoli/",
+   "hash": "8b5410b2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8b5410b2",
+     "file": "italy/napoli-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:53.492944+00:00"
+  },
+  "italy/nardo": {
+   "name": "AC Nardò Logo",
+   "country": "italy",
+   "slug": "nardo",
+   "page_url": "https://football-logos.cc/italy/nardo/",
+   "hash": "76645a27",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "76645a27",
+     "file": "italy/nardo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:54.180192+00:00"
+  },
+  "italy/nissa-fc": {
+   "name": "Nissa FC Logo",
+   "country": "italy",
+   "slug": "nissa-fc",
+   "page_url": "https://football-logos.cc/italy/nissa-fc/",
+   "hash": "95eaf83c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "95eaf83c",
+     "file": "italy/nissa-fc-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:54.304097+00:00"
+  },
+  "italy/nocerina-1910": {
+   "name": "Nocerina 1910 Logo",
+   "country": "italy",
+   "slug": "nocerina-1910",
+   "page_url": "https://football-logos.cc/italy/nocerina-1910/",
+   "hash": "f469f9b7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f469f9b7",
+     "file": "italy/nocerina-1910-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:54.518597+00:00"
+  },
+  "italy/nola-1925": {
+   "name": "Nola 1925 Logo",
+   "country": "italy",
+   "slug": "nola-1925",
+   "page_url": "https://football-logos.cc/italy/nola-1925/",
+   "hash": "68e78c41",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "68e78c41",
+     "file": "italy/nola-1925-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:54.805370+00:00"
+  },
+  "italy/notaresco-calcio-1924": {
+   "name": "Notaresco Calcio 1924 Logo",
+   "country": "italy",
+   "slug": "notaresco-calcio-1924",
+   "page_url": "https://football-logos.cc/italy/notaresco-calcio-1924/",
+   "hash": "dc1dbb44",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dc1dbb44",
+     "file": "italy/notaresco-calcio-1924-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:55.627421+00:00"
+  },
+  "italy/novara": {
+   "name": "Novara Logo",
+   "country": "italy",
+   "slug": "novara",
+   "page_url": "https://football-logos.cc/italy/novara/",
+   "hash": "31766eea",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "31766eea",
+     "file": "italy/novara-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:56.098251+00:00"
+  },
+  "italy/novaromentin": {
+   "name": "NovaRomentin Logo",
+   "country": "italy",
+   "slug": "novaromentin",
+   "page_url": "https://football-logos.cc/italy/novaromentin/",
+   "hash": "f3b2acd5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f3b2acd5",
+     "file": "italy/novaromentin-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:56.030870+00:00"
+  },
+  "italy/olbia-calcio-1905": {
+   "name": "Olbia Calcio 1905 Logo",
+   "country": "italy",
+   "slug": "olbia-calcio-1905",
+   "page_url": "https://football-logos.cc/italy/olbia-calcio-1905/",
+   "hash": "d9463c09",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d9463c09",
+     "file": "italy/olbia-calcio-1905-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:57.109060+00:00"
+  },
+  "italy/oltrepo-fbc": {
+   "name": "Oltrepò FBC Logo",
+   "country": "italy",
+   "slug": "oltrepo-fbc",
+   "page_url": "https://football-logos.cc/italy/oltrepo-fbc/",
+   "hash": "b3aa4f93",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b3aa4f93",
+     "file": "italy/oltrepo-fbc-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:57.768685+00:00"
+  },
+  "italy/orvietana": {
+   "name": "Orvietana Calcio Logo",
+   "country": "italy",
+   "slug": "orvietana",
+   "page_url": "https://football-logos.cc/italy/orvietana/",
+   "hash": "fe9d8f9d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "fe9d8f9d",
+     "file": "italy/orvietana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:57.942476+00:00"
+  },
+  "italy/ospitaletto": {
+   "name": "Ospitaletto Logo",
+   "country": "italy",
+   "slug": "ospitaletto",
+   "page_url": "https://football-logos.cc/italy/ospitaletto/",
+   "hash": "9b5dd2c4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9b5dd2c4",
+     "file": "italy/ospitaletto-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:58.192017+00:00"
+  },
+  "italy/ostiamare": {
+   "name": "Ostiamare Logo",
+   "country": "italy",
+   "slug": "ostiamare",
+   "page_url": "https://football-logos.cc/italy/ostiamare/",
+   "hash": "9e790e8d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9e790e8d",
+     "file": "italy/ostiamare-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:58.511316+00:00"
+  },
+  "italy/padova": {
+   "name": "Padova Logo",
+   "country": "italy",
+   "slug": "padova",
+   "page_url": "https://football-logos.cc/italy/padova/",
+   "hash": "e3fe4120",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e3fe4120",
+     "file": "italy/padova-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:59.236277+00:00"
+  },
+  "italy/paganese-calcio-1926": {
+   "name": "Paganese Calcio 1926 Logo",
+   "country": "italy",
+   "slug": "paganese-calcio-1926",
+   "page_url": "https://football-logos.cc/italy/paganese-calcio-1926/",
+   "hash": "72fc8bc2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "72fc8bc2",
+     "file": "italy/paganese-calcio-1926-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:59.652675+00:00"
+  },
+  "italy/palermo": {
+   "name": "Palermo Logo",
+   "country": "italy",
+   "slug": "palermo",
+   "page_url": "https://football-logos.cc/italy/palermo/",
+   "hash": "cff80c30",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "cff80c30",
+     "file": "italy/palermo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:19:59.511202+00:00"
+  },
+  "italy/parma": {
+   "name": "Parma Logo",
+   "country": "italy",
+   "slug": "parma",
+   "page_url": "https://football-logos.cc/italy/parma/",
+   "hash": "34d9667a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "34d9667a",
+     "file": "italy/parma-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:00.574710+00:00"
+  },
+  "italy/paterno-calcio": {
+   "name": "Paternò Calcio Logo",
+   "country": "italy",
+   "slug": "paterno-calcio",
+   "page_url": "https://football-logos.cc/italy/paterno-calcio/",
+   "hash": "27f0cc37",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "27f0cc37",
+     "file": "italy/paterno-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:01.398610+00:00"
+  },
+  "italy/pavia-calcio-1911": {
+   "name": "Pavia Calcio 1911 Logo",
+   "country": "italy",
+   "slug": "pavia-calcio-1911",
+   "page_url": "https://football-logos.cc/italy/pavia-calcio-1911/",
+   "hash": "17fe157c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "17fe157c",
+     "file": "italy/pavia-calcio-1911-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:01.643334+00:00"
+  },
+  "italy/pergolettese": {
+   "name": "Pergolettese Logo",
+   "country": "italy",
+   "slug": "pergolettese",
+   "page_url": "https://football-logos.cc/italy/pergolettese/",
+   "hash": "21528424",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "21528424",
+     "file": "italy/pergolettese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:01.909031+00:00"
+  },
+  "italy/perugia": {
+   "name": "Perugia Logo",
+   "country": "italy",
+   "slug": "perugia",
+   "page_url": "https://football-logos.cc/italy/perugia/",
+   "hash": "76020a07",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "76020a07",
+     "file": "italy/perugia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:02.127497+00:00"
+  },
+  "italy/pescara": {
+   "name": "Pescara Logo",
+   "country": "italy",
+   "slug": "pescara",
+   "page_url": "https://football-logos.cc/italy/pescara/",
+   "hash": "e6e7e25e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e6e7e25e",
+     "file": "italy/pescara-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:02.861574+00:00"
+  },
+  "italy/piacenza": {
+   "name": "Piacenza Calcio 1919 Logo",
+   "country": "italy",
+   "slug": "piacenza",
+   "page_url": "https://football-logos.cc/italy/piacenza/",
+   "hash": "ac7f678d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ac7f678d",
+     "file": "italy/piacenza-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:03.138170+00:00"
+  },
+  "italy/pianese": {
+   "name": "Pianese Logo",
+   "country": "italy",
+   "slug": "pianese",
+   "page_url": "https://football-logos.cc/italy/pianese/",
+   "hash": "bb3117af",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "bb3117af",
+     "file": "italy/pianese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:03.287935+00:00"
+  },
+  "italy/pineto": {
+   "name": "Pineto Logo",
+   "country": "italy",
+   "slug": "pineto",
+   "page_url": "https://football-logos.cc/italy/pineto/",
+   "hash": "f3cf5a9c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f3cf5a9c",
+     "file": "italy/pineto-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:04.280149+00:00"
+  },
+  "italy/pisa": {
+   "name": "Pisa Logo",
+   "country": "italy",
+   "slug": "pisa",
+   "page_url": "https://football-logos.cc/italy/pisa/",
+   "hash": "04d5b7d0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "04d5b7d0",
+     "file": "italy/pisa-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:04.960951+00:00"
+  },
+  "italy/pistoiese": {
+   "name": "FC Pistoiese 1921 Logo",
+   "country": "italy",
+   "slug": "pistoiese",
+   "page_url": "https://football-logos.cc/italy/pistoiese/",
+   "hash": "b5bd7bd9",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b5bd7bd9",
+     "file": "italy/pistoiese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:05.205913+00:00"
+  },
+  "italy/poggibonsi": {
+   "name": "US Poggibonsi Logo",
+   "country": "italy",
+   "slug": "poggibonsi",
+   "page_url": "https://football-logos.cc/italy/poggibonsi/",
+   "hash": "54532248",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "54532248",
+     "file": "italy/poggibonsi-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:05.570920+00:00"
+  },
+  "italy/pontedera": {
+   "name": "Pontedera Logo",
+   "country": "italy",
+   "slug": "pontedera",
+   "page_url": "https://football-logos.cc/italy/pontedera/",
+   "hash": "a3729690",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a3729690",
+     "file": "italy/pontedera-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:05.752999+00:00"
+  },
+  "italy/portogruaro": {
+   "name": "Portogruaro Calcio Logo",
+   "country": "italy",
+   "slug": "portogruaro",
+   "page_url": "https://football-logos.cc/italy/portogruaro/",
+   "hash": "2836b4d5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2836b4d5",
+     "file": "italy/portogruaro-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:06.489414+00:00"
+  },
+  "italy/potenza": {
+   "name": "Potenza Logo",
+   "country": "italy",
+   "slug": "potenza",
+   "page_url": "https://football-logos.cc/italy/potenza/",
+   "hash": "3f2de5d5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3f2de5d5",
+     "file": "italy/potenza-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:06.763113+00:00"
+  },
+  "italy/prato": {
+   "name": "AC Prato Logo",
+   "country": "italy",
+   "slug": "prato",
+   "page_url": "https://football-logos.cc/italy/prato/",
+   "hash": "313ec6e1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "313ec6e1",
+     "file": "italy/prato-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:06.947583+00:00"
+  },
+  "italy/pro-palazzolo": {
+   "name": "FC Pro Palazzolo Logo",
+   "country": "italy",
+   "slug": "pro-palazzolo",
+   "page_url": "https://football-logos.cc/italy/pro-palazzolo/",
+   "hash": "7c06de93",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7c06de93",
+     "file": "italy/pro-palazzolo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:07.863581+00:00"
+  },
+  "italy/pro-patria": {
+   "name": "Pro Patria Logo",
+   "country": "italy",
+   "slug": "pro-patria",
+   "page_url": "https://football-logos.cc/italy/pro-patria/",
+   "hash": "b8142a6c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b8142a6c",
+     "file": "italy/pro-patria-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:08.634900+00:00"
+  },
+  "italy/pro-sesto": {
+   "name": "Pro Sesto 1913 Logo",
+   "country": "italy",
+   "slug": "pro-sesto",
+   "page_url": "https://football-logos.cc/italy/pro-sesto/",
+   "hash": "08decfc6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "08decfc6",
+     "file": "italy/pro-sesto-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:08.857730+00:00"
+  },
+  "italy/pro-vercelli": {
+   "name": "FC Pro Vercelli 1892 Logo",
+   "country": "italy",
+   "slug": "pro-vercelli",
+   "page_url": "https://football-logos.cc/italy/pro-vercelli/",
+   "hash": "18dee487",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "18dee487",
+     "file": "italy/pro-vercelli-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:09.269030+00:00"
+  },
+  "italy/progresso": {
+   "name": "SCD Progresso Calcio Logo",
+   "country": "italy",
+   "slug": "progresso",
+   "page_url": "https://football-logos.cc/italy/progresso/",
+   "hash": "a7b0b0c4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a7b0b0c4",
+     "file": "italy/progresso-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:09.334419+00:00"
+  },
+  "italy/ragusa-calcio": {
+   "name": "Ragusa Calcio Logo",
+   "country": "italy",
+   "slug": "ragusa-calcio",
+   "page_url": "https://football-logos.cc/italy/ragusa-calcio/",
+   "hash": "cb00af11",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "cb00af11",
+     "file": "italy/ragusa-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:10.162971+00:00"
+  },
+  "italy/ravenna": {
+   "name": "Ravenna Logo",
+   "country": "italy",
+   "slug": "ravenna",
+   "page_url": "https://football-logos.cc/italy/ravenna/",
+   "hash": "2c84a78b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2c84a78b",
+     "file": "italy/ravenna-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:10.373965+00:00"
+  },
+  "italy/real-calepina": {
+   "name": "Real Calepina Logo",
+   "country": "italy",
+   "slug": "real-calepina",
+   "page_url": "https://football-logos.cc/italy/real-calepina/",
+   "hash": "49575e75",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "49575e75",
+     "file": "italy/real-calepina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:10.680658+00:00"
+  },
+  "italy/real-monterotondo": {
+   "name": "ASD Real Monterotondo Logo",
+   "country": "italy",
+   "slug": "real-monterotondo",
+   "page_url": "https://football-logos.cc/italy/real-monterotondo/",
+   "hash": "f590a816",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f590a816",
+     "file": "italy/real-monterotondo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:11.490206+00:00"
+  },
+  "italy/real-normanna": {
+   "name": "Real Normanna Logo",
+   "country": "italy",
+   "slug": "real-normanna",
+   "page_url": "https://football-logos.cc/italy/real-normanna/",
+   "hash": "ecd36570",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ecd36570",
+     "file": "italy/real-normanna-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:12.528561+00:00"
+  },
+  "italy/recanatese": {
+   "name": "US Recanatese Logo",
+   "country": "italy",
+   "slug": "recanatese",
+   "page_url": "https://football-logos.cc/italy/recanatese/",
+   "hash": "2e133354",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2e133354",
+     "file": "italy/recanatese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:12.861334+00:00"
+  },
+  "italy/reggiana": {
+   "name": "Reggiana Logo",
+   "country": "italy",
+   "slug": "reggiana",
+   "page_url": "https://football-logos.cc/italy/reggiana/",
+   "hash": "37225726",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "37225726",
+     "file": "italy/reggiana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:12.847856+00:00"
+  },
+  "italy/reggina": {
+   "name": "Reggina 1914 Logo",
+   "country": "italy",
+   "slug": "reggina",
+   "page_url": "https://football-logos.cc/italy/reggina/",
+   "hash": "edd9138d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "edd9138d",
+     "file": "italy/reggina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:13.032429+00:00"
+  },
+  "italy/renate": {
+   "name": "Renate Logo",
+   "country": "italy",
+   "slug": "renate",
+   "page_url": "https://football-logos.cc/italy/renate/",
+   "hash": "c96253c7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c96253c7",
+     "file": "italy/renate-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:13.799868+00:00"
+  },
+  "italy/roma": {
+   "name": "AS Roma Logo",
+   "country": "italy",
+   "slug": "roma",
+   "page_url": "https://football-logos.cc/italy/roma/",
+   "hash": "00288a7d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "00288a7d",
+     "file": "italy/roma-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:13.911019+00:00"
+  },
+  "italy/rovato-vertovese": {
+   "name": "Rovato Vertovese Logo",
+   "country": "italy",
+   "slug": "rovato-vertovese",
+   "page_url": "https://football-logos.cc/italy/rovato-vertovese/",
+   "hash": "a2e3da06",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a2e3da06",
+     "file": "italy/rovato-vertovese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:14.462328+00:00"
+  },
+  "italy/salernitana": {
+   "name": "Salernitana Logo",
+   "country": "italy",
+   "slug": "salernitana",
+   "page_url": "https://football-logos.cc/italy/salernitana/",
+   "hash": "08f0c4cc",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "08f0c4cc",
+     "file": "italy/salernitana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:15.150519+00:00"
+  },
+  "italy/saluzzo": {
+   "name": "Saluzzo Logo",
+   "country": "italy",
+   "slug": "saluzzo",
+   "page_url": "https://football-logos.cc/italy/saluzzo/",
+   "hash": "f4e35ed6",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f4e35ed6",
+     "file": "italy/saluzzo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:16.142781+00:00"
+  },
+  "italy/sambenedettese": {
+   "name": "Sambenedettese Logo",
+   "country": "italy",
+   "slug": "sambenedettese",
+   "page_url": "https://football-logos.cc/italy/sambenedettese/",
+   "hash": "963f2924",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "963f2924",
+     "file": "italy/sambenedettese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:16.435642+00:00"
+  },
+  "italy/sambiase-calcio": {
+   "name": "Sambiase Calcio Logo",
+   "country": "italy",
+   "slug": "sambiase-calcio",
+   "page_url": "https://football-logos.cc/italy/sambiase-calcio/",
+   "hash": "b244d934",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b244d934",
+     "file": "italy/sambiase-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:16.453999+00:00"
+  },
+  "italy/sammaurese": {
+   "name": "Sammaurese Calcio Logo",
+   "country": "italy",
+   "slug": "sammaurese",
+   "page_url": "https://football-logos.cc/italy/sammaurese/",
+   "hash": "635a9dc2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "635a9dc2",
+     "file": "italy/sammaurese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:16.629518+00:00"
+  },
+  "italy/sampdoria": {
+   "name": "Sampdoria Logo",
+   "country": "italy",
+   "slug": "sampdoria",
+   "page_url": "https://football-logos.cc/italy/sampdoria/",
+   "hash": "ec919bdb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ec919bdb",
+     "file": "italy/sampdoria-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:17.554258+00:00"
+  },
+  "italy/san-donato-tavarnelle": {
+   "name": "San Donato Tavarnelle Logo",
+   "country": "italy",
+   "slug": "san-donato-tavarnelle",
+   "page_url": "https://football-logos.cc/italy/san-donato-tavarnelle/",
+   "hash": "a65c83f3",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a65c83f3",
+     "file": "italy/san-donato-tavarnelle-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:17.650011+00:00"
+  },
+  "italy/san-luigi": {
+   "name": "ASD San Luigi Calcio Logo",
+   "country": "italy",
+   "slug": "san-luigi",
+   "page_url": "https://football-logos.cc/italy/san-luigi/",
+   "hash": "407c59ff",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "407c59ff",
+     "file": "italy/san-luigi-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:18.125138+00:00"
+  },
+  "italy/san-marino-calcio": {
+   "name": "San Marino Calcio Logo",
+   "country": "italy",
+   "slug": "san-marino-calcio",
+   "page_url": "https://football-logos.cc/italy/san-marino-calcio/",
+   "hash": "32360c82",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "32360c82",
+     "file": "italy/san-marino-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:18.744469+00:00"
+  },
+  "italy/sancataldese": {
+   "name": "Sancataldese Logo",
+   "country": "italy",
+   "slug": "sancataldese",
+   "page_url": "https://football-logos.cc/italy/sancataldese/",
+   "hash": "8f969525",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8f969525",
+     "file": "italy/sancataldese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:19.861822+00:00"
+  },
+  "italy/sangiuliano-city-nova": {
+   "name": "FC Sangiuliano City Nova Logo",
+   "country": "italy",
+   "slug": "sangiuliano-city-nova",
+   "page_url": "https://football-logos.cc/italy/sangiuliano-city-nova/",
+   "hash": "25c0ceb7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "25c0ceb7",
+     "file": "italy/sangiuliano-city-nova-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:20.107326+00:00"
+  },
+  "italy/sanremese": {
+   "name": "Sanremese Logo",
+   "country": "italy",
+   "slug": "sanremese",
+   "page_url": "https://football-logos.cc/italy/sanremese/",
+   "hash": "ce7d14b2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ce7d14b2",
+     "file": "italy/sanremese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:20.187468+00:00"
+  },
+  "italy/sant-angelo": {
+   "name": "AC Sant'Angelo 1907 Logo",
+   "country": "italy",
+   "slug": "sant-angelo",
+   "page_url": "https://football-logos.cc/italy/sant-angelo/",
+   "hash": "b5533abc",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b5533abc",
+     "file": "italy/sant-angelo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:20.281943+00:00"
+  },
+  "italy/sarnese-1926": {
+   "name": "Sarnese 1926 Logo",
+   "country": "italy",
+   "slug": "sarnese-1926",
+   "page_url": "https://football-logos.cc/italy/sarnese-1926/",
+   "hash": "dc543864",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dc543864",
+     "file": "italy/sarnese-1926-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:21.221323+00:00"
+  },
+  "italy/sassari-calcio-latte-dolce": {
+   "name": "Sassari Calcio Latte Dolce Logo",
+   "country": "italy",
+   "slug": "sassari-calcio-latte-dolce",
+   "page_url": "https://football-logos.cc/italy/sassari-calcio-latte-dolce/",
+   "hash": "80605fee",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "80605fee",
+     "file": "italy/sassari-calcio-latte-dolce-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:21.282062+00:00"
+  },
+  "italy/sasso-marconi": {
+   "name": "ASD Sasso Marconi 1924 Logo",
+   "country": "italy",
+   "slug": "sasso-marconi",
+   "page_url": "https://football-logos.cc/italy/sasso-marconi/",
+   "hash": "dcbc2a1a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dcbc2a1a",
+     "file": "italy/sasso-marconi-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:21.731894+00:00"
+  },
+  "italy/sassuolo": {
+   "name": "Sassuolo Logo",
+   "country": "italy",
+   "slug": "sassuolo",
+   "page_url": "https://football-logos.cc/italy/sassuolo/",
+   "hash": "9531e689",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "9531e689",
+     "file": "italy/sassuolo-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:22.450353+00:00"
+  },
+  "italy/savoia-1908": {
+   "name": "Savoia 1908 Logo",
+   "country": "italy",
+   "slug": "savoia-1908",
+   "page_url": "https://football-logos.cc/italy/savoia-1908/",
+   "hash": "ad04f6b8",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ad04f6b8",
+     "file": "italy/savoia-1908-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:23.440599+00:00"
+  },
+  "italy/scafatese-calcio-1922": {
+   "name": "Scafatese Calcio 1922 Logo",
+   "country": "italy",
+   "slug": "scafatese-calcio-1922",
+   "page_url": "https://football-logos.cc/italy/scafatese-calcio-1922/",
+   "hash": "87f00473",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "87f00473",
+     "file": "italy/scafatese-calcio-1922-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:23.693920+00:00"
+  },
+  "italy/scandicci": {
+   "name": "FC Scandicci 1908 Logo",
+   "country": "italy",
+   "slug": "scandicci",
+   "page_url": "https://football-logos.cc/italy/scandicci/",
+   "hash": "526a5b7e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "526a5b7e",
+     "file": "italy/scandicci-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:23.767347+00:00"
+  },
+  "italy/scanzorosciate": {
+   "name": "USD Scanzorosciate Calcio Logo",
+   "country": "italy",
+   "slug": "scanzorosciate",
+   "page_url": "https://football-logos.cc/italy/scanzorosciate/",
+   "hash": "412e59b7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "412e59b7",
+     "file": "italy/scanzorosciate-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:23.962150+00:00"
+  },
+  "italy/seravezza-pozzi": {
+   "name": "Seravezza Pozzi Calcio Logo",
+   "country": "italy",
+   "slug": "seravezza-pozzi",
+   "page_url": "https://football-logos.cc/italy/seravezza-pozzi/",
+   "hash": "7e5c7ab4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7e5c7ab4",
+     "file": "italy/seravezza-pozzi-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:24.887312+00:00"
+  },
+  "italy/serie-a": {
+   "name": "Serie A Logo",
+   "country": "italy",
+   "slug": "serie-a",
+   "page_url": "https://football-logos.cc/italy/serie-a/",
+   "hash": "15e58b67",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "15e58b67",
+     "file": "italy/serie-a-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:24.819984+00:00"
+  },
+  "italy/serie-b": {
+   "name": "Serie B Logo",
+   "country": "italy",
+   "slug": "serie-b",
+   "page_url": "https://football-logos.cc/italy/serie-b/",
+   "hash": "d27003ee",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d27003ee",
+     "file": "italy/serie-b-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:25.279868+00:00"
+  },
+  "italy/serie-c": {
+   "name": "Serie C Logo",
+   "country": "italy",
+   "slug": "serie-c",
+   "page_url": "https://football-logos.cc/italy/serie-c/",
+   "hash": "d2666270",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d2666270",
+     "file": "italy/serie-c-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:26.152597+00:00"
+  },
+  "italy/serie-d": {
+   "name": "Serie D Logo",
+   "country": "italy",
+   "slug": "serie-d",
+   "page_url": "https://football-logos.cc/italy/serie-d/",
+   "hash": "76772c13",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "76772c13",
+     "file": "italy/serie-d-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:26.956934+00:00"
+  },
+  "italy/sestri-levante": {
+   "name": "Sestri Levante Logo",
+   "country": "italy",
+   "slug": "sestri-levante",
+   "page_url": "https://football-logos.cc/italy/sestri-levante/",
+   "hash": "b607b1e0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "b607b1e0",
+     "file": "italy/sestri-levante-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:27.465257+00:00"
+  },
+  "italy/siena": {
+   "name": "Siena Logo",
+   "country": "italy",
+   "slug": "siena",
+   "page_url": "https://football-logos.cc/italy/siena/",
+   "hash": "6cf44e2d",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "6cf44e2d",
+     "file": "italy/siena-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:27.375537+00:00"
+  },
+  "italy/siracusa": {
+   "name": "Siracusa Logo",
+   "country": "italy",
+   "slug": "siracusa",
+   "page_url": "https://football-logos.cc/italy/siracusa/",
+   "hash": "67096bbf",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "67096bbf",
+     "file": "italy/siracusa-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:27.651899+00:00"
+  },
+  "italy/sondrio-calcio": {
+   "name": "Nuova Sondrio Calcio Logo",
+   "country": "italy",
+   "slug": "sondrio-calcio",
+   "page_url": "https://football-logos.cc/italy/sondrio-calcio/",
+   "hash": "1d4cffbb",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "1d4cffbb",
+     "file": "italy/sondrio-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:28.507098+00:00"
+  },
+  "italy/sora-calcio-1907": {
+   "name": "Sora Calcio 1907 Logo",
+   "country": "italy",
+   "slug": "sora-calcio-1907",
+   "page_url": "https://football-logos.cc/italy/sora-calcio-1907/",
+   "hash": "821dacec",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "821dacec",
+     "file": "italy/sora-calcio-1907-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:28.543188+00:00"
+  },
+  "italy/sorrento": {
+   "name": "Sorrento Logo",
+   "country": "italy",
+   "slug": "sorrento",
+   "page_url": "https://football-logos.cc/italy/sorrento/",
+   "hash": "ba8cb8a0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ba8cb8a0",
+     "file": "italy/sorrento-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:28.921387+00:00"
+  },
+  "italy/spal": {
+   "name": "SPAL Logo",
+   "country": "italy",
+   "slug": "spal",
+   "page_url": "https://football-logos.cc/italy/spal/",
+   "hash": "5725b76b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5725b76b",
+     "file": "italy/spal-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:29.866067+00:00"
+  },
+  "italy/spezia": {
+   "name": "Spezia Logo",
+   "country": "italy",
+   "slug": "spezia",
+   "page_url": "https://football-logos.cc/italy/spezia/",
+   "hash": "781ba53b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "781ba53b",
+     "file": "italy/spezia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:30.594152+00:00"
+  },
+  "italy/suditrol": {
+   "name": "Suditrol Logo",
+   "country": "italy",
+   "slug": "suditrol",
+   "page_url": "https://football-logos.cc/italy/suditrol/",
+   "hash": "a2ed73e7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a2ed73e7",
+     "file": "italy/suditrol-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:31.042190+00:00"
+  },
+  "italy/tau-calcio-altopascio": {
+   "name": "Tau Calcio Altopascio Logo",
+   "country": "italy",
+   "slug": "tau-calcio-altopascio",
+   "page_url": "https://football-logos.cc/italy/tau-calcio-altopascio/",
+   "hash": "2c953499",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2c953499",
+     "file": "italy/tau-calcio-altopascio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:31.088200+00:00"
+  },
+  "italy/team-altamura": {
+   "name": "Team Altamura Logo",
+   "country": "italy",
+   "slug": "team-altamura",
+   "page_url": "https://football-logos.cc/italy/team-altamura/",
+   "hash": "2d454408",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "2d454408",
+     "file": "italy/team-altamura-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:31.270034+00:00"
+  },
+  "italy/teramo-calcio-1913": {
+   "name": "Teramo Calcio 1913 Logo",
+   "country": "italy",
+   "slug": "teramo-calcio-1913",
+   "page_url": "https://football-logos.cc/italy/teramo-calcio-1913/",
+   "hash": "edc903ac",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "edc903ac",
+     "file": "italy/teramo-calcio-1913-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:32.088742+00:00"
+  },
+  "italy/termoli-calcio-1920": {
+   "name": "Termoli Calcio 1920 Logo",
+   "country": "italy",
+   "slug": "termoli-calcio-1920",
+   "page_url": "https://football-logos.cc/italy/termoli-calcio-1920/",
+   "hash": "f51d657a",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f51d657a",
+     "file": "italy/termoli-calcio-1920-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:32.134485+00:00"
+  },
+  "italy/ternana": {
+   "name": "Ternana Logo",
+   "country": "italy",
+   "slug": "ternana",
+   "page_url": "https://football-logos.cc/italy/ternana/",
+   "hash": "dadc1049",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dadc1049",
+     "file": "italy/ternana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:32.510280+00:00"
+  },
+  "italy/terranuova-traiana": {
+   "name": "Terranuova Traiana Logo",
+   "country": "italy",
+   "slug": "terranuova-traiana",
+   "page_url": "https://football-logos.cc/italy/terranuova-traiana/",
+   "hash": "0c842396",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "0c842396",
+     "file": "italy/terranuova-traiana-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:33.475579+00:00"
+  },
+  "italy/torino": {
+   "name": "Torino Logo",
+   "country": "italy",
+   "slug": "torino",
+   "page_url": "https://football-logos.cc/italy/torino/",
+   "hash": "ce70f82c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ce70f82c",
+     "file": "italy/torino-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:34.177125+00:00"
+  },
+  "italy/torres": {
+   "name": "Torres Logo",
+   "country": "italy",
+   "slug": "torres",
+   "page_url": "https://football-logos.cc/italy/torres/",
+   "hash": "009a89fd",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "009a89fd",
+     "file": "italy/torres-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:34.791391+00:00"
+  },
+  "italy/trapani": {
+   "name": "Trapani Logo",
+   "country": "italy",
+   "slug": "trapani",
+   "page_url": "https://football-logos.cc/italy/trapani/",
+   "hash": "05b49a8c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "05b49a8c",
+     "file": "italy/trapani-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:34.711770+00:00"
+  },
+  "italy/trastevere-calcio": {
+   "name": "Trastevere Calcio Logo",
+   "country": "italy",
+   "slug": "trastevere-calcio",
+   "page_url": "https://football-logos.cc/italy/trastevere-calcio/",
+   "hash": "c468e1f1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c468e1f1",
+     "file": "italy/trastevere-calcio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:34.859345+00:00"
+  },
+  "italy/trento": {
+   "name": "Trento Logo",
+   "country": "italy",
+   "slug": "trento",
+   "page_url": "https://football-logos.cc/italy/trento/",
+   "hash": "da51efa5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "da51efa5",
+     "file": "italy/trento-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:35.690751+00:00"
+  },
+  "italy/trestina": {
+   "name": "Sporting Club Trestina Logo",
+   "country": "italy",
+   "slug": "trestina",
+   "page_url": "https://football-logos.cc/italy/trestina/",
+   "hash": "8620b04f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8620b04f",
+     "file": "italy/trestina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:36.009493+00:00"
+  },
+  "italy/trevigliese": {
+   "name": "CS Trevigliese Logo",
+   "country": "italy",
+   "slug": "trevigliese",
+   "page_url": "https://football-logos.cc/italy/trevigliese/",
+   "hash": "ca9294a2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ca9294a2",
+     "file": "italy/trevigliese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:36.122686+00:00"
+  },
+  "italy/treviso": {
+   "name": "Treviso FBC 1993 Logo",
+   "country": "italy",
+   "slug": "treviso",
+   "page_url": "https://football-logos.cc/italy/treviso/",
+   "hash": "a33b8f22",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a33b8f22",
+     "file": "italy/treviso-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:37.082797+00:00"
+  },
+  "italy/triestina": {
+   "name": "Triestina Logo",
+   "country": "italy",
+   "slug": "triestina",
+   "page_url": "https://football-logos.cc/italy/triestina/",
+   "hash": "702182f7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "702182f7",
+     "file": "italy/triestina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:37.813680+00:00"
+  },
+  "italy/tropical-coriano": {
+   "name": "ASD Tropical Coriano Logo",
+   "country": "italy",
+   "slug": "tropical-coriano",
+   "page_url": "https://football-logos.cc/italy/tropical-coriano/",
+   "hash": "cb9b9d56",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "cb9b9d56",
+     "file": "italy/tropical-coriano-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:38.494692+00:00"
+  },
+  "italy/tuttocuoio": {
+   "name": "AC Tuttocuoio 1957 San Miniato Logo",
+   "country": "italy",
+   "slug": "tuttocuoio",
+   "page_url": "https://football-logos.cc/italy/tuttocuoio/",
+   "hash": "d4827432",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "d4827432",
+     "file": "italy/tuttocuoio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:38.424138+00:00"
+  },
+  "italy/udinese": {
+   "name": "Udinese Logo",
+   "country": "italy",
+   "slug": "udinese",
+   "page_url": "https://football-logos.cc/italy/udinese/",
+   "hash": "dc92d43c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "dc92d43c",
+     "file": "italy/udinese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:38.457141+00:00"
+  },
+  "italy/udinese--130th-anniversary": {
+   "name": "Udinese 130th Anniversary Logo",
+   "country": "italy",
+   "slug": "udinese--130th-anniversary",
+   "page_url": "https://football-logos.cc/italy/udinese/130th-anniversary/",
+   "hash": "8249441c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8249441c",
+     "file": "italy/udinese--130th-anniversary-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:39.378570+00:00"
+  },
+  "italy/union-brescia": {
+   "name": "Union Brescia Logo",
+   "country": "italy",
+   "slug": "union-brescia",
+   "page_url": "https://football-logos.cc/italy/union-brescia/",
+   "hash": "88902452",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "88902452",
+     "file": "italy/union-brescia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:39.735020+00:00"
+  },
+  "italy/union-clodiense-chioggia": {
+   "name": "Union Clodiense Chioggia FC Logo",
+   "country": "italy",
+   "slug": "union-clodiense-chioggia",
+   "page_url": "https://football-logos.cc/italy/union-clodiense-chioggia/",
+   "hash": "f202f549",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f202f549",
+     "file": "italy/union-clodiense-chioggia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:40.161578+00:00"
+  },
+  "italy/unione-la-rocca-altavilla": {
+   "name": "Unione La Rocca Altavilla Logo",
+   "country": "italy",
+   "slug": "unione-la-rocca-altavilla",
+   "page_url": "https://football-logos.cc/italy/unione-la-rocca-altavilla/",
+   "hash": "7d30570f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7d30570f",
+     "file": "italy/unione-la-rocca-altavilla-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:40.661208+00:00"
+  },
+  "italy/unipomezia-1938": {
+   "name": "UniPomezia 1938 Logo",
+   "country": "italy",
+   "slug": "unipomezia-1938",
+   "page_url": "https://football-logos.cc/italy/unipomezia-1938/",
+   "hash": "ea37c269",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "ea37c269",
+     "file": "italy/unipomezia-1938-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:41.404789+00:00"
+  },
+  "italy/us-avellino-1912": {
+   "name": "US Avellino 1912 Logo",
+   "country": "italy",
+   "slug": "us-avellino-1912",
+   "page_url": "https://football-logos.cc/italy/us-avellino-1912/",
+   "hash": "8f0f489f",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "8f0f489f",
+     "file": "italy/us-avellino-1912-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:42.038968+00:00"
+  },
+  "italy/us-palmese-1912": {
+   "name": "US Palmese 1912 Logo",
+   "country": "italy",
+   "slug": "us-palmese-1912",
+   "page_url": "https://football-logos.cc/italy/us-palmese-1912/",
+   "hash": "c26f7b51",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c26f7b51",
+     "file": "italy/us-palmese-1912-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:42.094897+00:00"
+  },
+  "italy/vado": {
+   "name": "Vado Logo",
+   "country": "italy",
+   "slug": "vado",
+   "page_url": "https://football-logos.cc/italy/vado/",
+   "hash": "a15c32bc",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a15c32bc",
+     "file": "italy/vado-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:42.121714+00:00"
+  },
+  "italy/valenzana-mado": {
+   "name": "Valenzana Mado Logo",
+   "country": "italy",
+   "slug": "valenzana-mado",
+   "page_url": "https://football-logos.cc/italy/valenzana-mado/",
+   "hash": "c00b1d58",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c00b1d58",
+     "file": "italy/valenzana-mado-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:42.979837+00:00"
+  },
+  "italy/valmontone-1921": {
+   "name": "Valmontone 1921 Logo",
+   "country": "italy",
+   "slug": "valmontone-1921",
+   "page_url": "https://football-logos.cc/italy/valmontone-1921/",
+   "hash": "98ab364e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "98ab364e",
+     "file": "italy/valmontone-1921-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:43.259421+00:00"
+  },
+  "italy/varese": {
+   "name": "Varese Logo",
+   "country": "italy",
+   "slug": "varese",
+   "page_url": "https://football-logos.cc/italy/varese/",
+   "hash": "7200bd5e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "7200bd5e",
+     "file": "italy/varese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:43.707345+00:00"
+  },
+  "italy/varesina": {
+   "name": "Varesina Calcio Logo",
+   "country": "italy",
+   "slug": "varesina",
+   "page_url": "https://football-logos.cc/italy/varesina/",
+   "hash": "a172cec4",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a172cec4",
+     "file": "italy/varesina-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:44.345453+00:00"
+  },
+  "italy/venezia": {
+   "name": "Venezia Logo",
+   "country": "italy",
+   "slug": "venezia",
+   "page_url": "https://football-logos.cc/italy/venezia/",
+   "hash": "3fe6664e",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "3fe6664e",
+     "file": "italy/venezia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:44.942044+00:00"
+  },
+  "italy/verona": {
+   "name": "Hellas Verona Logo",
+   "country": "italy",
+   "slug": "verona",
+   "page_url": "https://football-logos.cc/italy/verona/",
+   "hash": "c7fac3dd",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "c7fac3dd",
+     "file": "italy/verona-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:45.616395+00:00"
+  },
+  "italy/vibonese": {
+   "name": "Vibonese Logo",
+   "country": "italy",
+   "slug": "vibonese",
+   "page_url": "https://football-logos.cc/italy/vibonese/",
+   "hash": "5fc5f13b",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "5fc5f13b",
+     "file": "italy/vibonese-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:45.976529+00:00"
+  },
+  "italy/vicenza": {
+   "name": "Vicenza Logo",
+   "country": "italy",
+   "slug": "vicenza",
+   "page_url": "https://football-logos.cc/italy/vicenza/",
+   "hash": "f256a311",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f256a311",
+     "file": "italy/vicenza-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:46.026129+00:00"
+  },
+  "italy/vigasio": {
+   "name": "AC Vigasio Logo",
+   "country": "italy",
+   "slug": "vigasio",
+   "page_url": "https://football-logos.cc/italy/vigasio/",
+   "hash": "f6282dad",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "f6282dad",
+     "file": "italy/vigasio-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:46.597383+00:00"
+  },
+  "italy/vigor-lamezia": {
+   "name": "Vigor Lamezia Logo",
+   "country": "italy",
+   "slug": "vigor-lamezia",
+   "page_url": "https://football-logos.cc/italy/vigor-lamezia/",
+   "hash": "400e4637",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "400e4637",
+     "file": "italy/vigor-lamezia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:46.966684+00:00"
+  },
+  "italy/vigor-senigallia": {
+   "name": "Vigor Senigallia Logo",
+   "country": "italy",
+   "slug": "vigor-senigallia",
+   "page_url": "https://football-logos.cc/italy/vigor-senigallia/",
+   "hash": "383e16b0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "383e16b0",
+     "file": "italy/vigor-senigallia-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:47.256842+00:00"
+  },
+  "italy/villa-valle": {
+   "name": "Villa Valle Logo",
+   "country": "italy",
+   "slug": "villa-valle",
+   "page_url": "https://football-logos.cc/italy/villa-valle/",
+   "hash": "a09cbce1",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a09cbce1",
+     "file": "italy/villa-valle-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:47.967995+00:00"
+  },
+  "italy/virtus-ciserano-bergamo-1909": {
+   "name": "Virtus CiseranoBergamo 1909 Logo",
+   "country": "italy",
+   "slug": "virtus-ciserano-bergamo-1909",
+   "page_url": "https://football-logos.cc/italy/virtus-ciserano-bergamo-1909/",
+   "hash": "37951dc5",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "37951dc5",
+     "file": "italy/virtus-ciserano-bergamo-1909-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:48.613269+00:00"
+  },
+  "italy/virtus-entella": {
+   "name": "Virtus Entella Logo",
+   "country": "italy",
+   "slug": "virtus-entella",
+   "page_url": "https://football-logos.cc/italy/virtus-entella/",
+   "hash": "a5eed5f2",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "a5eed5f2",
+     "file": "italy/virtus-entella-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:49.247976+00:00"
+  },
+  "italy/virtus-francavilla": {
+   "name": "Virtus Francavilla Logo",
+   "country": "italy",
+   "slug": "virtus-francavilla",
+   "page_url": "https://football-logos.cc/italy/virtus-francavilla/",
+   "hash": "e9b18117",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "e9b18117",
+     "file": "italy/virtus-francavilla-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:49.625074+00:00"
+  },
+  "italy/virtus-verona": {
+   "name": "Virtus Verona Logo",
+   "country": "italy",
+   "slug": "virtus-verona",
+   "page_url": "https://football-logos.cc/italy/virtus-verona/",
+   "hash": "debf3ba0",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "debf3ba0",
+     "file": "italy/virtus-verona-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:49.662057+00:00"
+  },
+  "italy/vis-pesaro": {
+   "name": "Vis Pesaro Logo",
+   "country": "italy",
+   "slug": "vis-pesaro",
+   "page_url": "https://football-logos.cc/italy/vis-pesaro/",
+   "hash": "57b2b7b7",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "57b2b7b7",
+     "file": "italy/vis-pesaro-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:50.265463+00:00"
+  },
+  "italy/vivi-altotevere-sansepolcro": {
+   "name": "Vivi Altotevere Sansepolcro Logo",
+   "country": "italy",
+   "slug": "vivi-altotevere-sansepolcro",
+   "page_url": "https://football-logos.cc/italy/vivi-altotevere-sansepolcro/",
+   "hash": "db0bef3c",
+   "sizes": [
+    "700"
+   ],
+   "svg": true,
+   "svg_missing": false,
+   "png": {
+    "700": {
+     "hash": "db0bef3c",
+     "file": "italy/vivi-altotevere-sansepolcro-700.png"
+    }
+   },
+   "svg_file": null,
+   "fetched_at": "2026-09-19T21:20:50.695196+00:00"
+  }
+ }
+}
