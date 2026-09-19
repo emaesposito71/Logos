@@ -1,12 +1,25 @@
 # Sincronizza i loghi da football-logos.cc nella cartella calcio/ del repo.
-# Avvio manuale da: Actions -> "Sync football logos" -> Run workflow.
-# Lo script è incrementale: salta i loghi già aggiornati e scarica solo le novità.
+#
+# Quando gira:
+#   - Manualmente: Actions -> "Sync football logos" -> Run workflow.
+#   - Automaticamente: OGNI ORA (vedi "schedule" qui sotto).
+#
+# Cosa succede se il CDN ci rallenta (rate limit / HTTP 429):
+#   - Lo script SI FERMA DA SOLO, ma non perde nulla: il manifesto
+#     (calcio/index.json) viene salvato ogni 50 loghi e alla fine vengono
+#     committati comunque i loghi già scaricati.
+#   - La run appare VERDE con un avviso (giallo): volutamente non rossa,
+#     così non arrivano email di "run fallita" ogni ora.
+#   - La run successiva riparte dal manifesto: salta i loghi già presenti
+#     e scarica solo i mancanti. Man mano il repo si riempie da solo.
+#   - Quando è tutto scaricato, le run orarie durano 1-2 minuti, non
+#     committano nulla e fanno anche da radar per i loghi nuovi del sito.
+#
+# Per DISATTIVARE l'esecuzione oraria: elimina (o commenta) le due righe
+# "schedule:" / "- cron: ..." qui sotto, oppure da Actions -> Sync football
+# logos -> "..." -> "Disable workflow".
 #
 # Richiede: Settings -> Actions -> General -> Workflow permissions = "Read and write".
-#
-# Per passare a esecuzione automatica, aggiungi sotto "on:" (es. ogni lunedì alle 03:00 UTC):
-#   schedule:
-#     - cron: "0 3 * * 1"
 
 name: Sync football logos
 
@@ -20,7 +33,7 @@ on:
       sizes:
         description: "Misure PNG (virgola, tra 3000,1500,700,512,256,128,64)"
         required: false
-        default: "700"
+        default: "512"
       svg:
         description: "Scarica anche gli SVG"
         required: false
@@ -43,6 +56,10 @@ on:
         required: false
         default: false
         type: boolean
+  schedule:
+    # Ogni ora in punto (l'orario del cron è UTC: in Italia -2 in estate,
+    # -1 in inverno, ma per "ogni ora" non cambia nulla).
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
@@ -53,31 +70,63 @@ concurrency:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 360
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Download logos
+        id: download
         run: |
-          ARGS=(--sizes "${{ inputs.sizes }}" --workers "${{ inputs.workers }}" --delay "${{ inputs.delay }}")
-          [ -n "${{ inputs.countries }}" ] && ARGS+=(--countries "${{ inputs.countries }}")
-          [ -n "${{ inputs.limit }}" ] && ARGS+=(--limit "${{ inputs.limit }}")
-          [ "${{ inputs.svg }}" != "true" ] && ARGS+=(--no-svg)
-          [ "${{ inputs.force }}" = "true" ] && ARGS+=(--force)
+          # Nelle run programmate (schedule) gli input del form sono VUOTI:
+          # applichiamo quindi gli stessi default del modulo manuale.
+          COUNTRIES="${{ inputs.countries }}"
+          SIZES="${{ inputs.sizes }}"
+          SVG="${{ inputs.svg }}"
+          LIMIT="${{ inputs.limit }}"
+          WORKERS="${{ inputs.workers }}"
+          DELAY="${{ inputs.delay }}"
+          FORCE="${{ inputs.force }}"
+          [ -z "$SIZES" ] && SIZES="512"
+          [ -z "$SVG" ] && SVG="true"
+          [ -z "$WORKERS" ] && WORKERS="4"
+          [ -z "$DELAY" ] && DELAY="0.5"
+          [ -z "$FORCE" ] && FORCE="false"
+          ARGS=(--sizes "$SIZES" --workers "$WORKERS" --delay "$DELAY")
+          [ -n "$COUNTRIES" ] && ARGS+=(--countries "$COUNTRIES")
+          [ -n "$LIMIT" ] && ARGS+=(--limit "$LIMIT")
+          [ "$SVG" != "true" ] && ARGS+=(--no-svg)
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          set +e
           python3 scripts/calcio.py "${ARGS[@]}"
+          code=$?
+          set -e
+          # Codice 3 = fermo per rate limit persistente del CDN. I progressi
+          # sono già salvati nel manifesto: usciamo SENZA errore (run verde)
+          # perché è una pausa attesa, non un guasto. Il commit qui sotto
+          # salva comunque i loghi scaricati.
+          if [ "$code" -eq 3 ]; then
+            echo "aborted=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          exit "$code"
 
       - name: Commit e push se ci sono novità
+        if: always() && !cancelled()
         run: |
+          if [ ! -d calcio ]; then
+            echo "Nessuna cartella calcio/ da committare (il download non è mai partito)."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add calcio
+          git add -A -- calcio
           if git diff --cached --quiet; then
             echo "Nessuna novità, niente da committare."
           else
@@ -85,3 +134,27 @@ jobs:
             git commit -m "chore: sync football logos ($N file)"
             git push
           fi
+
+      - name: Esito
+        if: always() && steps.download.outcome != 'skipped'
+        run: |
+          N=$(python3 -c "import json;print(json.load(open('calcio/index.json')).get('count',0))" 2>/dev/null || echo "?")
+          if [ "${{ steps.download.outputs.aborted }}" = "true" ]; then
+            echo "::warning::Rate limit del CDN: la run si è fermata, ma è tutto salvato. Loghi già pronti nel repo: $N (target ≈ 4.500). La prossima esecuzione (automatica entro un'ora, o manuale) riparte da qui e scarica solo i mancanti."
+            {
+              echo "### ⏸️ Fermata per rate limit — è tutto normale"
+              echo ""
+              echo "- Loghi già pronti nel repo: **$N** su ≈ 4.500"
+              echo "- Nulla è perso: i loghi scaricati sono stati committati"
+              echo "- La prossima run (entro un'ora) riprende da qui da sola"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          {
+            echo "### ✅ Run completata senza interruzioni"
+            echo ""
+            echo "Loghi nel repo: **$N**. Nel riepilogo qui sotto: se \"Saltati"
+            echo "(già aggiornati)\" è uguale a \"Loghi elaborati\" e \"Falliti: 0\","
+            echo "la sincronizzazione è al completo. 🎉"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Run completata."
