@@ -26,7 +26,14 @@ Struttura prodotta (default: PNG 700px + SVG):
 
 Esecuzioni incrementali: i loghi già scaricati e invariati vengono saltati
 (confronto hash dalla sitemap), quindi le run successive scaricano solo
-le novità. Solo stdlib, nessuna dipendenza da installare.
+le novità.
+
+Modalità leggera per app (--webp N): scarica solo il PNG nativo dalla
+sitemap (1 richiesta per logo, niente pagina del logo né SVG), lo riduce
+a N px e lo salva come WebP in `<paese>/<slug>.webp`. Produce anche
+`index.min.json`, un indice compatto pensato per essere letto da un'app
+(Android telefono/TV legge i WebP nativamente). In questa modalità serve
+Pillow (pip install pillow).
 
 Rispetto anti-sovraccarico: pochi worker, pausa tra le richieste, backoff
 con rispetto di Retry-After, pausa globale condivisa sui 429 e stop
@@ -203,6 +210,24 @@ def is_valid_svg(data: bytes) -> bool:
     return len(data) > 50 and head.startswith(b"<svg") and b"</svg>" in data[-32:].lower()
 
 
+def is_valid_webp(data: bytes) -> bool:
+    return len(data) > 50 and data[:4] == b"RIFF" and data[8:12] == b"WEBP"
+
+
+def png_to_webp(data: bytes, max_px: int, quality: int) -> bytes:
+    """Riduce un PNG a max_px di lato massimo e lo ricodifica in WebP con alpha."""
+    import io
+
+    from PIL import Image
+    im = Image.open(io.BytesIO(data))
+    if im.mode != "RGBA":
+        im = im.convert("RGBA")
+    im.thumbnail((max_px, max_px), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "WEBP", quality=quality, method=6)
+    return buf.getvalue()
+
+
 def save_file(data: bytes, path: str) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + ".part"
@@ -211,7 +236,8 @@ def save_file(data: bytes, path: str) -> None:
     os.replace(tmp, path)
 
 
-def write_manifest(out_dir: str, sizes: list[str], want_svg: bool, logos: dict) -> None:
+def write_manifest(out_dir: str, sizes: list[str], want_svg: bool, logos: dict,
+                   extra: dict | None = None) -> None:
     """Scrive il manifesto in modo atomico (usato anche per i salvataggi parziali)."""
     manifest = {
         "source": IMAGE_SITEMAP,
@@ -221,8 +247,31 @@ def write_manifest(out_dir: str, sizes: list[str], want_svg: bool, logos: dict) 
         "count": len(logos),
         "logos": dict(sorted(logos.items())),
     }
+    if extra:
+        manifest.update(extra)
     path = os.path.join(out_dir, "index.json")
     save_file(json.dumps(manifest, ensure_ascii=False, indent=1).encode("utf-8"), path)
+
+
+def write_compact_index(out_dir: str, logos: dict) -> None:
+    """Indice compatto (index.min.json) pensato per le app: una voce per logo
+    con nome, paese e file, senza i metadati di scaricamento."""
+    compact = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "count": len(logos),
+        "logos": {
+            key: {
+                "name": m.get("name", ""),
+                "country": m.get("country", ""),
+                "slug": m.get("slug", ""),
+                "file": (m.get("webp_file") or {}).get("file", ""),
+            }
+            for key, m in sorted(logos.items())
+        },
+    }
+    path = os.path.join(out_dir, "index.min.json")
+    save_file(json.dumps(compact, ensure_ascii=False,
+                         separators=(",", ":")).encode("utf-8"), path)
 
 
 def load_sitemap(timeout: int, retries: int) -> list[dict]:
@@ -462,7 +511,72 @@ def process_entry(entry: dict, cfg: dict, manifest_logos: dict) -> dict:
     }
 
 
-def write_github_summary(path: str, stats: dict, failures: list[dict], countries: dict) -> None:
+def process_entry_webp(entry: dict, cfg: dict, manifest_logos: dict) -> dict:
+    """Modalità leggera: PNG nativo -> WebP ridotto (1 sola richiesta HTTP).
+
+    Niente pagina del logo né SVG: il file `<paese>/<slug>.webp` è ideale
+    per l'uso runtime in app Android (telefono e TV).
+    """
+    country = sanitize(entry["country"])
+    slug = sanitize(entry["slug"])
+    key = f"{entry['country']}/{entry['slug']}"
+    out = cfg["out"]
+    max_px = cfg["webp"]
+    quality = cfg["webp_quality"]
+
+    prev = manifest_logos.get(key) if not cfg["force"] else None
+    if prev and prev.get("hash") != entry["hash"]:
+        prev = None
+    if prev and prev.get("webp") == max_px and prev.get("webp_file"):
+        rec = prev["webp_file"]
+        if rec.get("hash") == entry["hash"] \
+                and os.path.exists(os.path.join(out, rec["file"])):
+            return {"key": key, "status": "skipped"}
+
+    dest_rel = os.path.join(country, f"{slug}.webp")
+    errors: list[str] = []
+    webp_file: dict | None = None
+    try:
+        data = fetch_bytes(entry["image_url"], IMG_HEADERS, cfg["timeout"],
+                           cfg["retries"], referer=entry["page_url"], cfg=cfg)
+        if not is_valid_png(data):
+            raise ValueError("contenuto non-PNG")
+        webp = png_to_webp(data, max_px, quality)
+        if not is_valid_webp(webp):
+            raise ValueError("conversione WebP fallita")
+        save_file(webp, os.path.join(out, dest_rel))
+        webp_file = {"hash": entry["hash"], "file": dest_rel}
+    except RateLimitExceeded:
+        raise
+    except Exception as e:
+        errors.append(f"webp: {e}")
+
+    status = "ok" if not errors else "failed"
+    return {
+        "key": key,
+        "status": status,
+        "errors": errors,
+        "manifest": {
+            "name": entry["title"] or slug,
+            "country": entry["country"],
+            "slug": entry["slug"],
+            "page_url": entry["page_url"],
+            "hash": entry["hash"],
+            "webp": max_px,
+            "webp_quality": quality,
+            "webp_file": webp_file,
+            "sizes": [],
+            "svg": False,
+            "svg_missing": False,
+            "png": {},
+            "svg_file": None,
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+        },
+    }
+
+
+def write_github_summary(path: str, stats: dict, failures: list[dict],
+                         countries: dict, fmt_note: str = "") -> None:
     lines = [
         "## ⚽ Sincronizzazione loghi",
         "",
@@ -472,6 +586,7 @@ def write_github_summary(path: str, stats: dict, failures: list[dict], countries
         f"- Saltati (già aggiornati): **{stats['skipped']}**",
         f"- Falliti: **{stats['failed']}**",
         f"- Senza SVG disponibile: **{stats['svg_missing']}**",
+        *([f"- Formato: **{fmt_note}**"] if fmt_note else []),
         "",
         "<details><summary>Loghi per paese (top 30)</summary>",
         "",
@@ -508,6 +623,13 @@ def main() -> int:
     ap.add_argument("--delay", type=float, default=0.5,
                     help="Pausa in secondi prima di ogni richiesta (default: 0.5; alza se vedi HTTP 429)")
     ap.add_argument("--force", action="store_true", help="Riscarica tutto, anche se presente")
+    ap.add_argument("--webp", type=int, default=0,
+                    help="Modalità leggera per app: riduce ogni logo a N px di "
+                         "lato e salva <paese>/<slug>.webp (es. --webp 512). "
+                         "Solo il PNG nativo: 1 richiesta per logo, niente SVG. "
+                         "Richiede Pillow. Cambiare N riscarica tutto.")
+    ap.add_argument("--webp-quality", type=int, default=80,
+                    help="Qualità WebP da 1 a 100 (default: 80)")
     ap.add_argument("--prune", action="store_true",
                     help="Rimuove dal manifesto/file i loghi spariti dalla sitemap (solo run complete)")
     ap.add_argument("--timeout", type=int, default=30, help="Timeout HTTP in secondi (default: 30)")
@@ -547,8 +669,22 @@ def main() -> int:
         except Exception as e:
             log(f"ATTENZIONE: manifesto illeggibile ({e}), riparto da zero.")
 
-    cfg = {"out": args.out, "sizes": sizes, "svg": args.svg, "force": args.force,
-           "timeout": args.timeout, "retries": args.retries, "delay": max(0.0, args.delay)}
+    webp_mode = args.webp > 0
+    svg_effective = False if webp_mode else args.svg
+    if webp_mode:
+        sizes = []
+        log(f"Modalità WebP leggera: 1 richiesta per logo, output "
+            f"{args.out}/<paese>/<slug>.webp a {args.webp}px "
+            f"(qualità {args.webp_quality}). Opzioni --sizes/--svg ignorate.")
+        try:
+            import PIL  # noqa: F401
+        except ImportError:
+            log("ERRORE: la modalità --webp richiede Pillow (pip install pillow).")
+            return 1
+
+    cfg = {"out": args.out, "sizes": sizes, "svg": svg_effective, "force": args.force,
+           "timeout": args.timeout, "retries": args.retries, "delay": max(0.0, args.delay),
+           "webp": args.webp, "webp_quality": max(1, min(100, args.webp_quality))}
 
     stats = {"total": len(entries), "ok": 0, "partial": 0, "skipped": 0,
              "failed": 0, "files": 0, "svg_missing": 0}
@@ -558,10 +694,15 @@ def main() -> int:
     t0 = time.time()
 
     workers = max(1, min(args.workers, 16))
-    log(f"Avvio download: {len(entries)} loghi, {workers} worker, "
-        f"misure PNG {','.join(sizes)}, SVG {'sì' if args.svg else 'no'}, "
-        f"pausa {cfg['delay']}s.")
-    per_logo = 2 if not args.svg else 3  # stima richieste HTTP per logo
+    if webp_mode:
+        log(f"Avvio download: {len(entries)} loghi, {workers} worker, "
+            f"WebP {cfg['webp']}px q{cfg['webp_quality']}, pausa {cfg['delay']}s.")
+        per_logo = 1  # solo il PNG nativo, niente pagina del logo né SVG
+    else:
+        log(f"Avvio download: {len(entries)} loghi, {workers} worker, "
+            f"misure PNG {','.join(sizes)}, SVG {'sì' if svg_effective else 'no'}, "
+            f"pausa {cfg['delay']}s.")
+        per_logo = 2 if not svg_effective else 3  # stima richieste HTTP per logo
     est_min = len(entries) * per_logo * cfg["delay"] * 1.25 / workers / 60
     if len(entries) > 0:
         log(f"Stima indicativa: ~{max(1, est_min):.0f} minuti "
@@ -569,11 +710,14 @@ def main() -> int:
 
     FLUSH_EVERY = 50  # salva il manifesto ogni N loghi scaricati: se la run
     next_flush = FLUSH_EVERY  # viene interrotta, i progressi restano salvati
+    extra_hdr = ({"webp": cfg["webp"], "webp_quality": cfg["webp_quality"]}
+                 if webp_mode else None)
 
     aborted: Exception | None = None
     pool = ThreadPoolExecutor(max_workers=workers)
     try:
-        futs = {pool.submit(process_entry, e, cfg, manifest_logos): e for e in entries}
+        worker_fn = process_entry_webp if webp_mode else process_entry
+        futs = {pool.submit(worker_fn, e, cfg, manifest_logos): e for e in entries}
         for fut in as_completed(futs):
             try:
                 res = fut.result()
@@ -591,7 +735,8 @@ def main() -> int:
                 if st in ("ok", "partial"):
                     m = res["manifest"]
                     manifest_logos[res["key"]] = m
-                    stats["files"] += len(m["png"]) + (1 if m["svg_file"] else 0)
+                    stats["files"] += (len(m["png"]) + (1 if m.get("webp_file") else 0)
+                                       + (1 if m["svg_file"] else 0))
                     if m["svg_missing"]:
                         stats["svg_missing"] += 1
                     if stats["ok"] + stats["partial"] >= next_flush:
@@ -606,7 +751,7 @@ def main() -> int:
             if need_flush:
                 # Salvataggio parziale atomico: anche se la run viene cancellata
                 # o il processo ucciso, i loghi già completati non si ripescano.
-                write_manifest(args.out, sizes, args.svg, manifest_logos)
+                write_manifest(args.out, sizes, svg_effective, manifest_logos, extra_hdr)
     finally:
         pool.shutdown(wait=False, cancel_futures=True)
 
@@ -634,11 +779,18 @@ def main() -> int:
                     if os.path.exists(p):
                         os.remove(p)
                         pruned += 1
+                if m.get("webp_file"):
+                    p = os.path.join(args.out, m["webp_file"]["file"])
+                    if os.path.exists(p):
+                        os.remove(p)
+                        pruned += 1
         log(f"Prune: rimosse {pruned} file non più in sitemap.")
 
     # --- manifesto ------------------------------------------------------------
     os.makedirs(args.out, exist_ok=True)
-    write_manifest(args.out, sizes, args.svg, manifest_logos)
+    write_manifest(args.out, sizes, svg_effective, manifest_logos, extra_hdr)
+    if webp_mode:
+        write_compact_index(args.out, manifest_logos)
 
     el = time.time() - t0
     log("")
@@ -655,8 +807,10 @@ def main() -> int:
         countries: dict[str, int] = {}
         for m in manifest_logos.values():
             countries[m["country"]] = countries.get(m["country"], 0) + 1
+        fmt_note = (f"WebP {cfg['webp']}px qualità {cfg['webp_quality']}"
+                    if webp_mode else "")
         try:
-            write_github_summary(summary_path, stats, failures, countries)
+            write_github_summary(summary_path, stats, failures, countries, fmt_note)
         except Exception as e:
             log(f"(impossibile scrivere il riepilogo GitHub: {e})")
     return 3 if aborted is not None else 0
