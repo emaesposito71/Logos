@@ -103,7 +103,7 @@ class RateLimitExceeded(Exception):
 _rate_lock = threading.Lock()
 _rate_cooldown_until = 0.0
 _consec_429 = 0
-MAX_CONSEC_429 = 20
+MAX_CONSEC_429 = 10
 _abort = threading.Event()
 
 
