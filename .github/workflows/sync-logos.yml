@@ -1,0 +1,83 @@
+# Sincronizza i loghi da football-logos.cc nella cartella calcio/ del repo.
+# Avvio manuale da: Actions -> "Sync football logos" -> Run workflow.
+# Lo script è incrementale: salta i loghi già aggiornati e scarica solo le novità.
+#
+# Richiede: Settings -> Actions -> General -> Workflow permissions = "Read and write".
+#
+# Per passare a esecuzione automatica, aggiungi sotto "on:" (es. ogni lunedì alle 03:00 UTC):
+#   schedule:
+#     - cron: "0 3 * * 1"
+
+name: Sync football logos
+
+on:
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: "Solo questi paesi (virgola, es. italy,spain). Vuoto = tutti."
+        required: false
+        default: ""
+      sizes:
+        description: "Misure PNG (virgola, tra 3000,1500,700,512,256,128,64)"
+        required: false
+        default: "700"
+      svg:
+        description: "Scarica anche gli SVG"
+        required: false
+        default: true
+        type: boolean
+      limit:
+        description: "Max loghi (vuoto = tutti; es. 20 per una prova)"
+        required: false
+        default: ""
+      workers:
+        description: "Download paralleli"
+        required: false
+        default: "8"
+      force:
+        description: "Riscarica tutto da zero"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-logos
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download logos
+        run: |
+          ARGS=(--sizes "${{ inputs.sizes }}" --workers "${{ inputs.workers }}")
+          [ -n "${{ inputs.countries }}" ] && ARGS+=(--countries "${{ inputs.countries }}")
+          [ -n "${{ inputs.limit }}" ] && ARGS+=(--limit "${{ inputs.limit }}")
+          [ "${{ inputs.svg }}" != "true" ] && ARGS+=(--no-svg)
+          [ "${{ inputs.force }}" = "true" ] && ARGS+=(--force)
+          python3 scripts/calcio.py "${ARGS[@]}"
+
+      - name: Commit e push se ci sono novità
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add calcio
+          if git diff --cached --quiet; then
+            echo "Nessuna novità, niente da committare."
+          else
+            N=$(git diff --cached --name-only | wc -l)
+            git commit -m "chore: sync football logos ($N file)"
+            git push
+          fi
