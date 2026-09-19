@@ -31,9 +31,13 @@ on:
         required: false
         default: ""
       workers:
-        description: "Download paralleli"
+        description: "Download paralleli (4 è prudente contro i rate-limit)"
         required: false
-        default: "8"
+        default: "4"
+      delay:
+        description: "Pausa in secondi prima di ogni richiesta (alza se vedi HTTP 429)"
+        required: false
+        default: "0.5"
       force:
         description: "Riscarica tutto da zero"
         required: false
@@ -62,7 +66,7 @@ jobs:
 
       - name: Download logos
         run: |
-          ARGS=(--sizes "${{ inputs.sizes }}" --workers "${{ inputs.workers }}")
+          ARGS=(--sizes "${{ inputs.sizes }}" --workers "${{ inputs.workers }}" --delay "${{ inputs.delay }}")
           [ -n "${{ inputs.countries }}" ] && ARGS+=(--countries "${{ inputs.countries }}")
           [ -n "${{ inputs.limit }}" ] && ARGS+=(--limit "${{ inputs.limit }}")
           [ "${{ inputs.svg }}" != "true" ] && ARGS+=(--no-svg)
