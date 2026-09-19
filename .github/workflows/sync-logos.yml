@@ -1,23 +1,28 @@
-# Sincronizza i loghi da football-logos.cc nella cartella calcio/ del repo.
+# Sincronizza i loghi da football-logos.cc nella repo.
+#
+# DUE FORMATI (scelta al lancio manuale, default: webp):
+#   - "webp"    → cartella loghi/  — UN file per logo: <paese>/<slug>.webp,
+#                 ridotto a 512px (ideale per app Android telefono/TV, ~15-40 KB
+#                 a logo). Solo 1 richiesta HTTP per logo: meno 429. Produce
+#                 anche loghi/index.min.json, indice compatto per l'app.
+#   - "png-svg" → cartella calcio/ — archivio completo PNG 512 + SVG.
+#
+# USO RUNTIME DELL'APP (esempio URL diretto, il repo fa da CDN):
+#   https://raw.githubusercontent.com/emaesposito71/Logos/main/loghi/italy/juventus.webp
+#   L'indice dei file: .../main/loghi/index.min.json
 #
 # Quando gira:
 #   - Manualmente: Actions -> "Sync football logos" -> Run workflow.
 #   - Automaticamente: OGNI ORA (vedi "schedule" qui sotto).
 #
-# Cosa succede se il CDN ci rallenta (rate limit / HTTP 429):
-#   - Lo script SI FERMA DA SOLO, ma non perde nulla: il manifesto
-#     (calcio/index.json) viene salvato ogni 50 loghi e alla fine vengono
-#     committati comunque i loghi già scaricati.
-#   - La run appare VERDE con un avviso (giallo): volutamente non rossa,
-#     così non arrivano email di "run fallita" ogni ora.
-#   - La run successiva riparte dal manifesto: salta i loghi già presenti
-#     e scarica solo i mancanti. Man mano il repo si riempie da solo.
-#   - Quando è tutto scaricato, le run orarie durano 1-2 minuti, non
-#     committano nulla e fanno anche da radar per i loghi nuovi del sito.
+# Rate limit / HTTP 429: lo script SI FERMA DA SOLO ma salva tutto (manifesto
+# aggiornato ogni 50 loghi, commit dei file già scaricati). La run appare
+# VERDE con un avviso giallo: è una pausa attesa, non un guasto. La run
+# successiva riparte dal manifesto e scarica solo i mancanti.
 #
-# Per DISATTIVARE l'esecuzione oraria: elimina (o commenta) le due righe
-# "schedule:" / "- cron: ..." qui sotto, oppure da Actions -> Sync football
-# logos -> "..." -> "Disable workflow".
+# Per DISATTIVARE l'esecuzione oraria: elimina (o commenta) le righe
+# "schedule:" qui sotto, oppure Actions -> Sync football logos -> "..." ->
+# "Disable workflow".
 #
 # Richiede: Settings -> Actions -> General -> Workflow permissions = "Read and write".
 
@@ -26,19 +31,22 @@ name: Sync football logos
 on:
   workflow_dispatch:
     inputs:
+      format:
+        description: "Formato: webp = leggero per app (cartella loghi/), png-svg = archivio (cartella calcio/)"
+        type: choice
+        options:
+          - "webp"
+          - "png-svg"
+        default: "webp"
+        required: true
+      webp_size:
+        description: "Lato massimo in px (solo formato webp)"
+        required: false
+        default: "512"
       countries:
         description: "Solo questi paesi (virgola, es. italy,spain). Vuoto = tutti."
         required: false
         default: ""
-      sizes:
-        description: "Misure PNG (virgola, tra 3000,1500,700,512,256,128,64)"
-        required: false
-        default: "512"
-      svg:
-        description: "Scarica anche gli SVG"
-        required: false
-        default: true
-        type: boolean
       limit:
         description: "Max loghi (vuoto = tutti; es. 20 per una prova)"
         required: false
@@ -81,27 +89,34 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Installa Pillow (conversione WebP)
+        run: python3 -m pip install --quiet pillow
+
       - name: Download logos
         id: download
         run: |
           # Nelle run programmate (schedule) gli input del form sono VUOTI:
           # applichiamo quindi gli stessi default del modulo manuale.
+          FORMAT="${{ inputs.format }}"
+          WEBP_SIZE="${{ inputs.webp_size }}"
           COUNTRIES="${{ inputs.countries }}"
-          SIZES="${{ inputs.sizes }}"
-          SVG="${{ inputs.svg }}"
           LIMIT="${{ inputs.limit }}"
           WORKERS="${{ inputs.workers }}"
           DELAY="${{ inputs.delay }}"
           FORCE="${{ inputs.force }}"
-          [ -z "$SIZES" ] && SIZES="512"
-          [ -z "$SVG" ] && SVG="true"
+          [ -z "$FORMAT" ] && FORMAT="webp"
+          [ -z "$WEBP_SIZE" ] && WEBP_SIZE="512"
           [ -z "$WORKERS" ] && WORKERS="4"
           [ -z "$DELAY" ] && DELAY="0.5"
           [ -z "$FORCE" ] && FORCE="false"
-          ARGS=(--sizes "$SIZES" --workers "$WORKERS" --delay "$DELAY")
+          ARGS=(--workers "$WORKERS" --delay "$DELAY")
+          if [ "$FORMAT" = "webp" ]; then
+            ARGS+=(--webp "$WEBP_SIZE" --out loghi)
+          else
+            ARGS+=(--sizes 512 --out calcio)
+          fi
           [ -n "$COUNTRIES" ] && ARGS+=(--countries "$COUNTRIES")
           [ -n "$LIMIT" ] && ARGS+=(--limit "$LIMIT")
-          [ "$SVG" != "true" ] && ARGS+=(--no-svg)
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           set +e
           python3 scripts/calcio.py "${ARGS[@]}"
@@ -120,13 +135,13 @@ jobs:
       - name: Commit e push se ci sono novità
         if: always() && !cancelled()
         run: |
-          if [ ! -d calcio ]; then
-            echo "Nessuna cartella calcio/ da committare (il download non è mai partito)."
+          if [ ! -d calcio ] && [ ! -d loghi ]; then
+            echo "Nessuna cartella da committare (il download non è mai partito)."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A -- calcio
+          git add -A -- calcio loghi
           if git diff --cached --quiet; then
             echo "Nessuna novità, niente da committare."
           else
@@ -138,13 +153,14 @@ jobs:
       - name: Esito
         if: always() && steps.download.outcome != 'skipped'
         run: |
-          N=$(python3 -c "import json;print(json.load(open('calcio/index.json')).get('count',0))" 2>/dev/null || echo "?")
+          if [ -f loghi/index.json ]; then M=loghi/index.json; else M=calcio/index.json; fi
+          N=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('count',0))" "$M" 2>/dev/null || echo "?")
           if [ "${{ steps.download.outputs.aborted }}" = "true" ]; then
-            echo "::warning::Rate limit del CDN: la run si è fermata, ma è tutto salvato. Loghi già pronti nel repo: $N (target ≈ 4.500). La prossima esecuzione (automatica entro un'ora, o manuale) riparte da qui e scarica solo i mancanti."
+            echo "::warning::Rate limit del CDN: la run si è fermata, ma è tutto salvato. Loghi già pronti: $N (target ≈ 4.500). La prossima esecuzione (automatica entro un'ora, o manuale) riparte da qui e scarica solo i mancanti."
             {
               echo "### ⏸️ Fermata per rate limit — è tutto normale"
               echo ""
-              echo "- Loghi già pronti nel repo: **$N** su ≈ 4.500"
+              echo "- Loghi già pronti: **$N** su ≈ 4.500"
               echo "- Nulla è perso: i loghi scaricati sono stati committati"
               echo "- La prossima run (entro un'ora) riprende da qui da sola"
             } >> "$GITHUB_STEP_SUMMARY"
@@ -153,7 +169,7 @@ jobs:
           {
             echo "### ✅ Run completata senza interruzioni"
             echo ""
-            echo "Loghi nel repo: **$N**. Nel riepilogo qui sotto: se \"Saltati"
+            echo "Loghi pronti: **$N**. Nel riepilogo qui sotto: se \"Saltati"
             echo "(già aggiornati)\" è uguale a \"Loghi elaborati\" e \"Falliti: 0\","
             echo "la sincronizzazione è al completo. 🎉"
           } >> "$GITHUB_STEP_SUMMARY"
