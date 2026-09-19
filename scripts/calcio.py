@@ -211,6 +211,20 @@ def save_file(data: bytes, path: str) -> None:
     os.replace(tmp, path)
 
 
+def write_manifest(out_dir: str, sizes: list[str], want_svg: bool, logos: dict) -> None:
+    """Scrive il manifesto in modo atomico (usato anche per i salvataggi parziali)."""
+    manifest = {
+        "source": IMAGE_SITEMAP,
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "sizes": sizes,
+        "svg": want_svg,
+        "count": len(logos),
+        "logos": dict(sorted(logos.items())),
+    }
+    path = os.path.join(out_dir, "index.json")
+    save_file(json.dumps(manifest, ensure_ascii=False, indent=1).encode("utf-8"), path)
+
+
 def load_sitemap(timeout: int, retries: int) -> list[dict]:
     log(f"Scarico sitemap immagini: {IMAGE_SITEMAP}")
     raw = fetch_bytes(IMAGE_SITEMAP, PAGE_HEADERS, timeout, retries)
@@ -547,6 +561,14 @@ def main() -> int:
     log(f"Avvio download: {len(entries)} loghi, {workers} worker, "
         f"misure PNG {','.join(sizes)}, SVG {'sì' if args.svg else 'no'}, "
         f"pausa {cfg['delay']}s.")
+    per_logo = 2 if not args.svg else 3  # stima richieste HTTP per logo
+    est_min = len(entries) * per_logo * cfg["delay"] * 1.25 / workers / 60
+    if len(entries) > 0:
+        log(f"Stima indicativa: ~{max(1, est_min):.0f} minuti "
+            f"(dipende dalla velocità di risposta del CDN).")
+
+    FLUSH_EVERY = 50  # salva il manifesto ogni N loghi scaricati: se la run
+    next_flush = FLUSH_EVERY  # viene interrotta, i progressi restano salvati
 
     aborted: Exception | None = None
     pool = ThreadPoolExecutor(max_workers=workers)
@@ -561,6 +583,7 @@ def main() -> int:
                 for f in futs:
                     f.cancel()
                 break
+            need_flush = False
             with lock:
                 done += 1
                 st = res["status"]
@@ -571,12 +594,19 @@ def main() -> int:
                     stats["files"] += len(m["png"]) + (1 if m["svg_file"] else 0)
                     if m["svg_missing"]:
                         stats["svg_missing"] += 1
+                    if stats["ok"] + stats["partial"] >= next_flush:
+                        need_flush = True
+                        next_flush += FLUSH_EVERY
                 if st in ("partial", "failed"):
                     failures.append(res)
-                if done % 100 == 0 or done == len(entries):
+                if done % 50 == 0 or done == len(entries):
                     el = time.time() - t0
                     log(f"... {done}/{len(entries)} ({el:.0f}s) "
                         f"ok={stats['ok']} skip={stats['skipped']} fail={stats['failed']}")
+            if need_flush:
+                # Salvataggio parziale atomico: anche se la run viene cancellata
+                # o il processo ucciso, i loghi già completati non si ripescano.
+                write_manifest(args.out, sizes, args.svg, manifest_logos)
     finally:
         pool.shutdown(wait=False, cancel_futures=True)
 
@@ -608,15 +638,7 @@ def main() -> int:
 
     # --- manifesto ------------------------------------------------------------
     os.makedirs(args.out, exist_ok=True)
-    manifest = {
-        "source": IMAGE_SITEMAP,
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "sizes": sizes,
-        "svg": args.svg,
-        "count": len(manifest_logos),
-        "logos": dict(sorted(manifest_logos.items())),
-    }
-    save_file(json.dumps(manifest, ensure_ascii=False, indent=1).encode("utf-8"), manifest_path)
+    write_manifest(args.out, sizes, args.svg, manifest_logos)
 
     el = time.time() - t0
     log("")
