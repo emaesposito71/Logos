@@ -1,8 +1,9 @@
 {
  "source": "https://football-logos.cc/image-sitemap.xml.gz",
- "updated_at": "2026-09-19T21:20:50.695897+00:00",
+ "updated_at": "2026-09-19T21:44:28.736722+00:00",
  "sizes": [
-  "700"
+  "512",
+  "256"
  ],
  "svg": true,
  "count": 273,
@@ -14,21 +15,26 @@
    "page_url": "https://football-logos.cc/italy/ac-leon/",
    "hash": "02d6d9f4",
    "sizes": [
-    "700"
+    "512",
+    "256"
    ],
    "svg": true,
    "svg_missing": false,
    "png": {
-    "700": {
-     "hash": "02d6d9f4",
-     "file": "italy/ac-leon-700.png"
+    "512": {
+     "hash": "42b524dc",
+     "file": "italy/ac-leon-512.png"
+    },
+    "256": {
+     "hash": "9e63af72",
+     "file": "italy/ac-leon-256.png"
     }
    },
    "svg_file": {
     "hash": "55add233",
     "file": "italy/ac-leon.svg"
    },
-   "fetched_at": "2026-09-19T21:19:11.184211+00:00"
+   "fetched_at": "2026-09-19T21:44:28.646732+00:00"
   },
   "italy/acerrana-1926": {
    "name": "Acerrana 1926 Logo",
@@ -37,21 +43,26 @@
    "page_url": "https://football-logos.cc/italy/acerrana-1926/",
    "hash": "32fe4cf5",
    "sizes": [
-    "700"
+    "512",
+    "256"
    ],
    "svg": true,
    "svg_missing": false,
    "png": {
-    "700": {
-     "hash": "32fe4cf5",
-     "file": "italy/acerrana-1926-700.png"
+    "512": {
+     "hash": "4a4c0233",
+     "file": "italy/acerrana-1926-512.png"
+    },
+    "256": {
+     "hash": "005ad4e0",
+     "file": "italy/acerrana-1926-256.png"
     }
    },
    "svg_file": {
     "hash": "3794f83e",
     "file": "italy/acerrana-1926.svg"
    },
-   "fetched_at": "2026-09-19T21:19:11.214239+00:00"
+   "fetched_at": "2026-09-19T21:44:28.736212+00:00"
   },
   "italy/acireale-calcio": {
    "name": "Acireale Calcio Logo",
@@ -60,21 +71,26 @@
    "page_url": "https://football-logos.cc/italy/acireale-calcio/",
    "hash": "5f80b95a",
    "sizes": [
-    "700"
+    "512",
+    "256"
    ],
    "svg": true,
    "svg_missing": false,
    "png": {
-    "700": {
-     "hash": "5f80b95a",
-     "file": "italy/acireale-calcio-700.png"
+    "512": {
+     "hash": "1296ac25",
+     "file": "italy/acireale-calcio-512.png"
+    },
+    "256": {
+     "hash": "d0bc1235",
+     "file": "italy/acireale-calcio-256.png"
     }
    },
    "svg_file": {
     "hash": "1d7b684e",
     "file": "italy/acireale-calcio.svg"
    },
-   "fetched_at": "2026-09-19T21:19:11.257290+00:00"
+   "fetched_at": "2026-09-19T21:44:28.460340+00:00"
   },
   "italy/acr-messina": {
    "name": "ACR Messina Logo",
@@ -83,21 +99,26 @@
    "page_url": "https://football-logos.cc/italy/acr-messina/",
    "hash": "591d7d5e",
    "sizes": [
-    "700"
+    "512",
+    "256"
    ],
    "svg": true,
    "svg_missing": false,
    "png": {
-    "700": {
-     "hash": "591d7d5e",
-     "file": "italy/acr-messina-700.png"
+    "512": {
+     "hash": "12710ae0",
+     "file": "italy/acr-messina-512.png"
+    },
+    "256": {
+     "hash": "9bad42d4",
+     "file": "italy/acr-messina-256.png"
     }
    },
    "svg_file": {
     "hash": "82f9fad8",
     "file": "italy/acr-messina.svg"
    },
-   "fetched_at": "2026-09-19T21:19:11.184473+00:00"
+   "fetched_at": "2026-09-19T21:44:28.538458+00:00"
   },
   "italy/adriese": {
    "name": "USD Adriese 1906 Logo",
@@ -106,21 +127,26 @@
    "page_url": "https://football-logos.cc/italy/adriese/",
    "hash": "9c63757e",
    "sizes": [
-    "700"
+    "512",
+    "256"
    ],
    "svg": true,
    "svg_missing": false,
    "png": {
-    "700": {
-     "hash": "9c63757e",
-     "file": "italy/adriese-700.png"
+    "512": {
+     "hash": "713c6c36",
+     "file": "italy/adriese-512.png"
+    },
+    "256": {
+     "hash": "40ea2caf",
+     "file": "italy/adriese-256.png"
     }
    },
    "svg_file": {
     "hash": "d6b1e4b7",
     "file": "italy/adriese.svg"
    },
-   "fetched_at": "2026-09-19T21:19:11.190409+00:00"
+   "fetched_at": "2026-09-19T21:44:28.520316+00:00"
   },
   "italy/afragolese-1944": {
    "name": "Afragolese 1944 Logo",
