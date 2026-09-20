@@ -1,9 +1,9 @@
 {
  "source": "https://football-logos.cc/image-sitemap.xml.gz",
- "updated_at": "2026-09-20T01:04:58.971304+00:00",
+ "updated_at": "2026-09-20T05:30:37.923243+00:00",
  "sizes": [],
  "svg": false,
- "count": 4524,
+ "count": 4537,
  "logos": {
   "afghanistan/afghanistan-national-team": {
    "name": "Afghanistan National Team Logo",
@@ -8365,6 +8365,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:55:30.917392+00:00"
   },
+  "brazil/bahia-de-feira": {
+   "name": "Bahia de Feira Logo",
+   "country": "brazil",
+   "slug": "bahia-de-feira",
+   "page_url": "https://football-logos.cc/brazil/bahia-de-feira/",
+   "hash": "7f9c29bd",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "7f9c29bd",
+    "file": "brazil/bahia-de-feira.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.540027+00:00"
+  },
   "brazil/bangu": {
    "name": "Bangu Logo",
    "country": "brazil",
@@ -12640,6 +12659,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:55:50.231032+00:00"
   },
+  "chile/colchagua": {
+   "name": "Colchagua Logo",
+   "country": "chile",
+   "slug": "colchagua",
+   "page_url": "https://football-logos.cc/chile/colchagua/",
+   "hash": "76ec42a5",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "76ec42a5",
+    "file": "chile/colchagua.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.549799+00:00"
+  },
   "chile/colo-colo": {
    "name": "Colo Colo Logo",
    "country": "chile",
@@ -14672,6 +14710,25 @@
    "png": {},
    "svg_file": null,
    "fetched_at": "2026-09-20T00:55:59.328910+00:00"
+  },
+  "croatia/nk-dugopolje": {
+   "name": "NK Dugopolje Logo",
+   "country": "croatia",
+   "slug": "nk-dugopolje",
+   "page_url": "https://football-logos.cc/croatia/nk-dugopolje/",
+   "hash": "7b858e55",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "7b858e55",
+    "file": "croatia/nk-dugopolje.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.547936+00:00"
   },
   "croatia/nk-zagora": {
    "name": "NK Zagora Logo",
@@ -21019,6 +21076,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:28.059747+00:00"
   },
+  "england/grimsby-borough": {
+   "name": "Grimsby Borough Logo",
+   "country": "england",
+   "slug": "grimsby-borough",
+   "page_url": "https://football-logos.cc/england/grimsby-borough/",
+   "hash": "27dfadf2",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "27dfadf2",
+    "file": "england/grimsby-borough.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.645391+00:00"
+  },
   "england/guiseley-afc": {
    "name": "Guiseley AFC Logo",
    "country": "england",
@@ -21474,6 +21550,25 @@
    "png": {},
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:30.300420+00:00"
+  },
+  "england/hinckley-afc": {
+   "name": "Hinckley AFC Logo",
+   "country": "england",
+   "slug": "hinckley-afc",
+   "page_url": "https://football-logos.cc/england/hinckley-afc/",
+   "hash": "e09d09d6",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "e09d09d6",
+    "file": "england/hinckley-afc.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.618104+00:00"
   },
   "england/hitchin-town": {
    "name": "Hitchin Town Logo",
@@ -25997,6 +26092,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:50.775442+00:00"
   },
+  "finland/gbk-kokkola": {
+   "name": "GBK Kokkola Logo",
+   "country": "finland",
+   "slug": "gbk-kokkola",
+   "page_url": "https://football-logos.cc/finland/gbk-kokkola/",
+   "hash": "05c55314",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "05c55314",
+    "file": "finland/gbk-kokkola.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:36.539740+00:00"
+  },
   "finland/gnistan": {
    "name": "IF Gnistan Logo",
    "country": "finland",
@@ -26719,6 +26833,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:54.106348+00:00"
   },
+  "france/as-aixoise": {
+   "name": "AS Aixoise Logo",
+   "country": "france",
+   "slug": "as-aixoise",
+   "page_url": "https://football-logos.cc/france/as-aixoise/",
+   "hash": "43a88499",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "43a88499",
+    "file": "france/as-aixoise.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.121392+00:00"
+  },
   "france/as-baume-les-dames": {
    "name": "AS Baume-les-Dames Logo",
    "country": "france",
@@ -26756,6 +26889,25 @@
    "png": {},
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:54.332340+00:00"
+  },
+  "france/as-brest": {
+   "name": "AS Brest Logo",
+   "country": "france",
+   "slug": "as-brest",
+   "page_url": "https://football-logos.cc/france/as-brest/",
+   "hash": "6779e445",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "6779e445",
+    "file": "france/as-brest.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.174193+00:00"
   },
   "france/as-cannes": {
    "name": "AS Cannes Logo",
@@ -26965,6 +27117,25 @@
    "png": {},
    "svg_file": null,
    "fetched_at": "2026-09-20T00:56:55.316940+00:00"
+  },
+  "france/asca-wittelsheim": {
+   "name": "ASCA Wittelsheim Logo",
+   "country": "france",
+   "slug": "asca-wittelsheim",
+   "page_url": "https://football-logos.cc/france/asca-wittelsheim/",
+   "hash": "792cc2fb",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "792cc2fb",
+    "file": "france/asca-wittelsheim.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.377441+00:00"
   },
   "france/aubagne": {
    "name": "Aubagne FC Logo",
@@ -34357,6 +34528,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:57:28.828606+00:00"
   },
+  "germany/spvgg-burgbrohl": {
+   "name": "SpVgg Burgbrohl Logo",
+   "country": "germany",
+   "slug": "spvgg-burgbrohl",
+   "page_url": "https://football-logos.cc/germany/spvgg-burgbrohl/",
+   "hash": "25381d22",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "25381d22",
+    "file": "germany/spvgg-burgbrohl.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.202192+00:00"
+  },
   "germany/spvgg-egc-wirges": {
    "name": "SpVgg EGC Wirges Logo",
    "country": "germany",
@@ -35041,6 +35231,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:57:31.903620+00:00"
   },
+  "germany/tsg-concordia-schonkirchen": {
+   "name": "TSG Concordia Schönkirchen Logo",
+   "country": "germany",
+   "slug": "tsg-concordia-schonkirchen",
+   "page_url": "https://football-logos.cc/germany/tsg-concordia-schonkirchen/",
+   "hash": "65057173",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "65057173",
+    "file": "germany/tsg-concordia-schonkirchen.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.335241+00:00"
+  },
   "germany/tsg-sprockhovel": {
    "name": "TSG Sprockhövel Logo",
    "country": "germany",
@@ -35212,6 +35421,25 @@
    "svg_file": null,
    "fetched_at": "2026-09-20T00:57:32.554141+00:00"
   },
+  "germany/tsv-mannheim": {
+   "name": "TSV Mannheim Logo",
+   "country": "germany",
+   "slug": "tsv-mannheim",
+   "page_url": "https://football-logos.cc/germany/tsv-mannheim/",
+   "hash": "75d9dc2a",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "75d9dc2a",
+    "file": "germany/tsv-mannheim.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.350403+00:00"
+  },
   "germany/tsv-reinbek": {
    "name": "TSV Reinbek Logo",
    "country": "germany",
@@ -35306,6 +35534,25 @@
    "png": {},
    "svg_file": null,
    "fetched_at": "2026-09-20T00:57:33.147415+00:00"
+  },
+  "germany/tsv-verden": {
+   "name": "TSV Verden Logo",
+   "country": "germany",
+   "slug": "tsv-verden",
+   "page_url": "https://football-logos.cc/germany/tsv-verden/",
+   "hash": "805e09c8",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "805e09c8",
+    "file": "germany/tsv-verden.webp"
+   },
+   "sizes": [],
+   "svg": false,
+   "svg_missing": false,
+   "png": {},
+   "svg_file": null,
+   "fetched_at": "2026-09-20T05:30:37.922984+00:00"
   },
   "germany/turkgucu-munchen": {
    "name": "Türkgücü München Logo",
