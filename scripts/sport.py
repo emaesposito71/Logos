@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 sport.py — scarica i loghi delle squadre americane (NBA, NFL, NHL, MLB, WNBA,
-NCAA) in WebP leggeri, pronti per l'uso runtime in un'app Android.
+UFL, NCAA) in WebP leggeri, pronti per l'uso runtime in un'app Android.
 
 Sorgente: API pubblica ESPN (site.api.espn.com) + CDN loghi (a.espncdn.com).
   Per ogni lega scarica l'elenco squadre (50 per pagina, paginato), poi
@@ -16,18 +16,31 @@ GitHub Actions. L'API di ESPN copre gli stessi sport principali in modo
 stabile e scaricabile; la qualità (PNG 500px) è identica a quella mostrata
 da ESPN su telefono e TV.
 
-Lego disponibili (chiave -> lega ESPN):
+Leghe disponibili (chiave -> lega ESPN):
 
-    nfl      NFL (football americano)            ~32 squadre
-    nba      NBA (basket)                        ~30 squadre
-    wnba     WNBA (basket femminile)             ~15 squadre
-    nhl      NHL (hockey ghiaccio)               ~32 squadre
-    mlb      MLB (baseball)                      ~30 squadre
-    ncaa-mb  NCAA basket maschile (Division I)   ~360 squadre
-    ncaa-wb  NCAA basket femminile (Division I)  ~350 squadre
-    ncaa-fb  NCAA football (FBS + altre div.)    ~130+ squadre
+    nfl       NFL (football americano)            ~32 squadre
+    nba       NBA (basket)                        ~30 squadre
+    wnba      WNBA (basket femminile)             ~15 squadre
+    nhl       NHL (hockey ghiaccio)               ~32 squadre
+    mlb       MLB (baseball)                      ~30 squadre
+    ufl       UFL (football prof., spring league) ~8 squadre
+    ncaa-mb   NCAA basket maschile (Div. I)       ~362 squadre
+    ncaa-wb   NCAA basket femminile (Div. I)      ~362 squadre
+    ncaa-fb   NCAA football (tutte le divisioni)  ~762 squadre
+    ncaa-base NCAA baseball (Div. I)              ~437 squadre
+    ncaa-hm   NCAA hockey maschile (Div. I)       ~116 squadre
+    ncaa-hw   NCAA hockey femminile (Div. I)      ~47 squadre
+    ncaa-vb   NCAA pallavolo femminile (Div. I)   ~359 squadre
 
-Non disponibile: F1 (ESPN non espone i loghi dei team via API).
+Non disponibile da ESPN (testato direttamente sull'API):
+  - F1: ESPN non espone i loghi dei team via API.
+  - Leghe minori USA: MiLB (baseball), AHL/ECHL (hockey), NBA G League
+    (basket) NON esistono come endpoint dell'API ESPN (404); TheSportsDB
+    con chiave gratuita ora espone solo 5 leghe; i siti ufficiali (MiLB.com,
+    theahl.com, nba.com) sono dietro WAF Akamai che blocca anche curl.
+    Nota: nelle leghe NCAA ci sono ~150 squadre di Divisione 2/3 che su
+    ESPN NON hanno proprio un logo: vengono contate a parte ("senza logo"),
+    non come errori.
 
 Struttura prodotta:
 
@@ -93,14 +106,19 @@ IMG_HEADERS: dict[str, str] = {}
 
 # Chiave -> (percorso API ESPN, nome lega per il manifesto)
 LEAGUES: dict[str, tuple[str, str]] = {
-    "nfl":     ("football/nfl", "NFL"),
-    "nba":     ("basketball/nba", "NBA"),
-    "wnba":    ("basketball/wnba", "WNBA"),
-    "nhl":     ("hockey/nhl", "NHL"),
-    "mlb":     ("baseball/mlb", "MLB"),
-    "ncaa-mb": ("basketball/mens-college-basketball", "NCAA basket maschile"),
-    "ncaa-wb": ("basketball/womens-college-basketball", "NCAA basket femminile"),
-    "ncaa-fb": ("football/college-football", "NCAA football"),
+    "nfl":       ("football/nfl", "NFL"),
+    "nba":       ("basketball/nba", "NBA"),
+    "wnba":      ("basketball/wnba", "WNBA"),
+    "nhl":       ("hockey/nhl", "NHL"),
+    "mlb":       ("baseball/mlb", "MLB"),
+    "ncaa-mb":   ("basketball/mens-college-basketball", "NCAA basket maschile"),
+    "ncaa-wb":   ("basketball/womens-college-basketball", "NCAA basket femminile"),
+    "ncaa-fb":   ("football/college-football", "NCAA football"),
+    "ufl":       ("football/ufl", "UFL"),
+    "ncaa-base": ("baseball/college-baseball", "NCAA baseball"),
+    "ncaa-hm":   ("hockey/mens-college-hockey", "NCAA hockey maschile"),
+    "ncaa-hw":   ("hockey/womens-college-hockey", "NCAA hockey femminile"),
+    "ncaa-vb":   ("volleyball/womens-college-volleyball", "NCAA pallavolo femminile"),
 }
 
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
@@ -344,10 +362,28 @@ def process_team(entry: dict, cfg: dict, manifest_logos: dict) -> dict:
     quality = cfg["quality"]
 
     if not entry["logo_url"]:
+        # Squadra senza logo su ESPN (es. college football Divisione 2/3):
+        # non è un errore. Registriamo lo stato e nelle run successive la
+        # saltiamo, così non viene ritentata all'infinito.
+        prev = manifest_logos.get(key) if not cfg["force"] else None
+        if prev and prev.get("logo_missing"):
+            return {"key": key, "status": "skipped"}
         return {
-            "key": key, "status": "failed",
-            "errors": ["nessun logo disponibile nell'API ESPN"],
-            "manifest": None,
+            "key": key, "status": "missing", "errors": [],
+            "manifest": {
+                "name": entry["name"],
+                "league": league,
+                "league_name": entry["league_name"],
+                "slug": slug,
+                "team_id": entry["id"],
+                "logo_url": "",
+                "logo_missing": True,
+                "hash": "missing",
+                "webp": max_px,
+                "webp_quality": quality,
+                "webp_file": None,
+                "fetched_at": datetime.now(timezone.utc).isoformat(),
+            },
         }
 
     # Skip incrementale: stesso URL logo + stesso WebP + file esistente.
@@ -400,13 +436,21 @@ def process_team(entry: dict, cfg: dict, manifest_logos: dict) -> dict:
 
 
 def write_manifest(out_dir: str, logos: dict, cfg: dict) -> None:
-    """Scrive il manifesto in modo atomico (usato anche per i salvataggi parziali)."""
+    """Scrive il manifesto in modo atomico (usato anche per i salvataggi parziali).
+
+    Nel manifesto le squadre restano TUTTE (anche quelle senza logo, con
+    logo_missing=true, così le run successive le saltano), ma "count"
+    conta solo i loghi realmente presenti.
+    """
+    real = sum(1 for m in logos.values() if m.get("webp_file"))
     manifest = {
         "source": "ESPN (site.api.espn.com + a.espncdn.com)",
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "webp": cfg["size"],
         "webp_quality": cfg["quality"],
-        "count": len(logos),
+        "count": real,
+        "teams": len(logos),
+        "missing": len(logos) - real,
         "logos": dict(sorted(logos.items())),
     }
     path = os.path.join(out_dir, "index.json")
@@ -415,10 +459,12 @@ def write_manifest(out_dir: str, logos: dict, cfg: dict) -> None:
 
 def write_compact_index(out_dir: str, logos: dict) -> None:
     """Indice compatto (index.min.json) pensato per le app: una voce per logo
-    con nome, lega e file, senza i metadati di scaricamento."""
+    con nome, lega e file, senza i metadati di scaricamento. Le squadre
+    senza logo NON compaiono: l'app vede solo file esistenti."""
+    real = {k: m for k, m in logos.items() if m.get("webp_file")}
     compact = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "count": len(logos),
+        "count": len(real),
         "logos": {
             key: {
                 "name": m.get("name", ""),
@@ -426,7 +472,7 @@ def write_compact_index(out_dir: str, logos: dict) -> None:
                 "slug": m.get("slug", ""),
                 "file": (m.get("webp_file") or {}).get("file", ""),
             }
-            for key, m in sorted(logos.items())
+            for key, m in sorted(real.items())
         },
     }
     path = os.path.join(out_dir, "index.min.json")
@@ -443,6 +489,8 @@ def write_github_summary(path: str, stats: dict, failures: list[dict],
         f"- Scaricati/aggiornati: **{stats['ok']}** ({stats['files']} file)",
         f"- Saltati (già aggiornati): **{stats['skipped']}**",
         f"- Falliti: **{stats['failed']}**",
+        f"- Senza logo su ESPN: **{stats.get('missing', 0)}** "
+        "(squadre senza immagine disponibile, es. college football Div. 2/3)",
         "",
         "<details><summary>Loghi per lega</summary>",
         "",
@@ -466,7 +514,8 @@ def write_github_summary(path: str, stats: dict, failures: list[dict],
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="Scarica i loghi NBA/NFL/NHL/MLB/WNBA/NCAA da ESPN in WebP leggeri.")
+        description="Scarica i loghi NFL/NBA/WNBA/NHL/MLB/UFL e NCAA (basket, "
+                    "football, baseball, hockey, pallavolo) da ESPN, in WebP leggeri.")
     ap.add_argument("--out", default="sport",
                     help="Cartella di destinazione (default: sport)")
     ap.add_argument("--leagues", default="",
@@ -561,7 +610,7 @@ def main() -> int:
         f"2 richieste per squadra max (pagina API + logo).")
 
     stats = {"total": len(entries), "ok": 0, "skipped": 0,
-             "failed": 0, "files": 0}
+             "failed": 0, "files": 0, "missing": 0}
     failures: list[dict] = []
     lock = threading.Lock()
     done = 0
@@ -596,19 +645,21 @@ def main() -> int:
                 done += 1
                 st = res["status"]
                 stats[st] = stats.get(st, 0) + 1
-                if st == "ok":
+                if st in ("ok", "missing"):
                     m = res["manifest"]
                     manifest_logos[res["key"]] = m
-                    stats["files"] += 1 if m.get("webp_file") else 0
-                    if stats["ok"] >= next_flush:
-                        need_flush = True
-                        next_flush += FLUSH_EVERY
+                    if st == "ok":
+                        stats["files"] += 1 if m.get("webp_file") else 0
+                        if stats["ok"] >= next_flush:
+                            need_flush = True
+                            next_flush += FLUSH_EVERY
                 if st == "failed":
                     failures.append(res)
                 if done % 50 == 0 or done == len(entries):
                     el = time.time() - t0
                     log(f"... {done}/{len(entries)} ({el:.0f}s) "
-                        f"ok={stats['ok']} skip={stats['skipped']} fail={stats['failed']}")
+                        f"ok={stats['ok']} skip={stats['skipped']} "
+                        f"fail={stats['failed']} no_logo={stats['missing']}")
             if need_flush:
                 # Salvataggio parziale atomico: anche se la run viene cancellata
                 # o il processo ucciso, i loghi già completati non si ripescano.
@@ -645,7 +696,12 @@ def main() -> int:
     el = time.time() - t0
     log("")
     log(f"FINITO in {el:.0f}s: ok={stats['ok']} saltati={stats['skipped']} "
-        f"falliti={stats['failed']} file_scaricati={stats['files']}")
+        f"falliti={stats['failed']} senza_logo={stats['missing']} "
+        f"file_scaricati={stats['files']}")
+    if stats["missing"]:
+        log(f"Nota: {stats['missing']} squadre non hanno un logo su ESPN "
+            f"(es. college football Divisione 2/3): non sono errori e non "
+            f"verranno ritentate.")
     if failures:
         log("Primi errori:")
         for f in failures[:10]:
@@ -655,6 +711,8 @@ def main() -> int:
     if summary_path:
         per_league: dict[str, int] = {}
         for m in manifest_logos.values():
+            if not m.get("webp_file"):
+                continue  # nell'indice per lega solo i loghi realmente presenti
             ln = m.get("league_name") or m.get("league", "?")
             per_league[ln] = per_league.get(ln, 0) + 1
         try:
