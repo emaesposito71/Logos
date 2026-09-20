@@ -1,0 +1,224 @@
+# Sincronizza i ritratti a mezzobusto dei tennisti ATP/WTA (ESPN) nella repo.
+#
+# Copre: TOP 150 ATP + TOP 150 WTA (= i giocatori attivi con pagina profilo
+# su espn.com/tennis/players). ESPN NON ha la foto per tutti: solo ~1/4
+# dei giocatori ha il ritratto (per le stelle tipo Sinner/Alcaraz/Zverev
+# c'è sempre). Chi non ce l'ha viene registrato e saltato, non ritentato.
+#
+# OUTPUT: cartella sports/tennis/ — UN file per giocatore, col nome nel file:
+#   sports/tennis/<nome>.webp (es. sports/tennis/jannik_sinner.webp), WebP
+#   ridotto a 512px di lato massimo (proporzioni originali mantenute,
+#   ~20-60 KB a ritratto). Produce anche sports/tennis/index.min.json,
+#   indice compatto per l'app (nome, tour, rank, file).
+#
+# MIGRAZIONE AUTOMATICA: alla prima esecuzione il workflow SPOSTA da solo
+# la vecchia cartella tennis/ della root (i PNG già caricati a mano) dentro
+# sports/tennis/. Dalla seconda run in poi questa operazione non serve più.
+#
+# USO RUNTIME DELL'APP (esempio URL diretto, il repo fa da CDN):
+#   https://raw.githubusercontent.com/emaesposito71/Logos/main/sports/tennis/jannik_sinner.webp
+#   L'indice dei file: .../main/sports/tennis/index.min.json
+#
+# Quando gira:
+#   - Manualmente: Actions -> "Sync tennis portraits" -> Run workflow.
+#   - Automaticamente: OGNI ORA al minuto 45 (il calcio gira al minuto 0 e
+#     gli sport al minuto 30: le tre sync non si sovrappongono mai).
+#
+# Rate limit / HTTP 429: lo script SI FERMA DA SOLO ma salva tutto (manifesto
+# aggiornato ogni 50 ritratti, commit dei file già scaricati). La run appare
+# VERDE con un avviso giallo: è una pausa attesa, non un guasto. La run
+# successiva riparte dal manifesto e scarica solo i mancanti.
+#
+# "Retry missing": ESPN aggiunge ritratti nel tempo. A ogni run si provano
+# SOLO i nuovi giocatori; per riprovare anche i vecchi "senza ritratto"
+# lancia la run manuale con retry_missing=true (o --retry-missing).
+#
+# Per DISATTIVARE l'esecuzione oraria: elimina (o commenta) le righe
+# "schedule:" qui sotto, oppure Actions -> Sync tennis portraits -> "..." ->
+# "Disable workflow".
+#
+# ATTENZIONE: durante una run NON aggiungere/modificare file a mano nel repo
+# (anche un piccolo commit fatto a metà run "sposta" il ramo remoto e può far
+# fallire il push finale della run). Le cartelle sports/tennis/ le crea il
+# bot da solo: non serve crearle.
+#
+# Richiede: Settings -> Actions -> General -> Workflow permissions = "Read
+# and write" (già impostata per le altre sync).
+
+name: Sync tennis portraits
+
+on:
+  workflow_dispatch:
+    inputs:
+      tours:
+        description: "Solo questi tour (virgola: atp,wta). Vuoto = entrambi."
+        required: false
+        default: ""
+      size:
+        description: "Lato massimo in px del WebP (default 512; cambiarlo riscarica tutto)"
+        required: false
+        default: "512"
+      limit:
+        description: "Max ritratti (vuoto = tutti; es. 20 per una prova)"
+        required: false
+        default: ""
+      workers:
+        description: "Download paralleli (4 di default; abbassa a 2 se vedi tanti 429)"
+        required: false
+        default: "4"
+      delay:
+        description: "Pausa in secondi prima di ogni richiesta (alza se vedi HTTP 429)"
+        required: false
+        default: "0.2"
+      force:
+        description: "Riscarica tutto da zero"
+        required: false
+        default: false
+        type: boolean
+      retry_missing:
+        description: "Riprova anche i giocatori senza ritratto (ESPN li aggiunge nel tempo)"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # Ogni ora al minuto 45 (UTC). Il calcio gira al minuto 0, gli sport al
+    # minuto 30: tre finestre separate, nessuna sovrapposizione.
+    - cron: "45 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tennis
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installa Pillow (conversione WebP)
+        run: python3 -m pip install --quiet pillow
+
+      - name: Download ritratti tennisti
+        id: download
+        run: |
+          # Nelle run programmate (schedule) gli input del form sono VUOTI:
+          # applichiamo quindi gli stessi default del modulo manuale.
+          TOURS="${{ inputs.tours }}"
+          SIZE="${{ inputs.size }}"
+          LIMIT="${{ inputs.limit }}"
+          WORKERS="${{ inputs.workers }}"
+          DELAY="${{ inputs.delay }}"
+          FORCE="${{ inputs.force }}"
+          RETRY="${{ inputs.retry_missing }}"
+          [ -z "$SIZE" ] && SIZE="512"
+          [ -z "$WORKERS" ] && WORKERS="4"
+          [ -z "$DELAY" ] && DELAY="0.2"
+          [ -z "$FORCE" ] && FORCE="false"
+          [ -z "$RETRY" ] && RETRY="false"
+          ARGS=(--workers "$WORKERS" --delay "$DELAY" --size "$SIZE" --out sports/tennis)
+          [ -n "$TOURS" ] && ARGS+=(--tours "$TOURS")
+          [ -n "$LIMIT" ] && ARGS+=(--limit "$LIMIT")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          [ "$RETRY" = "true" ] && ARGS+=(--retry-missing)
+          set +e
+          python3 scripts/tennis.py "${ARGS[@]}"
+          code=$?
+          set -e
+          # Codice 3 = fermo per rate limit persistente. I progressi sono già
+          # salvati nel manifesto: usciamo SENZA errore (run verde) perché è
+          # una pausa attesa, non un guasto. Il commit qui sotto salva comunque
+          # i ritratti scaricati.
+          if [ "$code" -eq 3 ]; then
+            echo "aborted=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          exit "$code"
+
+      - name: Commit e push se ci sono novità
+        if: always() && !cancelled()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config http.postBuffer 524288000
+          # Migrazione una tantum: la vecchia cartella tennis/ della root
+          # (PNG caricati a mano) viene spostata dentro sports/tennis/.
+          # Dalla seconda esecuzione in poi questo blocco non fa nulla.
+          if [ -d tennis ] && [ -n "$(ls -A tennis 2>/dev/null)" ]; then
+            mkdir -p sports/tennis
+            moved=0
+            for f in tennis/*; do
+              [ -e "$f" ] || continue
+              if git mv "$f" "sports/tennis/$(basename "$f")" 2>/dev/null; then
+                moved=$((moved+1))
+              else
+                mv "$f" "sports/tennis/$(basename "$f")"
+                moved=$((moved+1))
+              fi
+            done
+            rmdir tennis 2>/dev/null || true
+            echo "Migrati $moved file: tennis/ -> sports/tennis/"
+          fi
+          if [ ! -d sports/tennis ]; then
+            echo "Nessuna cartella da committare (il download non è mai partito)."
+            exit 0
+          fi
+          git add -A -- sports/tennis
+          if git diff --cached --quiet; then
+            echo "Nessuna novità, niente da committare."
+            exit 0
+          fi
+          N=$(git diff --cached --name-only | wc -l)
+          git commit -m "chore: sync tennis portraits ($N file)"
+          # Il remoto può essere cambiato durante la run (commit manuali o
+          # le altre sync): riallineiamo e riproviamo 3 volte.
+          ok=""
+          for i in 1 2 3; do
+            echo "Tentativo push $i/3..."
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "$GITHUB_REF_NAME"; then
+              ok="1"
+              break
+            fi
+            echo "Push non riuscito al tentativo $i: riprovo tra 10s"
+            sleep 10
+          done
+          if [ -z "$ok" ]; then
+            git rebase --abort 2>/dev/null || true
+            echo "::error::Push non riuscito dopo 3 tentativi. I file di questa run non sono arrivati sul repo: rilancia il workflow (riparte dai ritratti mancanti)."
+            exit 1
+          fi
+          echo "Push riuscito."
+
+      - name: Esito
+        if: always() && steps.download.outcome != 'skipped'
+        run: |
+          N=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('count',0))" sports/tennis/index.json 2>/dev/null || echo "?")
+          if [ "${{ steps.download.outputs.aborted }}" = "true" ]; then
+            echo "::warning::Rate limit: la run si è fermata, ma è tutto salvato. Ritratti già pronti: $N (ESPN non ha la foto per tutti i giocatori: attesi ~80-90 su 300). La prossima esecuzione riparte da qui."
+            {
+              echo "### ⏸️ Fermata per rate limit — è tutto normale"
+              echo ""
+              echo "- Ritratti già pronti: **$N**"
+              echo "- Nulla è perso: i ritratti scaricati sono stati committati"
+              echo "- La prossima run (entro un'ora) riprende da qui da sola"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          {
+            echo "### ✅ Run completata senza interruzioni"
+            echo ""
+            echo "Ritratti pronti: **$N**. Nota: ESPN non ha il ritratto per tutti"
+            echo "i giocatori: la voce \"Senza ritratto su ESPN\" conta chi non ha"
+            echo "la foto (non è un errore)."
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Run completata."
