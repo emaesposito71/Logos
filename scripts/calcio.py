@@ -110,7 +110,7 @@ class RateLimitExceeded(Exception):
 _rate_lock = threading.Lock()
 _rate_cooldown_until = 0.0
 _consec_429 = 0
-MAX_CONSEC_429 = 10
+MAX_CONSEC_429 = 20
 _abort = threading.Event()
 
 
@@ -224,7 +224,8 @@ def png_to_webp(data: bytes, max_px: int, quality: int) -> bytes:
         im = im.convert("RGBA")
     im.thumbnail((max_px, max_px), Image.LANCZOS)
     buf = io.BytesIO()
-    im.save(buf, "WEBP", quality=quality, method=6)
+    # method=4: encoding ~3x più veloce di method=6 con file ~5% più grandi
+    im.save(buf, "WEBP", quality=quality, method=4)
     return buf.getvalue()
 
 
