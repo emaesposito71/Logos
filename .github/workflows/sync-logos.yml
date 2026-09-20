@@ -24,6 +24,11 @@
 # "schedule:" qui sotto, oppure Actions -> Sync football logos -> "..." ->
 # "Disable workflow".
 #
+# ATTENZIONE: durante una run NON aggiungere/modificare file a mano nel repo
+# (anche un piccolo commit fatto a metà run "sposta" il ramo remoto e può far
+# fallire il push finale della run). Le cartelle calcio/ e loghi/ le crea il
+# bot da solo: non serve crearle.
+#
 # Richiede: Settings -> Actions -> General -> Workflow permissions = "Read and write".
 
 name: Sync football logos
@@ -52,9 +57,9 @@ on:
         required: false
         default: ""
       workers:
-        description: "Download paralleli (4 è prudente contro i rate-limit)"
+        description: "Download paralleli (6 di default; abbassa a 4 se vedi tanti 429)"
         required: false
-        default: "4"
+        default: "6"
       delay:
         description: "Pausa in secondi prima di ogni richiesta (alza se vedi HTTP 429)"
         required: false
@@ -106,7 +111,7 @@ jobs:
           FORCE="${{ inputs.force }}"
           [ -z "$FORMAT" ] && FORMAT="webp"
           [ -z "$WEBP_SIZE" ] && WEBP_SIZE="512"
-          [ -z "$WORKERS" ] && WORKERS="4"
+          [ -z "$WORKERS" ] && WORKERS="6"
           [ -z "$DELAY" ] && DELAY="0.5"
           [ -z "$FORCE" ] && FORCE="false"
           ARGS=(--workers "$WORKERS" --delay "$DELAY")
@@ -141,14 +146,34 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Push di pacchetti grandi (migliaia di file): buffer HTTP più grande
+          git config http.postBuffer 524288000
           git add -A -- calcio loghi
           if git diff --cached --quiet; then
             echo "Nessuna novità, niente da committare."
-          else
-            N=$(git diff --cached --name-only | wc -l)
-            git commit -m "chore: sync football logos ($N file)"
-            git push
+            exit 0
           fi
+          N=$(git diff --cached --name-only | wc -l)
+          git commit -m "chore: sync football logos ($N file)"
+          # Il remoto può essere cambiato durante la run (commit manuali) e i
+          # push molto grandi a volte cadono: riallineiamo e riproviamo 3 volte.
+          ok=""
+          for i in 1 2 3; do
+            echo "Tentativo push $i/3..."
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "$GITHUB_REF_NAME"; then
+              ok="1"
+              break
+            fi
+            echo "Push non riuscito al tentativo $i: riprovo tra 10s"
+            sleep 10
+          done
+          if [ -z "$ok" ]; then
+            git rebase --abort 2>/dev/null || true
+            echo "::error::Push non riuscito dopo 3 tentativi. I file di questa run non sono arrivati sul repo: rilancia il workflow (riparte dai loghi mancanti)."
+            exit 1
+          fi
+          echo "Push riuscito."
 
       - name: Esito
         if: always() && steps.download.outcome != 'skipped'
