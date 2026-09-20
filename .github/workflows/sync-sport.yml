@@ -1,7 +1,8 @@
 # Sincronizza i loghi delle squadre americane (ESPN) nella repo.
 #
-# Copre: NFL, NBA, WNBA, NHL, MLB, NCAA basket maschile/femminile, NCAA
-# football (~1.000 squadre). Perché ESPN e non SportsLogos.net: il sito è
+# Copre: NFL, NBA, WNBA, NHL, MLB, UFL e NCAA (basket maschile/femminile,
+# football, baseball, hockey M/F, pallavolo femminile) — ~2.600 squadre.
+# Perché ESPN e non SportsLogos.net: il sito è
 # dietro Cloudflare (challenge JavaScript) che blocca script e GitHub
 # Actions; l'API di ESPN è pubblica e stabile, con la stessa qualità
 # (PNG 500px → WebP).
@@ -42,7 +43,7 @@ on:
   workflow_dispatch:
     inputs:
       leagues:
-        description: "Solo queste leghe (virgola: nfl,nba,wnba,nhl,mlb,ncaa-mb,ncaa-wb,ncaa-fb). Vuoto = tutte."
+        description: "Solo queste leghe (virgola: nfl,nba,wnba,nhl,mlb,ufl,ncaa-mb,ncaa-wb,ncaa-fb,ncaa-base,ncaa-hm,ncaa-hw,ncaa-vb). Vuoto = tutte."
         required: false
         default: ""
       size:
@@ -170,11 +171,11 @@ jobs:
         run: |
           N=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('count',0))" sport/index.json 2>/dev/null || echo "?")
           if [ "${{ steps.download.outputs.aborted }}" = "true" ]; then
-            echo "::warning::Rate limit: la run si è fermata, ma è tutto salvato. Loghi sport già pronti: $N (target ≈ 1.000). La prossima esecuzione (automatica entro un'ora, o manuale) riparte da qui e scarica solo i mancanti."
+            echo "::warning::Rate limit: la run si è fermata, ma è tutto salvato. Loghi sport già pronti: $N (target ≈ 2.450). La prossima esecuzione (automatica entro un'ora, o manuale) riparte da qui e scarica solo i mancanti."
             {
               echo "### ⏸️ Fermata per rate limit — è tutto normale"
               echo ""
-              echo "- Loghi sport già pronti: **$N** su ≈ 1.000"
+              echo "- Loghi sport già pronti: **$N** su ≈ 2.450"
               echo "- Nulla è perso: i loghi scaricati sono stati committati"
               echo "- La prossima run (entro un'ora) riprende da qui da sola"
             } >> "$GITHUB_STEP_SUMMARY"
