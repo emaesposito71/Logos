@@ -1,11 +1,11 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-09-30T14:04:22.241495+00:00",
+ "updated_at": "2026-09-30T19:33:53.818367+00:00",
  "webp": 512,
  "webp_quality": 80,
  "count": 2435,
- "teams": 2592,
- "missing": 157,
+ "teams": 2595,
+ "missing": 160,
  "logos": {
   "mlb/arizona_diamondbacks": {
    "name": "Arizona Diamondbacks",
@@ -13531,6 +13531,20 @@
    "webp_file": null,
    "fetched_at": "2026-09-20T11:36:28.767224+00:00"
   },
+  "ncaa-fb/madonna_crusaders": {
+   "name": "Madonna Crusaders",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "madonna_crusaders",
+   "team_id": "126146",
+   "logo_url": "",
+   "logo_missing": true,
+   "hash": "missing",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": null,
+   "fetched_at": "2026-09-30T19:33:53.785707+00:00"
+  },
   "ncaa-fb/maine_black_bears": {
    "name": "Maine Black Bears",
    "league": "ncaa-fb",
@@ -13606,6 +13620,20 @@
     "file": "ncaa-fb/mansfield_mountaineers.webp"
    },
    "fetched_at": "2026-09-20T10:58:47.504293+00:00"
+  },
+  "ncaa-fb/marian_in_knights": {
+   "name": "Marian (IN) Knights",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "marian_in_knights",
+   "team_id": "2366",
+   "logo_url": "",
+   "logo_missing": true,
+   "hash": "missing",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": null,
+   "fetched_at": "2026-09-30T19:33:53.785793+00:00"
   },
   "ncaa-fb/marian_in_marian": {
    "name": "Marian (IN) MARIAN",
@@ -15522,6 +15550,20 @@
     "file": "ncaa-fb/oklahoma_baptist_bison.webp"
    },
    "fetched_at": "2026-09-20T10:58:54.922861+00:00"
+  },
+  "ncaa-fb/oklahoma_panhandle_aggies": {
+   "name": "Oklahoma Panhandle Aggies",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "oklahoma_panhandle_aggies",
+   "team_id": "2824",
+   "logo_url": "",
+   "logo_missing": true,
+   "hash": "missing",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": null,
+   "fetched_at": "2026-09-30T19:33:53.787485+00:00"
   },
   "ncaa-fb/oklahoma_panhandle_ok_panhandle_st": {
    "name": "Oklahoma Panhandle OK PANHANDLE ST",
