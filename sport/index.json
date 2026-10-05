@@ -1,10 +1,10 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-10-05T16:17:39.978431+00:00",
+ "updated_at": "2026-10-05T22:50:14.910651+00:00",
  "webp": 512,
  "webp_quality": 80,
- "count": 2435,
- "teams": 2595,
+ "count": 2436,
+ "teams": 2596,
  "missing": 160,
  "logos": {
   "mlb/arizona_diamondbacks": {
@@ -36390,6 +36390,22 @@
     "file": "ncaa-wb/louisiana_ragin_cajuns.webp"
    },
    "fetched_at": "2026-09-20T10:59:43.960446+00:00"
+  },
+  "ncaa-wb/louisiana_tech_bulldogs": {
+   "name": "Louisiana Tech Bulldogs",
+   "league": "ncaa-wb",
+   "league_name": "NCAA basket femminile",
+   "slug": "louisiana_tech_bulldogs",
+   "team_id": "2348",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+    "file": "ncaa-wb/louisiana_tech_bulldogs.webp"
+   },
+   "fetched_at": "2026-10-05T22:50:14.910388+00:00"
   },
   "ncaa-wb/louisiana_tech_lady_techsters": {
    "name": "Louisiana Tech Lady Techsters",
