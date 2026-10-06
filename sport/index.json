@@ -1,10 +1,10 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-10-06T10:38:23.090694+00:00",
+ "updated_at": "2026-10-06T17:21:09.689578+00:00",
  "webp": 512,
  "webp_quality": 80,
- "count": 2436,
- "teams": 2596,
+ "count": 2439,
+ "teams": 2599,
  "missing": 160,
  "logos": {
   "mlb/arizona_diamondbacks": {
@@ -34711,6 +34711,22 @@
    },
    "fetched_at": "2026-09-20T10:59:37.267154+00:00"
   },
+  "ncaa-wb/central_arkansas_sugar_bears": {
+   "name": "Central Arkansas Sugar Bears",
+   "league": "ncaa-wb",
+   "league_name": "NCAA basket femminile",
+   "slug": "central_arkansas_sugar_bears",
+   "team_id": "2110",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+    "file": "ncaa-wb/central_arkansas_sugar_bears.webp"
+   },
+   "fetched_at": "2026-10-06T17:21:09.689091+00:00"
+  },
   "ncaa-wb/central_connecticut_blue_devils": {
    "name": "Central Connecticut Blue Devils",
    "league": "ncaa-wb",
@@ -35206,6 +35222,22 @@
     "file": "ncaa-wb/east_carolina_pirates.webp"
    },
    "fetched_at": "2026-09-20T10:59:39.290402+00:00"
+  },
+  "ncaa-wb/east_tennessee_state_buccaneers": {
+   "name": "East Tennessee State Buccaneers",
+   "league": "ncaa-wb",
+   "league_name": "NCAA basket femminile",
+   "slug": "east_tennessee_state_buccaneers",
+   "team_id": "2193",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+    "file": "ncaa-wb/east_tennessee_state_buccaneers.webp"
+   },
+   "fetched_at": "2026-10-06T17:21:09.681822+00:00"
   },
   "ncaa-wb/east_tennessee_state_bucs": {
    "name": "East Tennessee State Bucs",
@@ -35734,6 +35766,22 @@
     "file": "ncaa-wb/harvard_crimson.webp"
    },
    "fetched_at": "2026-09-20T10:59:41.375651+00:00"
+  },
+  "ncaa-wb/hawai_i_rainbow_wahine": {
+   "name": "Hawai'i Rainbow Wahine",
+   "league": "ncaa-wb",
+   "league_name": "NCAA basket femminile",
+   "slug": "hawai_i_rainbow_wahine",
+   "team_id": "62",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+    "file": "ncaa-wb/hawai_i_rainbow_wahine.webp"
+   },
+   "fetched_at": "2026-10-06T17:21:09.682943+00:00"
   },
   "ncaa-wb/hawai_i_rainbow_warriors": {
    "name": "Hawai'i Rainbow Warriors",
