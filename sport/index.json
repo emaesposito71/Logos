@@ -1,6 +1,6 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-10-07T22:10:57.269744+00:00",
+ "updated_at": "2026-10-08T02:11:14.453371+00:00",
  "webp": 512,
  "webp_quality": 80,
  "count": 2439,
@@ -8653,15 +8653,15 @@
    "league_name": "NCAA football",
    "slug": "azusa_pacific_cougars",
    "team_id": "2049",
-   "logo_url": "https://a.espncdn.com/guid/0aa67bb7-1cce-622a-b14f-d2a82aa2349b/logos/default.png",
-   "hash": "https://a.espncdn.com/guid/0aa67bb7-1cce-622a-b14f-d2a82aa2349b/logos/default.png",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2049.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2049.png",
    "webp": 512,
    "webp_quality": 80,
    "webp_file": {
-    "hash": "https://a.espncdn.com/guid/0aa67bb7-1cce-622a-b14f-d2a82aa2349b/logos/default.png",
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2049.png",
     "file": "ncaa-fb/azusa_pacific_cougars.webp"
    },
-   "fetched_at": "2026-09-20T10:58:28.222453+00:00"
+   "fetched_at": "2026-10-08T02:11:14.452747+00:00"
   },
   "ncaa-fb/baker_university_baker": {
    "name": "Baker University Baker",
