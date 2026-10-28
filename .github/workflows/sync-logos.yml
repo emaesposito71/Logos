@@ -148,7 +148,13 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # Push di pacchetti grandi (migliaia di file): buffer HTTP più grande
           git config http.postBuffer 524288000
-          git add -A -- calcio loghi
+          # FIX run fallite (exit 128): con più pathspec basta che UNO solo non
+          # corrisponda a nulla per avere "fatal: pathspec 'calcio' did not
+          # match any files". Le run programmate usano il formato webp (solo
+          # loghi/), quindi calcio/ può legittimamente non esistere nel repo:
+          # aggiungiamo ciascuna cartella SOLO se presente.
+          if [ -d calcio ]; then git add -A -- calcio; fi
+          if [ -d loghi ]; then git add -A -- loghi; fi
           if git diff --cached --quiet; then
             echo "Nessuna novità, niente da committare."
             exit 0
