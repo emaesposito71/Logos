@@ -1,10 +1,10 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-11-02T07:57:07.740629+00:00",
+ "updated_at": "2026-11-02T18:40:42.989718+00:00",
  "webp": 512,
  "webp_quality": 80,
- "count": 2439,
- "teams": 2599,
+ "count": 2442,
+ "teams": 2602,
  "missing": 160,
  "logos": {
   "mlb/arizona_diamondbacks": {
@@ -29103,6 +29103,22 @@
    },
    "fetched_at": "2026-09-20T11:36:51.865082+00:00"
   },
+  "ncaa-vb/chicago_state_cougars-2": {
+   "name": "Chicago State Cougars",
+   "league": "ncaa-vb",
+   "league_name": "NCAA pallavolo femminile",
+   "slug": "chicago_state_cougars-2",
+   "team_id": "2130",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+    "file": "ncaa-vb/chicago_state_cougars-2.webp"
+   },
+   "fetched_at": "2026-11-02T18:40:42.974670+00:00"
+  },
   "ncaa-vb/cincinnati_bearcats": {
    "name": "Cincinnati Bearcats",
    "league": "ncaa-vb",
@@ -31294,6 +31310,22 @@
     "file": "ncaa-vb/new_mexico_state_aggies.webp"
    },
    "fetched_at": "2026-09-20T11:37:08.102380+00:00"
+  },
+  "ncaa-vb/new_mexico_state_aggies-2": {
+   "name": "New Mexico State Aggies",
+   "league": "ncaa-vb",
+   "league_name": "NCAA pallavolo femminile",
+   "slug": "new_mexico_state_aggies-2",
+   "team_id": "166",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+    "file": "ncaa-vb/new_mexico_state_aggies-2.webp"
+   },
+   "fetched_at": "2026-11-02T18:40:42.989274+00:00"
   },
   "ncaa-vb/niagara_purple_eagles": {
    "name": "Niagara Purple Eagles",
@@ -33510,6 +33542,22 @@
     "file": "ncaa-vb/ut_rio_grande_valley_vaqueros.webp"
    },
    "fetched_at": "2026-09-20T11:37:24.222911+00:00"
+  },
+  "ncaa-vb/ut_rio_grande_valley_vaqueros-2": {
+   "name": "UT Rio Grande Valley Vaqueros",
+   "league": "ncaa-vb",
+   "league_name": "NCAA pallavolo femminile",
+   "slug": "ut_rio_grande_valley_vaqueros-2",
+   "team_id": "292",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+    "file": "ncaa-vb/ut_rio_grande_valley_vaqueros-2.webp"
+   },
+   "fetched_at": "2026-11-02T18:40:42.972557+00:00"
   },
   "ncaa-vb/utah_state_aggies": {
    "name": "Utah State Aggies",
