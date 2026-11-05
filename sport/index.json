@@ -1,10 +1,10 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-11-05T11:21:17.414398+00:00",
+ "updated_at": "2026-11-05T18:54:05.114084+00:00",
  "webp": 512,
  "webp_quality": 80,
- "count": 2442,
- "teams": 2602,
+ "count": 2443,
+ "teams": 2603,
  "missing": 160,
  "logos": {
   "mlb/arizona_diamondbacks": {
@@ -9956,6 +9956,22 @@
     "file": "ncaa-fb/claremont_mudd_scripps_stags.webp"
    },
    "fetched_at": "2026-09-20T10:58:33.436400+00:00"
+  },
+  "ncaa-fb/claremont_mudd_scripps_stags_athenas": {
+   "name": "Claremont Mudd Scripps Stags/Athenas",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "claremont_mudd_scripps_stags_athenas",
+   "team_id": "17",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/17.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/17.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/17.png",
+    "file": "ncaa-fb/claremont_mudd_scripps_stags_athenas.webp"
+   },
+   "fetched_at": "2026-11-05T18:54:05.113499+00:00"
   },
   "ncaa-fb/clarion_golden_eagles": {
    "name": "Clarion Golden Eagles",
