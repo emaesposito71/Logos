@@ -1,11 +1,11 @@
 {
  "source": "ESPN (site.api.espn.com + a.espncdn.com)",
- "updated_at": "2026-11-06T00:29:50.105699+00:00",
+ "updated_at": "2026-11-06T07:16:40.013037+00:00",
  "webp": 512,
  "webp_quality": 80,
- "count": 2443,
- "teams": 2603,
- "missing": 160,
+ "count": 2445,
+ "teams": 2607,
+ "missing": 162,
  "logos": {
   "mlb/arizona_diamondbacks": {
    "name": "Arizona Diamondbacks",
@@ -14505,6 +14505,20 @@
    "webp_file": null,
    "fetched_at": "2026-09-20T11:36:28.768166+00:00"
   },
+  "ncaa-fb/monroe_ny_mustangs": {
+   "name": "Monroe (NY) Mustangs",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "monroe_ny_mustangs",
+   "team_id": "134001",
+   "logo_url": "",
+   "logo_missing": true,
+   "hash": "missing",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": null,
+   "fetched_at": "2026-11-06T07:16:39.518728+00:00"
+  },
   "ncaa-fb/montana_grizzlies": {
    "name": "Montana Grizzlies",
    "league": "ncaa-fb",
@@ -15122,6 +15136,22 @@
     "file": "ncaa-fb/north_central_college_cardinals.webp"
    },
    "fetched_at": "2026-09-20T10:58:53.263073+00:00"
+  },
+  "ncaa-fb/north_central_il_cardinals": {
+   "name": "North Central (IL) Cardinals",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "north_central_il_cardinals",
+   "team_id": "3071",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/3071.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/3071.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/3071.png",
+    "file": "ncaa-fb/north_central_il_cardinals.webp"
+   },
+   "fetched_at": "2026-11-06T07:16:40.012369+00:00"
   },
   "ncaa-fb/north_dakota_fighting_hawks": {
    "name": "North Dakota Fighting Hawks",
@@ -19103,6 +19133,22 @@
    "webp_file": null,
    "fetched_at": "2026-09-20T11:36:28.779173+00:00"
   },
+  "ncaa-fb/west_texas_a_m_buffaloes": {
+   "name": "West Texas A&M Buffaloes",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "west_texas_a_m_buffaloes",
+   "team_id": "2704",
+   "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2704.png",
+   "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2704.png",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": {
+    "hash": "https://a.espncdn.com/i/teamlogos/ncaa/500/2704.png",
+    "file": "ncaa-fb/west_texas_a_m_buffaloes.webp"
+   },
+   "fetched_at": "2026-11-06T07:16:39.972994+00:00"
+  },
   "ncaa-fb/west_texas_buffaloes": {
    "name": "West Texas Buffaloes",
    "league": "ncaa-fb",
@@ -19326,6 +19372,20 @@
     "file": "ncaa-fb/westfield_state_owls.webp"
    },
    "fetched_at": "2026-09-20T10:59:08.868587+00:00"
+  },
+  "ncaa-fb/westgate_christian_ravens": {
+   "name": "Westgate Christian Ravens",
+   "league": "ncaa-fb",
+   "league_name": "NCAA football",
+   "slug": "westgate_christian_ravens",
+   "team_id": "134087",
+   "logo_url": "",
+   "logo_missing": true,
+   "hash": "missing",
+   "webp": 512,
+   "webp_quality": 80,
+   "webp_file": null,
+   "fetched_at": "2026-11-06T07:16:39.534110+00:00"
   },
   "ncaa-fb/westgate_christian_university_ravens": {
    "name": "Westgate Christian University Ravens",
